@@ -2,25 +2,30 @@
 
 > 🎓 A Claude Code skill — AI prompt library for the full academic paper workflow.
 
-Covers every stage from literature reading to journal submission, including writing, polishing, reviewing, translating, reference management, figure generation, and defense PPT.
+Covers every stage from literature reading to journal submission, with prompts optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 
-Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
+Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/nature-skills).
 
 ---
 
 ## What's Inside
 
-| Category | Prompts |
-|----------|---------|
-| 📖 文献阅读与分析 | 精读文献、综述撰写、领域现状总结 |
-| ✍️ 论文写作与生成 | 从材料生成全文、引言/相关工作写作、写作规范 |
-| 🔧 论文润色与修改 | 全文纠错、段落学术化、TRO风格润色、公式规范 |
-| 🎯 论文审稿与投稿 | IJCAI/TRO/TII/Nature 审稿人视角、拒稿漏洞排查 |
+| Category | Highlights |
+|----------|-----------|
+| 📐 论文类型与叙事结构 | 识别论文类型（discovery/methods/resource/review），确定叙事弧 |
+| 📖 文献阅读与分析 | 精读、综述撰写、领域现状、论证链提取 |
+| ✍️ 论文写作与生成 | 从材料生成全文、引言/相关工作、证据-主张检查 |
+| 🔧 论文润色与修改 | TRO/Nature风格润色、LaTeX排版修复、公式符号规范、段落失败模式诊断 |
+| 🎯 论文审稿与投稿 | IJCAI/TRO/TII/Nature 审稿人视角（含3-reviewer+综合预审） |
+| 💬 审稿意见逐点回复 | triage分类、point-by-point回复信起草、修改位置映射、QA检查 |
 | 🌐 论文翻译 | 中译英全文/部分章节、准确性校对（标蓝标红） |
-| 📚 参考文献管理 | 编号排序、引用内容匹配、文献真实性核实 |
-| 💻 代码相关 | 报错修复、定向代码修改、视频逐帧导出 |
-| 🎨 绘图与可视化 | nano banana 方法图/实验图提示词、图注生成 |
-| 📊 PPT制作与答辩 | 转博答辩PPT、演讲稿生成、评委问题预测 |
+| 📚 参考文献管理 | 编号排序、引用匹配、文献真实性核实 |
+| 💻 代码相关 | 报错修复、定向代码修改 |
+| 🎨 绘图与可视化 | 图表合同、nano banana 方法图/实验图、图表质量审计 |
+| 📊 PPT制作与答辩 | 论文类型驱动PPT、演讲稿生成、Slide质量检查 |
+| 🔤 中英文对照阅读 | 全文并排Markdown阅读（图表就近定位）、术语对照表 |
+| 📋 数据可用性声明 | FAIR合规声明起草、FAIR元数据审计、repository选择建议 |
+| 🔍 学术文献检索 | 多源搜索策略、MeSH检索、引用核查、相关文献发现 |
 | 🗂️ 文件与桌面管理 | 桌面归类整理、合同分析、试卷解答生成 |
 
 ---
@@ -50,64 +55,124 @@ Download `SKILL.md` and place it at:
 
 Once installed, Claude Code automatically discovers the skill.
 
-**Invoke by name in any conversation:**
+**Invoke by name:**
 ```
 /paper-skill
 ```
 
-**Or let Claude auto-detect** — the skill triggers automatically when you ask about:
+**Auto-triggered** when you ask about:
 - Writing / polishing / reviewing a paper
 - SCI / IEEE / Nature / IJCAI / TRO submissions
-- Translating a paper
+- Translating a paper, replying to reviewers
 - Creating figures or defense PPT
-- Managing references
+- Data availability statements, literature search
 
 ---
 
 ## Prompt Examples
 
-### 🔧 Polishing — TRO Style
+### 📐 Identify Paper Type First
 ```
-这个是论文方法部分，帮我按照SCI一区、TRO的学术语言风格进行润色，
-要求逻辑缜密，如果原理不对的话请修改出来，生成修改后的完整方法部分
+在正式写作前，请告诉我：
+1. 这篇论文解决的核心科学问题是什么？
+2. 现有方法/知识存在哪些局限？
+3. 我们的核心创新点是什么（一句话）？
+4. 最关键的实验证据是什么？
+5. 投稿目标期刊是什么？
+
+根据以上信息，确定论文类型（discovery/methods/resource/review），制定写作叙事弧。
 ```
 
-### 🎯 Reviewing — Find Fatal Flaws (IEEE TRO)
+### 🔧 LaTeX 排版修复
 ```
-你是IEEE TRO审稿人，帮我找到会导致拒稿的致命漏洞，包括逻辑，理论，
-实验，以及全文，在不补实验的基础上，给我一个修改清单，
-包括修改哪里，如何修改，用什么描述语言替换，生成完整word
-```
-
-### 🌐 Translation — CN → EN (Nature Standard)
-```
-把论文全文翻译为英文，不要丢失参考文献标号和公式，你是nature主编，
-需要百分百确保翻译后的英文意思和我原来的中文一模一样，
-需要非常准确及学术化，生成完整word在桌面
+我的LaTeX论文存在排版问题：[页面稀疏/图表不填满/Float too large/标题孤立]
+你是Nature主编，帮我诊断并修复：
+1. 描述具体问题
+2. 给出修改哪一行/哪个位置
+3. 给出可以直接替换的latex代码
+4. 解释为什么这样修改
+修改前和修改后的对比都要给出来，生成完整word修订报告
 ```
 
-### 🎨 Figure Prompt (nano banana)
+### 💬 Reviewer Reply (point-by-point)
 ```
-这些是我的代码，我要投稿SCI一区，根据我的方法生成详细的AI提示词，
-用于nano banana绘图（方法流程图），学术美观，nature级别，
-包括配色、用什么元素、多加图标和元素图
+你是顶刊论文作者，请帮我起草逐点回复信。
+要求：
+1. 对每条审稿意见（R1.1, R2.1等）逐一回复
+2. 格式：审稿人原文 → 作者回复 → 论文对应修改位置
+3. 语气：尊重但坚定，措辞学术化
+4. 不编造实验；需要作者补充信息的标注[作者需提供：XXX]
+5. 生成完整word，包含所有回复和修改位置映射
 ```
 
-### 📖 LaTeX Revision (TRO)
+### 🎯 3-Reviewer Pre-submission Review
 ```
-你是IEEE TRO审稿人和编委，给出审稿意见，修订直接在latex上修改，
-给我可以复制进去替换的latex代码，精确告诉我修改哪一行，
-修改前后对比都要给出来，生成完整word
+你是Nature审稿人，对这篇论文给出预审稿评估，返回：
+Reviewer 1 / 2 / 3（仅侧重点不同，不编造审稿人身份）
+Cross-review synthesis（共识优点、共识风险、最重要待解决问题）
+只基于提供的论文内容，不编造图表细节或引用
 ```
+
+### 🔤 Bilingual Paper Reading
+```
+请帮我阅读这篇论文，生成完整的中英文并排Markdown阅读文档：
+- 每个章节：英文原文 + 中文翻译并排
+- 所有图表和表格在对应文字位置就近呈现
+- 建立术语表（科学术语保留英文，括注中文）
+- 不要降级为摘要，我需要完整内容
+来源：[PDF路径 / DOI / arXiv链接]
+```
+
+### 📋 Data Availability Statement
+```
+请帮我起草这篇论文的数据可用性声明（Data Availability Statement）。
+我的数据情况：
+- 新生成的数据：[数据类型和存放位置]
+- 重复使用的公开数据：[数据库名称和accession number]
+- 代码/脚本：[GitHub链接或计划]
+- 是否有受限数据：[是/否]
+要求：符合FAIR原则，不编造DOI，未确定的标注[AUTHOR_INPUT_NEEDED]
+```
+
+### 🎨 Figure Contract Before Drawing
+```
+在绘制图表前，先回答：
+1. 这个图表要证明的核心结论是什么（一句话）？
+2. 数据如何支持这个结论？
+3. 最适合的图表类型？Hero panel是哪一个？
+4. 投稿期刊和导出格式（PNG@300dpi/PDF/TIFF）？
+5. 调色板约束（最多3-4种颜色，黑白可读）？
+确认以上信息后再开始绘图。
+```
+
+---
+
+## Key Differences from Basic Prompts
+
+Compared to generic prompts, paper-skill adds:
+
+| Feature | Description |
+|---------|-------------|
+| **Paper type framework** | Classifies as discovery/methods/resource/review before writing |
+| **Narrative arc** | Each type has an optimized argument structure |
+| **3-reviewer format** | Pre-submission review returns 3 reports + cross-review synthesis |
+| **Reviewer reply workflow** | Triage → draft → map to manuscript → QA checklist |
+| **Figure contract** | Define scientific logic before coding any plot |
+| **LaTeX layout fixes** | Specific diagnostics for float issues, sparse pages, orphan headings |
+| **FAIR data statements** | Repository recommendations + FAIR audit checklist |
+| **Bilingual reading** | Figure-aware, not summary-only, source-anchored |
+| **Literature search strategy** | Multi-source routing, MeSH support, citation verification |
 
 ---
 
 ## Tips
 
-- **指定输出路径**：每个提示词记得加上"生成word在桌面上"或具体路径
-- **LaTeX 修订**：务必加"精确告诉我修改哪一行，修改前后对比"，否则找不到位置
-- **润色 vs 写作**：润色在原文基础上改；写作是让AI重新生成，角色定位要区分清楚
-- **不补实验**：审稿类提示词加上"在不补实验的基础上给修改建议"限制范围
+- **先识别论文类型**：discovery/methods/review 对应不同的叙事结构，搞清楚再写
+- **审稿回复不要编造**：声称了修改就要有具体位置，用`[作者需提供：XXX]`占位
+- **绘图前做图表合同**：先定"这图证明什么"，再动手画
+- **LaTeX修订要精确**：加"精确告诉我修改哪一行，修改前后对比"
+- **翻译后必须校对**：中译英后做"修改前标蓝，修改后标红"对比
+- **指定输出路径**：每个提示词记得加"生成word在桌面上"或具体路径
 
 ---
 
@@ -121,9 +186,9 @@ paper-skill/
 
 ---
 
-## Contributing
+## Credits
 
-If you have useful prompts to add, feel free to open a PR or issue.
+Prompts inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/nature-skills) — a comprehensive Nature-style academic writing skill suite.
 
 ---
 

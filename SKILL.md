@@ -1,26 +1,61 @@
 ---
 name: paper-skill
-description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, and LaTeX editing.
+description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, LaTeX editing, data availability statements, reviewer response letters, and bilingual paper reading.
 ---
 
 # paper-skill
 
 A prompt library for academic research workflows, covering the full lifecycle from literature reading to journal submission.
 
+Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
+
+---
+
 ## Quick Reference by Task
 
 | Task | Section |
 |------|---------|
+| Identify paper type & structure | [论文类型与叙事结构](#0-论文类型与叙事结构) |
 | Read / analyze a paper | [文献阅读与分析](#1-文献阅读与分析) |
 | Write a paper from scratch | [论文写作与生成](#2-论文写作与生成) |
 | Polish / fix existing draft | [论文润色与修改](#3-论文润色与修改) |
 | Review / submission feedback | [论文审稿与投稿](#4-论文审稿与投稿) |
-| Translate paper (CN↔EN) | [论文翻译](#5-论文翻译) |
-| Fix / audit references | [参考文献管理](#6-参考文献管理) |
-| Debug / generate code | [代码相关](#7-代码相关) |
-| Generate figure prompts | [绘图与可视化](#8-绘图与可视化提示词) |
-| Make defense PPT | [PPT制作与答辩](#9-ppt-制作与答辩) |
-| Organize files / desktop | [文件与桌面管理](#10-文件与桌面管理) |
+| Reply to reviewer comments | [审稿意见逐点回复](#5-审稿意见逐点回复) |
+| Translate paper (CN↔EN) | [论文翻译](#6-论文翻译) |
+| Fix / audit references | [参考文献管理](#7-参考文献管理) |
+| Debug / generate code | [代码相关](#8-代码相关) |
+| Generate figure prompts | [绘图与可视化](#9-绘图与可视化提示词) |
+| Make defense PPT | [PPT制作与答辩](#10-ppt-制作与答辩) |
+| Read paper bilingually | [中英文对照阅读](#11-中英文对照阅读) |
+| Data availability statement | [数据可用性声明](#12-数据可用性声明fair合规) |
+| Literature search strategy | [学术文献检索](#13-学术文献检索) |
+| Organize files / desktop | [文件与桌面管理](#14-文件与桌面管理) |
+
+---
+
+## 0. 论文类型与叙事结构
+
+在起草、润色、制PPT前，先识别论文类型。不同类型对应不同叙事弧（narrative arc）。
+
+| 论文类型 | 叙事弧 | 核心结构 |
+|---------|--------|---------|
+| **discovery** 发现/机制类 | 问题→证据 | 背景→方法→结果→意义→展望 |
+| **methods** 方法/算法类 | 问题→解决方案 | 问题→现有缺陷→创新→验证→应用 |
+| **resource** 数据集/平台类 | 工作流→验证 | 动机→构建→规模→基准→用例 |
+| **clinical** 临床/人群类 | 设计→推断 | 问题→设计→结果→临床implications |
+| **review** 综述/观点类 | 证据地图 | 现状→共识→争议→未来方向 |
+
+### 论文核心创新识别（起草前必做）
+```
+在正式写作前，请告诉我：
+1. 这篇论文解决的核心科学问题是什么？
+2. 现有方法/知识存在哪些局限（gap）？
+3. 我们的核心创新点是什么（一句话概括）？
+4. 最关键的实验证据是什么？
+5. 投稿目标期刊是什么？
+
+根据以上信息，确定论文类型（discovery/methods/resource/review），制定写作叙事弧，再进行后续写作。
+```
 
 ---
 
@@ -44,6 +79,16 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 ### 研究现状罗列（含图）
 ```
 给我[研究方向]的国内外研究现状，把最新的论文罗列出来，包括：文章标题、方法简述、与本工作区别、发表期刊/会议、发表时间、期刊级别，并呈现关键图
+```
+
+### 深度阅读（提取论证链）
+```
+详细阅读这篇论文，提取：
+1. 主要科学主张是什么？
+2. 可见的证据基础是什么（图表、数据）？
+3. 声称的重要性（为什么读者应该关心）？
+4. 明显的局限性是什么？
+5. 与本领域现有工作的关系？
 ```
 
 ---
@@ -78,6 +123,16 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 ### SCI一区论文写作指导（从数据/毕设起步）
 ```
 这个是我的[毕业论文/实验数据]，请你仔细阅读所有材料，我现在要在现有资料基础上写一篇SCI一区论文，给我一个详细完整的论文写作指导和全文框架，以及生成一篇论文，所有内容生成完整word在桌面上
+```
+
+### 检查证据与主张的对应关系
+```
+你是[期刊]审稿人，检查这篇论文中：
+1. 每个核心主张是否有对应的实验证据支撑？
+2. 是否存在主张大于证据的情况（over-claim）？
+3. 图表与正文描述是否一致？
+4. 哪些局限性被忽略或低估了？
+请逐点列出，并给出具体修改建议。
 ```
 
 ---
@@ -129,6 +184,28 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 [描述新增实验数据变化]，帮我更新论文里所有表格数据，包括论文部分所有涉及到这个的描述，生成完整版论文，你修改的地方标红，防止乱码，我是wps打开的，生成完整中文版word
 ```
 
+### LaTeX 排版修复（浮动体/图表位置问题）
+```
+我的LaTeX论文存在排版问题：[描述问题：页面稀疏/图表不填满页面/跨页/Float too large/标题孤立/多面板图表排列混乱]
+
+你是Nature主编，帮我诊断并修复LaTeX排版，要求：
+1. 先描述具体问题是什么
+2. 给出修改哪一行/哪个位置
+3. 给出可以直接替换的latex代码
+4. 解释为什么这样修改
+修改前和修改后的对比都要给出来，生成完整word修订报告
+```
+
+### 段落失败模式诊断（写作质量审计）
+```
+你是Nature审稿人，对这段/这部分文字进行失败模式诊断：
+1. 主张→证据→意义的逻辑链是否完整？
+2. 是否存在冗余重复或逻辑跳跃？
+3. 句子结构是否符合Nature学术风格？
+4. 如果无法在不添加内容的情况下修复结构问题，请标记而非覆盖
+给出修改建议和替换语句
+```
+
 ---
 
 ## 4. 论文审稿与投稿
@@ -175,14 +252,93 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 你是IEEE TII审稿人，检查这篇论文是否按照小修意见进行了修改，检查图片字体、单词拼写、参考文献、表格是否有明显错误，帮我校对勘误，生成详细具体修订word
 ```
 
-### 转博/IJCAI对比审稿
+### 预审稿报告（Nature 审稿人风格，3份+综合）
 ```
-我上传了一篇我自己的论文和[年份]IJCAI接收的论文，你作为审稿人和主编，给出我的论文的最终决定意见
+你是Nature审稿人，对这篇论文给出预审稿评估。请返回：
+
+Reviewer 1、Reviewer 2、Reviewer 3（三位审稿人仅在侧重点上有所不同，不要编造审稿人身份）：
+- 总体评估
+- 哪类读者会对结果感兴趣，以及为什么
+- 主要优点
+- 主要问题
+- 必须解决才能建立论文论证的技术缺陷
+- 针对Nature标准的评估（originality、scientific importance、technical soundness、readability）
+- 录用建议
+
+Cross-review synthesis：
+- 三位审稿人的共识优点
+- 共识技术风险
+- 各审稿人侧重差异
+- 最重要的待解决问题
+
+注意：只基于提供的论文内容评估，不编造图表细节、引用或论文中不存在的内容
 ```
 
 ---
 
-## 5. 论文翻译
+## 5. 审稿意见逐点回复
+
+### 确定修改策略（triage优先）
+```
+这是期刊的审稿意见，请先帮我分类每条意见：
+- 必须做实验响应的（Major concern）
+- 可以通过解释/澄清解决的（Minor / Clarification）
+- 审稿人的主观意见，可以礼貌不同意的
+
+然后给出回复策略总结：哪里需要补实验，哪里只需要解释，哪里可以措辞分歧。
+不要编造实验结果或凭空添加数据。
+```
+
+### 起草逐点回复信（point-by-point）
+```
+你是顶刊论文作者，请帮我起草逐点回复信。
+
+要求：
+1. 对每条审稿意见（R1.1, R2.1等）逐一回复
+2. 格式：审稿人原文 → 作者回复 → 论文对应修改位置（或标注AUTHOR_INPUT_NEEDED）
+3. 语气：尊重但坚定，措辞学术化
+4. 不编造实验结果；如需作者补充信息，明确标注[作者需提供：XXX]
+5. 生成完整word，包含所有回复和修改位置映射
+```
+
+### 大修回复（含修改位置映射）
+```
+这是大修审稿意见，请帮我：
+1. 提取并编号所有编辑意见（E.1等）和审稿人意见（R1.1, R2.1等）
+2. 对每条意见起草回复，说明：我们如何响应 + 在论文哪个位置做了什么修改
+3. 凡是需要我来补充决定或数据的地方，标注[作者需提供：XXX]
+4. 生成最终的回复信word，附修改跟踪表
+
+注意：我是[中文/英文]作者，请对应输出语言
+```
+
+### 难以响应的意见处理
+```
+审稿人提出的这条意见很难响应：[意见内容]
+
+请帮我分析：
+1. 这是技术缺陷还是主观偏好？
+2. 是否必须做实验？还是可以通过澄清+补充讨论解决？
+3. 如果在不补实验的情况下，最佳的回复措辞是什么？
+4. 有没有论文中已有的证据可以用来支持我们的立场？
+
+给出具体的回复语句建议
+```
+
+### 审稿回复QA检查
+```
+这是我起草的审稿回复信，请检查：
+1. 每条审稿意见是否都有回复（有没有遗漏）？
+2. 每个声称的修改是否都映射到了具体的论文位置？
+3. 语气是否尊重且学术化？
+4. 是否有编造数据或声称了不存在的修改？
+5. 是否有需要作者决定但还未填入的placeholder？
+生成修订后的完整回复信word
+```
+
+---
+
+## 6. 论文翻译
 
 ### 全文中译英（学术化，Nature标准）
 ```
@@ -211,7 +367,7 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 
 ---
 
-## 6. 参考文献管理
+## 7. 参考文献管理
 
 ### 参考文献顺序编排
 ```
@@ -240,7 +396,7 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 
 ---
 
-## 7. 代码相关
+## 8. 代码相关
 
 ### 报错修复（含调试验证）
 ```
@@ -259,7 +415,20 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 
 ---
 
-## 8. 绘图与可视化提示词
+## 9. 绘图与可视化提示词
+
+### 图表合同（绘图前必做）
+```
+在绘制图表前，先回答以下问题：
+1. 这个图表要证明的核心结论是什么（一句话）？
+2. 数据如何支持这个结论（证据逻辑）？
+3. 最适合的图表类型是什么（线图/柱图/热图/散点图）？
+4. Hero panel是哪一个（最能展示核心结论的子图）？
+5. 投稿期刊是什么？需要什么分辨率和格式（PNG@300dpi/PDF/TIFF）？
+6. 调色板约束（最多3-4种颜色，黑白可读）？
+
+确认以上信息后再开始绘图。
+```
 
 ### 方法流程图提示词（nano banana）
 ```
@@ -296,13 +465,31 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 结合我的产品手册，智能体，就是一个[设备描述]的元素图，给我用于nano banana绘图的AI提示词就行，生成.txt文件在桌面上，元素图是中文的
 ```
 
+### 图表质量审计（出版前）
+```
+你是Nature图表编辑，审查这张图的出版质量：
+1. 分辨率是否足够（≥300 DPI for raster）？
+2. 字体大小是否在投影/印刷时可读（≥8pt）？
+3. 颜色是否对色盲友好？黑白打印时是否可区分？
+4. 误差棒/显著性标记/n值是否完整？
+5. 图注是否完整（包含所有panel说明、统计方法、样本量）？
+6. 子图标签（A、B、C）是否清晰一致？
+给出具体修改建议。
+```
+
 ---
 
-## 9. PPT 制作与答辩
+## 10. PPT 制作与答辩
 
-### 从论文生成转博答辩PPT
+### 从论文生成转博答辩PPT（论文类型驱动）
 ```
-这些是我的研究材料，根据以上材料完善和修改我的转博答辩PPT，要求具备博士深入提出科学问题、聚焦科学问题并解决科学问题的学术能力，生成修改后的完整PPT，不要生成无关内容
+这些是我的研究材料，根据以上材料完善和修改我的转博答辩PPT。
+
+首先识别我的研究类型（discovery/methods/resource），确定叙事弧，然后：
+- 要求具备博士深入提出科学问题、聚焦科学问题并解决科学问题的学术能力
+- 每个slide必须推进论证，不是简单罗列
+- 所有slide内容和演讲稿用中文
+- 生成修改后的完整PPT，不要生成无关内容
 ```
 
 ### 修改PPT某一页
@@ -320,9 +507,189 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 [描述修改内容和方向]，重新生成完整PPT。加上当前研究现状：有没有人用了同样的方法，把文章标题、方法简要描述、与本工作的区别、发表期刊/会议、发表时间、期刊级别一起列进去
 ```
 
+### PPT Slide质量检查
+```
+检查这个PPT的质量：
+1. 是否有broken figure references或missing images？
+2. 是否有text overflow（slide上文字过多）？
+3. 每个slide是否只传递一个核心信息？
+4. 论证flow是否清晰（背景→问题→方法→结果→意义）？
+5. 术语是否在整个deck中一致？
+6. 图表质量是否足以投影展示？
+给出修改建议，生成修改后的完整PPT
+```
+
 ---
 
-## 10. 文件与桌面管理
+## 11. 中英文对照阅读
+
+### 全文中英文并排阅读（含图表定位）
+```
+请帮我阅读这篇论文，生成完整的中英文并排Markdown阅读文档：
+
+要求：
+1. 每个章节：英文原文 + 中文翻译并排
+2. 所有图表和表格在对应文字位置就近呈现（不要只放末尾）
+3. 建立术语表（科学术语保留英文，括注中文）
+4. 不要降级为摘要或概述——我需要完整的内容
+5. 如果图表提取有问题，在注释中说明，但不要省略内容
+6. 保留所有参考文献编号
+
+来源：[PDF路径 / DOI / arXiv链接 / 粘贴文本]
+```
+
+### 论文精读（提取核心论证）
+```
+详细精读这篇论文：
+1. 科学问题是什么？
+2. 作者的核心主张是什么（一句话）？
+3. 关键证据是什么（关键图表、数据）？
+4. 方法的核心创新点是什么？
+5. 实验验证了什么，有什么局限？
+6. 这个工作对[我的研究方向]有什么参考价值？
+
+用中文输出，重要术语保留英文
+```
+
+### 快速论文摘要（组会/汇报用）
+```
+请快速总结这篇论文，用于组会汇报：
+- 一句话：这篇文章做了什么
+- 背景与动机（2-3点）
+- 方法核心创新（2-3点）
+- 最重要的实验结果（1-2个关键数字或图）
+- 局限性与未来方向
+- 与我研究的相关性
+
+控制在500字以内，中文输出
+```
+
+### 术语对照表生成
+```
+阅读这篇论文，生成论文中所有专业术语的中英对照表：
+- 模型/方法名称
+- 数据集名称
+- 指标名称
+- 领域专有名词
+- 缩写展开
+
+格式：英文术语 | 中文译法 | 首次出现位置
+```
+
+---
+
+## 12. 数据可用性声明（FAIR合规）
+
+### 起草数据可用性声明
+```
+请帮我起草这篇论文的数据可用性声明（Data Availability Statement）。
+
+我的数据情况：
+- 新生成的数据：[描述数据类型和存放位置/计划存放位置]
+- 重复使用的公开数据：[数据库名称和accession number]
+- 代码/脚本：[GitHub链接或计划]
+- 是否有受限数据（临床/隐私）：[是/否，原因]
+
+要求：
+1. 符合[Nature/IEEE/目标期刊]的数据共享要求
+2. 每个数据集明确映射到具体repository和identifier
+3. 不编造DOI或accession number，未确定的用[AUTHOR_INPUT_NEEDED]标注
+4. 遵循FAIR原则（可发现、可访问、可互操作、可复用）
+5. 生成英文版（如需中文说明也一并提供）
+```
+
+### FAIR元数据审计
+```
+对这篇论文的数据共享方案进行FAIR审计：
+
+Findable（可发现）：
+- 是否使用了持久标识符（DOI/accession number）？
+- repository中是否有清晰的元数据和描述？
+
+Accessible（可访问）：
+- 是否提供了公开URL或accession number？
+- 如果是受限访问，访问流程是否清晰？
+- 许可证是否明确说明？
+
+Interoperable（可互操作）：
+- 是否使用了标准化格式（FASTQ/CSV/etc）？
+- 是否包含文件格式说明和README？
+
+Reusable（可复用）：
+- 许可证是否允许再用？
+- 数据来源和版本控制是否记录？
+
+列出每个数据集的FAIR合规状态，以及需要改进的地方
+```
+
+### repository选择建议
+```
+我的论文数据类型是[基因组测序/单细胞/图像/化学/材料/通用/代码]，
+目标期刊是[期刊名]，
+请推荐合适的数据repository，并说明：
+1. 推荐的repository名称和网址
+2. 如何获取accession number或DOI
+3. 需要准备哪些metadata
+4. 数据许可证建议
+```
+
+---
+
+## 13. 学术文献检索
+
+### 多源文献搜索策略
+```
+我需要检索关于[研究主题]的文献，请帮我：
+1. 构建搜索关键词（Boolean operators + 同义词扩展）
+2. 确定应该在哪些数据库检索（PubMed/arXiv/Scopus/Google Scholar，根据学科）
+3. 给出具体的搜索语句
+4. 说明如何过滤（发表年份：[年份范围]，期刊级别：一区二区/顶会）
+5. 如果结果太多，如何进一步精炼
+
+学科领域：[生物医学/计算机/工程/其他]
+```
+
+### MeSH检索策略（生物医学）
+```
+帮我构建关于[研究主题]的PubMed MeSH搜索策略：
+1. 识别核心MeSH主题词和qualifiers
+2. 构建完整Boolean查询语句（含Explode和限定符）
+3. 给出预期结果量评估
+4. 提供用于后续复用的查询字符串
+
+目标：找到[年份范围]内发表在高水平期刊上的相关文献
+```
+
+### 引用文献真实性核查
+```
+请帮我核查以下引用文献是否真实存在且与引用内容匹配：
+
+[粘贴引用列表或文章段落]
+
+检查内容：
+1. 作者、标题、年份、期刊是否一致
+2. 引用的内容描述是否与原文相符
+3. 标注不确定或需要手工确认的条目
+
+对于无法确认的条目，请明确标注[需要手工核实]
+```
+
+### 相关文献发现（给定一篇种子论文）
+```
+给定这篇论文：[标题/DOI/arXiv链接]
+
+请帮我找到：
+1. 该论文引用的最重要的5-10篇基础文献
+2. 引用该论文的重要后续工作
+3. 同期发表的相关工作（parallel work）
+4. 与该论文方法最相关的近3年新工作
+
+按照相关性排序，给出标题、作者、期刊、年份、DOI
+```
+
+---
+
+## 14. 文件与桌面管理
 
 ### 桌面整理归类
 ```
@@ -353,7 +720,10 @@ A prompt library for academic research workflows, covering the full lifecycle fr
 
 ## Common Mistakes
 
-- **提示词太短**：审稿类提示词需要明确说明"不补实验的基础上"、"生成word在桌面上"等关键约束，否则AI会自由发挥
-- **忘记指定输出格式**：每次都要说清楚生成word/latex/pdf，以及生成到哪个路径
-- **润色vs写作混用**：润色是在原文基础上改，写作是重新生成，给AI的角色定位要区分清楚
-- **latex修订要精确**：要加上"精确告诉我修改哪一行，修改前和修改后的对比"，否则找不到修改位置
+- **忘记识别论文类型**：不同类型（discovery/methods/review）叙事结构不同，先识别类型再写作
+- **审稿回复编造修改**：不要声称做了实验或修改却没有对应的论文位置，用`[作者需提供：XXX]`占位
+- **提示词太短**：审稿类需明确"不补实验的基础上"、"生成word在桌面上"等约束
+- **忘记指定输出格式**：每次说清楚生成word/latex/pdf，以及生成到哪个路径
+- **LaTeX修订不精确**：要加"精确告诉我修改哪一行，修改前后对比"，否则找不到修改位置
+- **绘图前未定图表合同**：先回答"这图证明什么"再绘图，否则容易做出与文章脱节的图
+- **翻译后未校对**：中译英后必须做"修改前标蓝，修改后标红"的对比校对
