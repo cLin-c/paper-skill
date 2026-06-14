@@ -37,6 +37,8 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 | 📋 数据可用性声明 | FAIR合规声明起草、FAIR元数据审计、repository选择建议 |
 | 🔍 学术文献检索 | 多源搜索策略、MeSH检索、引用核查、相关文献发现 |
 | 🗂️ 文件与桌面管理 | 桌面归类整理、合同分析、试卷解答生成 |
+| 🧹 去AI化写作 | 18类AI模式检测、全文扫描、摘要去AI化、投稿前快速自查 |
+| 📋 IMRAD与报告规范 | CONSORT 2025 / PRISMA 2020 / STROBE / ARRIVE 2.0 逐条合规检查 |
 
 ---
 
@@ -242,8 +244,8 @@ Several public skill libraries exist for academic writing. Here's how paper-skil
 | **Scope** | 15+ scenarios | 2 focused skills | 5-stage pipeline | de-AI writing | research + coding |
 | **Nature depth** | moderate | deepest | moderate | — | moderate |
 | **Reviewer reply** | ✅ full workflow | ✅ | ✅ | ❌ | ❌ |
-| **IMRAD / reporting guidelines** | ❌ | ❌ | ❌ | ✅ CONSORT / PRISMA | ❌ |
-| **De-AI writing** | ❌ | ❌ | partial | ✅ 18 patterns | ❌ |
+| **IMRAD / reporting guidelines** | ✅ CONSORT/PRISMA/STROBE/ARRIVE | ❌ | ❌ | ✅ CONSORT / PRISMA | ❌ |
+| **De-AI writing** | ✅ 18 patterns + full scan | ❌ | partial | ✅ 18 patterns | ❌ |
 | **PPT / defense** | ✅ | ❌ | ❌ | ❌ | ❌ |
 | **FAIR data statement** | ✅ | ✅ | ❌ | ❌ | ❌ |
 
@@ -254,6 +256,8 @@ Several public skill libraries exist for academic writing. Here's how paper-skil
 - **三平台开箱即用** — 同一份 `SKILL.md` 在 Claude Code / Codex CLI / OpenClaw 上均可直接安装
 - **审稿回复完整流程** — triage 分类 → 逐点起草 → 映射修改位置 → QA 检查，业界最完整
 - **PPT 与答辩支持** — 唯一覆盖论文转演讲稿和答辩 Slide 质量检查的技能
+- **去AI化写作** — 18类 AI 写作模式逐条检测，含全文扫描、摘要专项、投稿前30秒自查清单
+- **IMRAD + 4大报告规范** — CONSORT 2025 / PRISMA 2020 / STROBE / ARRIVE 2.0 逐条合规检查，生成检查报告
 
 **何时选其他工具：**
 
