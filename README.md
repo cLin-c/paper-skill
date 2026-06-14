@@ -10,11 +10,23 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 ## Supported Platforms
 
+### 国际平台
+
 | Platform | Version | Install Method | Skill Path |
 |----------|---------|----------------|------------|
 | **Claude Code** | Latest | [claude.ai/code](https://claude.ai/code) | `~/.claude/skills/paper-skill/` |
 | **OpenAI Codex CLI** | v0.139.0+ (Jun 2026) | `npm install -g @openai/codex` | `~/.codex/skills/paper-skill/` |
 | **OpenClaw** | v2026.6.6+ | `npm install -g openclaw@latest` | `~/.openclaw/skills/paper-skill/` |
+
+### 国产平台
+
+| 平台 | 厂商 | 安装命令 | Skill 路径 |
+|------|------|---------|-----------|
+| **Qwen Code** | 阿里 / 通义 | `npm install -g @qwen-code/qwen-code` | `~/.qwen/skills/paper-skill/` |
+| **Kimi Code CLI** | 月之暗面 | `npm install -g @moonshot-ai/kimi-code` | `~/.kimi/skills/paper-skill/` |
+| **Deep Code** | DeepSeek | `npm install -g deep-code` | `~/.deepseek/skills/paper-skill/` |
+| **Baidu Comate** | 百度 | `npm install -g @baidu/comate-cli` | `~/.comate/skills/paper-skill/` |
+| **通义灵码 / Qoder CN** | 阿里云 | `npm install -g @alicloud/qoder` | `~/.lingma/skills/paper-skill/` |
 
 ---
 
@@ -43,6 +55,45 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 ---
 
 ## Installation
+
+### 快速安装（所有平台通用）
+
+所有平台使用相同的 `SKILL.md` 文件格式，只需克隆到对应目录：
+
+```bash
+# 选择你的平台，运行对应命令：
+
+# Claude Code
+git clone https://github.com/cLin-c/paper-skill ~/.claude/skills/paper-skill
+
+# Qwen Code（通义）
+git clone https://github.com/cLin-c/paper-skill ~/.qwen/skills/paper-skill
+
+# Kimi Code CLI（月之暗面）
+git clone https://github.com/cLin-c/paper-skill ~/.kimi/skills/paper-skill
+
+# Deep Code（DeepSeek）
+git clone https://github.com/cLin-c/paper-skill ~/.deepseek/skills/paper-skill
+
+# Baidu Comate（文心快码）
+git clone https://github.com/cLin-c/paper-skill ~/.comate/skills/paper-skill
+
+# 通义灵码 / Qoder CN
+git clone https://github.com/cLin-c/paper-skill ~/.lingma/skills/paper-skill
+
+# OpenAI Codex CLI
+git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
+
+# OpenClaw
+git clone https://github.com/cLin-c/paper-skill ~/.openclaw/skills/paper-skill
+```
+
+> **Windows（PowerShell）**：将 `~` 替换为 `$env:USERPROFILE`，例如：
+> ```powershell
+> git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.qwen\skills\paper-skill"
+> ```
+
+---
 
 ### Claude Code
 
@@ -130,17 +181,125 @@ git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.openclaw\skil
 
 ---
 
+### 国产平台安装
+
+#### Qwen Code（阿里 / 通义）
+
+> 需要：Node.js 18+ · 阿里云 Model Studio API Key
+> 平台：macOS · Linux · Windows
+
+```bash
+npm install -g @qwen-code/qwen-code
+qwen-code auth          # 使用阿里云 API Key 认证
+
+# 安装 paper-skill
+git clone https://github.com/cLin-c/paper-skill ~/.qwen/skills/paper-skill
+```
+
+**调用：**
+```
+/paper-skill
+```
+
+---
+
+#### Kimi Code CLI（月之暗面）
+
+> 需要：Node.js 18+（2026年6月已迁移至 Node.js）· Moonshot API Key
+> 平台：macOS · Linux · Windows
+
+```bash
+npm install -g @moonshot-ai/kimi-code
+kimi-code auth          # 使用 Moonshot API Key 认证
+
+# 安装 paper-skill
+git clone https://github.com/cLin-c/paper-skill ~/.kimi/skills/paper-skill
+```
+
+**调用（斜杠命令）：**
+```
+/skill:paper-skill
+```
+
+---
+
+#### Deep Code（DeepSeek）
+
+> 需要：Node.js 18+ · DeepSeek API Key
+> 平台：macOS · Linux · Windows
+
+```bash
+npm install -g deep-code
+deep-code auth          # 使用 DeepSeek API Key 认证
+
+# 安装 paper-skill
+git clone https://github.com/cLin-c/paper-skill ~/.deepseek/skills/paper-skill
+```
+
+**调用：**
+```
+/paper-skill
+```
+
+> Deep Code 与 Claude Code、DeepSeek-TUI 共享 SKILL.md 格式，已有其他平台的技能文件可直接复用。
+
+---
+
+#### Baidu Comate（文心快码）
+
+> 需要：Node.js 18+ · 百度云 API Key
+> 平台：macOS · Linux · Windows
+
+```bash
+npm install -g @baidu/comate-cli
+comate auth             # 使用百度云 API Key 认证
+
+# 安装 paper-skill
+git clone https://github.com/cLin-c/paper-skill ~/.comate/skills/paper-skill
+```
+
+**调用：**
+```
+/paper-skill
+```
+
+> Comate 内置 `/find-skills` 命令，可从技能中心自动搜索并安装匹配技能。
+
+---
+
+#### 通义灵码 / Qoder CN（阿里云）
+
+> 注：通义灵码于 2026年5月20日 正式更名为 **Qoder CN**
+> 需要：Node.js 18+ · 阿里云 API Key
+> 平台：macOS · Linux · Windows
+
+```bash
+npm install -g @alicloud/qoder
+qoder auth              # 使用阿里云 API Key 认证
+
+# 安装 paper-skill
+git clone https://github.com/cLin-c/paper-skill ~/.lingma/skills/paper-skill
+```
+
+**调用：**
+```
+/paper-skill
+```
+
+---
+
 ## Platform Comparison
 
-| Feature | Claude Code | Codex CLI | OpenClaw |
-|---------|------------|-----------|----------|
-| Skill format | `SKILL.md` | `SKILL.md` | `SKILL.md` |
-| Skill path | `~/.claude/skills/` | `~/.codex/skills/` | `~/.openclaw/skills/` |
-| Invoke command | `/paper-skill` | `$paper-skill` | `/paper-skill` |
-| Node.js required | No | 18+ | 24 rec / 22.19+ |
-| Windows native | ✅ | ✅ | ✅ |
-| Linux | ✅ | ✅ | ✅ |
-| macOS | ✅ | ✅ | ✅ |
+| Feature | Claude Code | Qwen Code | Kimi Code | Deep Code | Comate | Lingma/Qoder | Codex CLI | OpenClaw |
+|---------|------------|-----------|-----------|-----------|--------|--------------|-----------|----------|
+| Skill format | `SKILL.md` | `SKILL.md` | `SKILL.md` | `SKILL.md` | `SKILL.md` | `SKILL.md` | `SKILL.md` | `SKILL.md` |
+| Skill path | `~/.claude/` | `~/.qwen/` | `~/.kimi/` | `~/.deepseek/` | `~/.comate/` | `~/.lingma/` | `~/.codex/` | `~/.openclaw/` |
+| Invoke | `/paper-skill` | `/paper-skill` | `/skill:paper-skill` | `/paper-skill` | `/paper-skill` | `/paper-skill` | `$paper-skill` | `/paper-skill` |
+| 国产平台 | ❌ | ✅ 阿里 | ✅ 月之暗面 | ✅ DeepSeek | ✅ 百度 | ✅ 阿里云 | ❌ | ❌ |
+| Node.js | No | 18+ | 18+ | 18+ | 18+ | 18+ | 18+ | 24 rec |
+| Windows | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Linux | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| macOS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ---
 
@@ -240,8 +399,9 @@ Several public skill libraries exist for academic writing. Here's how paper-skil
 | | paper-skill | [nature-skills](https://github.com/Yuan1z0825/nature-skills) | [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | [paper-writer-skill](https://github.com/kgraph57/paper-writer-skill) | [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) |
 |--|--|--|--|--|--|
 | **Chinese-friendly prompts** | ✅ bilingual | ❌ English only | ❌ English only | ❌ English only | ❌ English only |
-| **Multi-platform** | ✅ Claude / Codex / OpenClaw | ✅ Claude only | ✅ Claude only | ✅ Claude only | ✅ Claude / Codex / Kimi / OpenCode |
-| **Scope** | 15+ scenarios | 2 focused skills | 5-stage pipeline | de-AI writing | research + coding |
+| **Multi-platform** | ✅ 8 platforms (含5个国产) | ✅ Claude only | ✅ Claude only | ✅ Claude only | ✅ Claude / Codex / Kimi / OpenCode |
+| **国产平台支持** | ✅ Qwen / Kimi / DeepSeek / Comate / Lingma | ❌ | ❌ | ❌ | ✅ Kimi |
+| **Scope** | 17+ scenarios | 2 focused skills | 5-stage pipeline | de-AI writing | research + coding |
 | **Nature depth** | moderate | deepest | moderate | — | moderate |
 | **Reviewer reply** | ✅ full workflow | ✅ | ✅ | ❌ | ❌ |
 | **IMRAD / reporting guidelines** | ✅ CONSORT/PRISMA/STROBE/ARRIVE | ❌ | ❌ | ✅ CONSORT / PRISMA | ❌ |
@@ -253,7 +413,7 @@ Several public skill libraries exist for academic writing. Here's how paper-skil
 
 - **中文用户首选** — 提示词中英双语，直接用中文与 AI 对话，无需翻译
 - **最宽覆盖** — 从读文献到答辩 PPT，15+ 场景一个技能全搞定，无需切换多个工具
-- **三平台开箱即用** — 同一份 `SKILL.md` 在 Claude Code / Codex CLI / OpenClaw 上均可直接安装
+- **8平台开箱即用** — 同一份 `SKILL.md` 在 Claude Code / Qwen Code / Kimi Code / Deep Code / Comate / 通义灵码 / Codex CLI / OpenClaw 上均可直接安装，**5个国产平台全覆盖**
 - **审稿回复完整流程** — triage 分类 → 逐点起草 → 映射修改位置 → QA 检查，业界最完整
 - **PPT 与答辩支持** — 唯一覆盖论文转演讲稿和答辩 Slide 质量检查的技能
 - **去AI化写作** — 18类 AI 写作模式逐条检测，含全文扫描、摘要专项、投稿前30秒自查清单
