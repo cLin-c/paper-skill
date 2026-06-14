@@ -1,10 +1,20 @@
 # paper-skill
 
-> 🎓 A Claude Code skill — AI prompt library for the full academic paper workflow.
+> 🎓 A multi-platform AI coding assistant skill — prompt library for the full academic paper workflow.
 
 Covers every stage from literature reading to journal submission, with prompts optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 
 Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/nature-skills).
+
+---
+
+## Supported Platforms
+
+| Platform | Version | Install Method | Skill Path |
+|----------|---------|----------------|------------|
+| **Claude Code** | Latest | [claude.ai/code](https://claude.ai/code) | `~/.claude/skills/paper-skill/` |
+| **OpenAI Codex CLI** | v0.139.0+ (Jun 2026) | `npm install -g @openai/codex` | `~/.codex/skills/paper-skill/` |
+| **OpenClaw** | v2026.6.6+ | `npm install -g openclaw@latest` | `~/.openclaw/skills/paper-skill/` |
 
 ---
 
@@ -32,7 +42,10 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 ## Installation
 
-### Option 1: Clone into your Claude skills directory
+### Claude Code
+
+> Requires: [Claude Code](https://claude.ai/code) (latest)
+> Platform: macOS · Linux · Windows
 
 ```bash
 # macOS / Linux
@@ -42,25 +55,96 @@ git clone https://github.com/cLin-c/paper-skill ~/.claude/skills/paper-skill
 git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.claude\skills\paper-skill"
 ```
 
-### Option 2: Manual
+**Manual:** Download `SKILL.md` and place it at `~/.claude/skills/paper-skill/SKILL.md`
 
-Download `SKILL.md` and place it at:
+**Invoke:**
 ```
-~/.claude/skills/paper-skill/SKILL.md
+/paper-skill
 ```
+
+---
+
+### OpenAI Codex CLI
+
+> Requires: Node.js 18+ · Codex CLI v0.139.0+ (June 2026)
+> Platform: macOS · Linux · Windows (PowerShell / WSL2)
+
+**Step 1 — Install Codex CLI:**
+```bash
+npm install -g @openai/codex
+codex --version   # should show 0.139.0 or later
+codex auth        # authenticate with your OpenAI API key
+```
+
+**Step 2 — Install paper-skill:**
+```bash
+# macOS / Linux
+git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
+
+# Windows (PowerShell)
+git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.codex\skills\paper-skill"
+```
+
+**Manual:** Download `SKILL.md` and place it at `~/.codex/skills/paper-skill/SKILL.md`
+
+**Invoke (inside Codex CLI):**
+```
+/skills              # list all available skills
+$paper-skill         # invoke directly in prompt
+```
+
+> **Windows note:** Native PowerShell with npm (Node.js 22+) is recommended. Use WSL2 for a full Linux environment.
+
+---
+
+### OpenClaw
+
+> Requires: Node.js 24 (recommended) or Node.js 22.19+ · OpenClaw v2026.6.6+
+> Platform: macOS · Linux · Windows · Any OS (runs as a daemon gateway)
+
+**Step 1 — Install OpenClaw:**
+```bash
+npm install -g openclaw@latest
+openclaw onboard --install-daemon   # set up the local gateway
+```
+
+**Step 2 — Install paper-skill:**
+```bash
+# macOS / Linux
+git clone https://github.com/cLin-c/paper-skill ~/.openclaw/skills/paper-skill
+
+# Windows (PowerShell)
+git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.openclaw\skills\paper-skill"
+```
+
+**Manual:** Download `SKILL.md` and place it at `~/.openclaw/skills/paper-skill/SKILL.md`
+
+**Invoke (via chat app or CLI):**
+```
+/paper-skill
+```
+
+> **Skill priority:** OpenClaw loads skills from `~/.openclaw/skills/` (managed), `~/.agents/skills/` (personal), and workspace-level `skills/` directories — in ascending priority.
+
+---
+
+## Platform Comparison
+
+| Feature | Claude Code | Codex CLI | OpenClaw |
+|---------|------------|-----------|----------|
+| Skill format | `SKILL.md` | `SKILL.md` | `SKILL.md` |
+| Skill path | `~/.claude/skills/` | `~/.codex/skills/` | `~/.openclaw/skills/` |
+| Invoke command | `/paper-skill` | `$paper-skill` | `/paper-skill` |
+| Node.js required | No | 18+ | 24 rec / 22.19+ |
+| Windows native | ✅ | ✅ | ✅ |
+| Linux | ✅ | ✅ | ✅ |
+| macOS | ✅ | ✅ | ✅ |
 
 ---
 
 ## Usage
 
-Once installed, Claude Code automatically discovers the skill.
-
-**Invoke by name:**
-```
-/paper-skill
-```
-
-**Auto-triggered** when you ask about:
+Once installed, the skill is auto-discovered when you ask about:
 - Writing / polishing / reviewing a paper
 - SCI / IEEE / Nature / IJCAI / TRO submissions
 - Translating a paper, replying to reviewers
@@ -180,7 +264,7 @@ Compared to generic prompts, paper-skill adds:
 
 ```
 paper-skill/
-├── SKILL.md      # Claude Code skill definition (prompt library)
+├── SKILL.md      # Skill definition (works on Claude Code, Codex CLI, OpenClaw)
 └── README.md     # This file
 ```
 
