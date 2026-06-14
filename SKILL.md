@@ -1,6 +1,6 @@
 ---
 name: paper-skill
-description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, LaTeX editing, data availability statements, reviewer response letters, and bilingual paper reading.
+description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, LaTeX editing, data availability statements, reviewer response letters, bilingual paper reading, de-AI writing detection, and IMRAD/CONSORT/PRISMA/STROBE reporting guidelines.
 ---
 
 # paper-skill
@@ -30,6 +30,8 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | Data availability statement | [数据可用性声明](#12-数据可用性声明fair合规) |
 | Literature search strategy | [学术文献检索](#13-学术文献检索) |
 | Organize files / desktop | [文件与桌面管理](#14-文件与桌面管理) |
+| Remove AI writing patterns | [去AI化写作](#15-去ai化写作检测与修复) |
+| IMRAD / reporting guidelines | [IMRAD与报告规范](#16-imrad结构与报告规范) |
 
 ---
 
@@ -804,6 +806,284 @@ Reusable（可复用）：
 ### 期末作业生成（含图表和参考文献）
 ```
 期末作业的主题是[主题]，字数要求在1500字以上，帮我生成这个，包含图片和表格，包括真实有效的参考文献，要有图片
+```
+
+---
+
+## 15. 去AI化写作检测与修复
+
+AI生成的学术文本有18类可识别模式，投稿前必须清除，否则容易被编辑或审稿人识别为AI写作。
+
+### AI写作18类高频模式
+
+| # | 模式名称 | 典型词/句 | 修复方向 |
+|---|---------|---------|---------|
+| 1 | **显著性通胀** | groundbreaking, revolutionary, unprecedented, transformative | 改用客观数据描述，删去形容词 |
+| 2 | **AI高频词** | delve, intricate, nuanced, robust, pivotal, leverage, commendable, multifaceted | 换成具体名词或动词 |
+| 3 | **填充过渡词** | Furthermore, Moreover, Additionally, It is worth noting that, Notably | 直接进入下一个论点 |
+| 4 | **模糊量化** | several, numerous, a variety of, many, various | 改用具体数字或范围 |
+| 5 | **过度规避** | may potentially, could possibly, might perhaps, it is possible that | 保留一个模态词，删去叠加 |
+| 6 | **对称式列举** | Firstly…Secondly…Thirdly…Finally | 改为段落逻辑而非枚举 |
+| 7 | **空洞结语** | In conclusion, In summary, To summarize, Overall, Taken together | 直接给出核心结论，删去引导句 |
+| 8 | **元评论** | This section will discuss…, In this paper, we present… | 直接陈述内容，不要预告 |
+| 9 | **反复前指** | As mentioned earlier, As discussed above, As previously stated | 重组段落结构以消除重复引用 |
+| 10 | **领域套话开头** | In the realm of, In the field of, In the context of, With the advent of | 以具体问题或数据开头 |
+| 11 | **全知免责声明** | To the best of our knowledge, As far as we are aware | 只在首次提及新颖性时使用一次 |
+| 12 | **情感性强调** | very important, quite significant, rather crucial, extremely valuable | 删去副词，改用evidence支撑 |
+| 13 | **修辞问句** | But what does this mean for…? How can we address this challenge? | 删去，直接给答案 |
+| 14 | **被动语态滥用** | It was observed that, It has been shown that, It can be seen that | 改主动句，明确施动者 |
+| 15 | **平行结构堆砌** | X not only…but also…and furthermore… | 拆分为两个独立句子 |
+| 16 | **假精确** | approximately 98.7% of cases, nearly all researchers | 给出真实数据来源或删去 |
+| 17 | **显而易见陈述** | It is clear that, Obviously, Evidently, Needless to say | 直接给事实，不要预判读者判断 |
+| 18 | **句式单一化** | 每句都是"Subject + verb + object"的简单结构 | 混合使用从句、分词短语、倒装 |
+
+---
+
+### 全文去AI化扫描（一键检测18类模式）
+```
+你是学术写作编辑，对这篇论文/段落进行去AI化检测：
+
+请扫描以下18类AI写作模式并逐一标注：
+1. 显著性通胀词（groundbreaking/revolutionary/unprecedented）
+2. AI高频词（delve/intricate/nuanced/robust/pivotal/leverage/commendable/multifaceted）
+3. 填充过渡词（Furthermore/Moreover/Notably/It is worth noting）
+4. 模糊量化（several/numerous/a variety of）
+5. 过度规避（may potentially/could possibly/might perhaps）
+6. 对称式列举（Firstly...Secondly...Thirdly）
+7. 空洞结语（In conclusion/In summary/To summarize）
+8. 元评论（This section will discuss/In this paper we present）
+9. 反复前指（As mentioned earlier/As discussed above）
+10. 领域套话开头（In the realm of/In the field of/With the advent of）
+11. 全知免责声明（To the best of our knowledge）滥用
+12. 情感性强调（very important/quite significant/rather crucial）
+13. 修辞问句
+14. 被动语态滥用（It was observed that/It has been shown that）
+15. 平行结构堆砌
+16. 假精确（无来源的近似数字）
+17. 显而易见陈述（It is clear that/Obviously/Evidently）
+18. 句式单一化
+
+输出格式：
+- 每条模式：原句 → 修改建议 → 修改后版本
+- 标注严重程度（高/中/低）
+- 最后给出整体AI痕迹风险评分（0-10）
+生成完整检测报告word
+```
+
+### 指定模式精准清除
+```
+对这段文字，精准清除以下AI写作模式：[从上表选择1-3个模式编号]
+
+要求：
+1. 找出所有该模式的实例
+2. 给出每处的修改建议和替换句
+3. 不改变原文的科学意思和数据
+4. 修改前标蓝，修改后标红
+5. 生成修改后的完整段落
+```
+
+### 语言自然度提升（使人类化）
+```
+这段文字AI痕迹明显，请在不改变科学内容的前提下使其更自然：
+
+要求：
+1. 删除所有填充过渡词和套话开头
+2. 将平行列举改为有层次的论证结构
+3. 被动句改主动，明确施动者（作者/数据/模型）
+4. 删除情感性副词，改用数据/证据支撑
+5. 混合句式长度（20-30词的长句 + 10词内的短句）
+6. 保留所有专业术语、数据、引用标号不变
+
+生成修改后的段落，并标注每处改动原因
+```
+
+### 摘要去AI化（高风险区域）
+```
+论文摘要是AI检测重点区域，对这个摘要进行去AI化重写：
+
+禁止使用：groundbreaking, revolutionary, unprecedented, delve, intricate, robust, pivotal, leverage, Furthermore, Moreover, It is worth noting, In conclusion, In this paper we propose, To the best of our knowledge（只允许出现一次）
+
+要求：
+1. 第一句直接给出研究问题或核心发现，不要从背景开始
+2. 方法：具体描述做了什么，不用"we propose a novel framework"
+3. 结果：给出关键数字和对比基线
+4. 意义：一句话，具体到哪类读者/应用会受益
+5. 控制在250词以内
+生成修改后的摘要
+```
+
+### 投稿前AI痕迹快速自查清单
+```
+投稿前30秒自查，对这篇论文快速检查：
+1. 摘要第一句是否以"In recent years"或"With the rapid development of"开头？（如是，改掉）
+2. 全文是否有"delve into"？（删去）
+3. 引言是否有3个以上"Furthermore/Moreover/Additionally"段首？（精简）
+4. 结论是否以"In conclusion/In summary"开头？（删去，直接陈述）
+5. 全文是否有"It is worth noting that"？（删去）
+6. 是否有连续3句以上"It was found that/It was observed that"？（改主动）
+7. 是否有"groundbreaking/revolutionary/unprecedented"？（删去）
+
+逐条检查并给出修改，生成快速修改报告
+```
+
+---
+
+## 16. IMRAD结构与报告规范
+
+IMRAD是实验性研究论文的标准结构（Introduction, Methods, Results, And Discussion）。临床/观察性研究额外需要遵循报告规范（CONSORT/PRISMA/STROBE等）。
+
+### 主要报告规范速查
+
+| 规范 | 适用类型 | 核心要求 | 官方清单 |
+|------|---------|---------|---------|
+| **CONSORT 2025** | 随机对照试验（RCT） | 25条目，含分配隐藏、盲法、CONSORT流程图 | consort-statement.org |
+| **PRISMA 2020** | 系统综述/Meta分析 | 27条目，含检索策略、PRISMA流程图、偏倚评估 | prisma-statement.org |
+| **STROBE** | 观察性研究（队列/病例对照/横断面） | 22条目，含暴露/结局定义、失访处理 | strobe-statement.org |
+| **ARRIVE 2.0** | 动物实验 | 21条目，含样本量计算、随机化、盲法 | arriveguidelines.org |
+| **SPIRIT** | 临床试验方案 | 33条目，注册前使用 | spirit-statement.org |
+| **CARE** | 病例报告 | 13条目，含时间轴、患者视角 | care-statement.org |
+| **IMRAD** | 实验性研究（通用） | Introduction/Methods/Results/Discussion四段结构 | — |
+
+---
+
+### IMRAD结构写作指导
+```
+根据IMRAD结构，对这篇[实验性/方法类]论文进行结构诊断：
+
+Introduction（引言）应包含：
+- 研究背景与知识gap（漏斗式从宽到窄）
+- 现有方法的局限性（逐条列出）
+- 本文目的和核心贡献（明确的1-2句）
+
+Methods（方法）应包含：
+- 研究设计/实验设置（完整可重复）
+- 数据来源和预处理
+- 模型/算法描述（含超参数）
+- 评价指标定义
+
+Results（结果）应包含：
+- 主要结果（先陈述，后数据）
+- 对比基线和消融实验
+- 图表所有panel的文字描述
+
+Discussion（讨论）应包含：
+- 主要发现的解释（与假设对比）
+- 与现有文献的关联
+- 局限性（诚实列举）
+- 未来方向
+
+请对照以上标准逐节检查，给出具体缺失和改进建议
+```
+
+### CONSORT 2025 合规检查（RCT）
+```
+你是CONSORT 2025专家，对这篇随机对照试验（RCT）论文进行合规检查：
+
+必须核查的25条目（重点检查以下高风险项）：
+1a. 标题是否包含"randomised"关键词？
+4a. 合格标准（纳入/排除）是否明确定义？
+6a. 主要/次要结局指标是否在方法中预先说明？
+7a. 样本量如何计算（含依据和参数）？
+8a. 随机序列如何生成（方法和类型）？
+9. 分配隐藏机制是否描述？（非随机化本身，而是隐藏机制）
+10. 谁执行随机化？
+11a. 是否说明盲法（参与者/执行者/评估者）？如无盲法，理由？
+13a. 是否附CONSORT流程图（筛查→随机→分析人数）？
+16. 每组分析人数（分母）是否与随机化人数一致？
+17a. 主要结局是否报告效应量+95% CI？
+22. 是否登记（临床试验注册号和注册时间）？
+
+逐条标注：✅ 合规 / ⚠️ 部分合规（具体说明） / ❌ 缺失（补充建议）
+生成CONSORT合规报告word
+```
+
+### PRISMA 2020 合规检查（系统综述/Meta分析）
+```
+你是PRISMA 2020专家，对这篇系统综述/Meta分析进行合规检查：
+
+重点核查条目：
+3. 是否提供完整检索策略（至少一个数据库的全文）？
+6. 是否说明排重方法？
+7. 是否描述文献筛选流程（初筛/全文审阅人数及分歧处理）？
+8. 是否有PRISMA 2020流程图（4层：识别→筛查→合格→纳入）？
+9. 是否记录排除原因（全文排除阶段）？
+13a. 主要Meta分析是否报告各研究效应量+95%CI+异质性I²？
+13b. 是否附森林图（Forest plot）？
+15. 是否进行偏倚风险评估（说明使用的工具）？
+16. 是否进行发表偏倚评估（漏斗图或Egger检验）？
+17. 是否进行敏感性分析？
+21. 是否注册（PROSPERO或类似平台，注明注册号）？
+
+逐条标注：✅ / ⚠️ / ❌，并给出缺失内容的补充模板
+生成PRISMA合规报告word
+```
+
+### STROBE 合规检查（观察性研究）
+```
+你是STROBE专家，对这篇[队列研究/病例对照研究/横断面研究]进行合规检查：
+
+重点核查条目：
+1. 标题或摘要是否标明研究设计类型？
+4. 研究设置（地点、时间、背景）是否清晰？
+6. 暴露变量（队列/横断面）或病例/对照定义（病例对照）是否明确？
+7. 结局指标和暴露的测量方法是否描述？
+9. 偏倚来源（选择偏倚、信息偏倚、混杂）是否讨论？
+12a. 连续变量是否报告均数±SD或中位数(IQR)？
+12b. 是否报告缺失数据的处理方法？
+12e. 队列研究：失访原因和人数是否报告？
+16. 混杂因素调整策略（多变量模型变量选择依据）是否说明？
+
+逐条标注：✅ / ⚠️ / ❌，给出补充建议
+生成STROBE合规报告word
+```
+
+### ARRIVE 2.0 合规检查（动物实验）
+```
+你是ARRIVE 2.0专家，对这篇动物实验论文进行合规检查：
+
+必要条目（Essential 10）重点核查：
+1. 是否说明动物实验伦理批准（机构+批准号）？
+2. 研究设计是否随机化（如何分组，是否盲法）？
+3. 样本量如何确定（幂分析或文献依据）？
+4. 是否报告排除动物数量和原因？
+5. 所有结局指标是否在引言/方法中预先说明？
+6. 统计方法是否完整（含使用的软件和版本）？
+7. 实验动物的所有特征是否描述（品系/性别/年龄/体重/健康状态）？
+8. 实验环境（饲养条件、光照周期）是否报告？
+9. 每组实际分析动物数是否明确（分母一致性）？
+10. 是否提供每只动物的原始数据或汇总统计（均数±SEM/SD）？
+
+逐条标注：✅ / ⚠️ / ❌，给出缺失内容的补充建议
+生成ARRIVE合规报告word
+```
+
+### 一键识别适用报告规范
+```
+根据这篇论文的研究设计，帮我确定应该使用哪个报告规范：
+
+请分析：
+1. 研究类型是什么（RCT/观察性/Meta分析/动物实验/病例报告/方法类）？
+2. 适用的报告规范是什么（CONSORT/STROBE/PRISMA/ARRIVE/CARE/IMRAD）？
+3. 目标期刊[期刊名]是否强制要求提交规范对照表？
+4. 需要额外附上哪些材料（CONSORT流程图/PRISMA流程图/注册号）？
+
+给出明确的规范选择建议和投稿时需要准备的checklist材料清单
+```
+
+### 方法部分可重复性审查
+```
+你是实验可重复性审查员，对这篇论文的方法部分进行审查：
+
+检查以下可重复性要素：
+1. 所有试剂/材料是否有厂商、货号、批号？
+2. 所有仪器是否有型号、参数设置？
+3. 所有软件是否有版本号和参数？
+4. 统计方法：使用的检验名称、显著性阈值（α）、多重比较校正方法？
+5. 样本量：每组n是多少？如有排除，理由和数量？
+6. 时间点/剂量：是否精确描述？
+7. 代码/数据：是否提供可访问的链接或accession number？
+
+逐条标注，给出具体补充内容，生成可重复性审查报告word
 ```
 
 ---
