@@ -61,44 +61,25 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 ## Installation
 
-### 快速安装（所有平台通用）
+### 一键安装（推荐）
 
-所有平台使用相同的 `SKILL.md` 文件格式，只需克隆到对应目录：
+**自动部署到你机器上所有已支持的平台，已安装的会自动更新。**
 
+**macOS / Linux：**
 ```bash
-# 选择你的平台，运行对应命令：
-
-# Claude Code
-git clone https://github.com/cLin-c/paper-skill ~/.claude/skills/paper-skill
-
-# Qwen Code（通义）
-git clone https://github.com/cLin-c/paper-skill ~/.qwen/skills/paper-skill
-
-# Kimi Code CLI（月之暗面）
-git clone https://github.com/cLin-c/paper-skill ~/.kimi/skills/paper-skill
-
-# Deep Code（DeepSeek）
-git clone https://github.com/cLin-c/paper-skill ~/.deepseek/skills/paper-skill
-
-# Baidu Comate（文心快码）
-git clone https://github.com/cLin-c/paper-skill ~/.comate/skills/paper-skill
-
-# 通义灵码 / Qoder CN
-git clone https://github.com/cLin-c/paper-skill ~/.lingma/skills/paper-skill
-
-# OpenAI Codex CLI
-git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
-
-# OpenClaw
-git clone https://github.com/cLin-c/paper-skill ~/.openclaw/skills/paper-skill
+curl -fsSL https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.sh | bash
 ```
 
-> **Windows（PowerShell）**：将 `~` 替换为 `$env:USERPROFILE`，例如：
-> ```powershell
-> git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.qwen\skills\paper-skill"
-> ```
+**Windows（PowerShell）：**
+```powershell
+irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
+```
+
+运行后会同时安装到所有平台（Claude Code / Qwen Code / Kimi Code / Deep Code / Comate / 通义灵码 / Codex CLI / OpenClaw），已有安装自动 `git pull` 更新，未安装的平台会跳过但不报错。
 
 ---
+
+### 手动安装（按平台）
 
 ### Claude Code
 
@@ -469,6 +450,8 @@ paper-skill/
 ├── citation-integrity.md  # Companion — 引用诚信、防幻觉、Trust-Chain溯源
 ├── journal-strategy.md    # Companion — 期刊优先决策、FINER评分、风格校准
 ├── quality-gates.md       # Companion — 7维度35分门控、R&R矩阵、Devil's Advocate
+├── install.sh             # 一键安装脚本（macOS / Linux）
+├── install.ps1            # 一键安装脚本（Windows PowerShell）
 └── README.md              # This file
 ```
 
