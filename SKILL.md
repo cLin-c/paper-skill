@@ -1,6 +1,6 @@
 ---
 name: paper-skill
-description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, LaTeX editing, data availability statements, reviewer response letters, bilingual paper reading, de-AI writing detection, and IMRAD/CONSORT/PRISMA/STROBE reporting guidelines.
+description: Use when working on academic papers - writing, polishing, reviewing, translating, managing references, creating figures, or preparing submissions for SCI/IEEE/Nature/IJCAI/TRO journals. Also use for thesis defense PPT, paper-to-PPT conversion, LaTeX editing, data availability statements, reviewer response letters, bilingual paper reading, de-AI writing detection, IMRAD/CONSORT/PRISMA/STROBE/SPIRIT/CARE reporting guidelines, journal-first selection strategy, FINER research question scoring, citation integrity & anti-hallucination verification, 7-dimension quality gates, R&R revision traceability matrix, Devil's Advocate adversarial review, CRediT author contributions, ethics & COI declarations, and preprint workflows.
 ---
 
 # paper-skill
@@ -8,6 +8,11 @@ description: Use when working on academic papers - writing, polishing, reviewing
 A prompt library for academic research workflows, covering the full lifecycle from literature reading to journal submission.
 
 Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
+
+> **Companion modules** — 加载以下模块获得更深度的专项能力：
+> - [`citation-integrity.md`](citation-integrity.md) — AI引用幻觉检测、Trust-Chain溯源、DOI核查
+> - [`journal-strategy.md`](journal-strategy.md) — 期刊优先决策、FINER评分、期刊风格校准
+> - [`quality-gates.md`](quality-gates.md) — 7维度35分质量门控、R&R可追溯矩阵、Devil's Advocate自审
 
 ---
 
@@ -32,6 +37,11 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | Organize files / desktop | [文件与桌面管理](#14-文件与桌面管理) |
 | Remove AI writing patterns | [去AI化写作](#15-去ai化写作检测与修复) |
 | IMRAD / reporting guidelines | [IMRAD与报告规范](#16-imrad结构与报告规范) |
+| Select journal before writing | [期刊优先策略](#17-期刊优先策略) |
+| Verify citation authenticity | [引用诚信核查](#18-引用诚信核查) |
+| Quality gate self-assessment | [质量门控自评](#19-质量门控自评) |
+| CRediT author contributions | [CRediT作者贡献声明](#20-credit作者贡献声明) |
+| Ethics, COI & preprint workflow | [伦理声明与预印本](#21-伦理声明利益冲突与预印本) |
 
 ---
 
@@ -1088,12 +1098,309 @@ Discussion（讨论）应包含：
 
 ---
 
+## 17. 期刊优先策略
+
+在写论文之前，先确定目标期刊。期刊决定了你的写作深度、图表标准、字数限制和论证框架。"先写后选刊"会导致大量返工。
+
+> 详细提示词见伴侣模块：[`journal-strategy.md`](journal-strategy.md)
+
+### 快速期刊选择（写作前）
+```
+我有一篇[方法类/应用类/综述类/临床类]论文，核心亮点是：
+[一句话描述]
+
+请推荐3个最匹配的目标期刊：
+- 最高目标（冲刺）：[期刊名 + IF + 为何适合]
+- 主要目标（最匹配）：[期刊名 + IF + 为何适合]
+- 保底选择（高录用率）：[期刊名 + IF + 为何适合]
+
+对主要目标期刊，给出：写这篇论文需要特别注意哪些格式和内容要求？
+```
+
+### FINER研究问题快速评分
+```
+请对我的研究问题进行FINER快速评分（各5分，满分25）：
+
+研究问题：[明确描述，1-2句话]
+
+F — Feasible（可行性）：[1-5分] [理由]
+I — Interesting（重要性）：[1-5分] [理由]
+N — Novel（新颖性）：[1-5分] [理由]
+E — Ethical（伦理性）：[1-5分] [理由]
+R — Relevant（相关性）：[1-5分] [理由]
+
+总分：[X]/25
+
+≥22：优秀，可直接写作
+18-21：良好，建议强化低分维度
+<18：建议修改研究问题后再写作
+
+对低分维度给出具体改进建议
+```
+
+### 期刊风格校准卡
+```
+我计划投稿到[目标期刊名]，请基于该期刊的特点，生成"风格校准卡"：
+
+分析该期刊：
+1. 摘要结构（几段/几句/典型开头方式）
+2. 引言逻辑（漏斗式/问题-解决，gap在第几段）
+3. 结果表述（先数据还是先结论）
+4. 语言风格（句长/语态/是否第一人称）
+5. 引用密度（引言每段平均几条引用）
+6. 特殊要求（structured abstract/数据共享/代码开源）
+
+输出：一页风格校准卡，供写作时参考
+```
+
+---
+
+## 18. 引用诚信核查
+
+AI辅助写作存在引用幻觉风险（2026年研究发现14.6万条幻觉引用）。投稿前必须核查引用真实性。
+
+> 详细提示词见伴侣模块：[`citation-integrity.md`](citation-integrity.md)
+
+### 引用幻觉扫描（投稿前必做）
+```
+请对我这篇论文的参考文献进行幻觉风险扫描：
+
+重点检查：
+1. 期刊名称是否为真实期刊（无异常拼写/杜撰期刊名）？
+2. 作者姓名格式是否正常（无随机字符）？
+3. 年份与卷期号是否匹配？
+4. DOI格式是否合法（10.XXXX/YYYY格式）？
+5. 被引内容是否真的支持对应的论点（而非仅主题相关）？
+
+对每条可疑引用标注：
+🔴 高风险（可能幻觉）/ 🟡 中风险（需手动核实）/ 🟢 低风险
+
+[粘贴参考文献列表]
+```
+
+### Trust-Chain核心论点溯源
+```
+请为我论文的核心论点建立Trust-Chain（证据链）：
+
+论点：[你最重要的声明，1-2句话]
+支撑引用：[引用信息]
+
+三层核查：
+层1 — 引用真实性：该文献是否真实存在？
+层2 — 原文匹配：原文是否真的说了这个论点？（请引用原文段落）
+层3 — 逻辑一致：我的声明与原文结论是否一致，还是存在过度解读？
+
+结论：✅ 证据链完整 / ⚠️ 需要补强（说明差距）/ ❌ 引用不支持论点（建议替换）
+```
+
+---
+
+## 19. 质量门控自评
+
+论文投稿前，用7维度35分框架进行结构化自评。**≥28/35 方可提交**，<28 需定向改进。
+
+> 详细提示词和R&R可追溯矩阵见伴侣模块：[`quality-gates.md`](quality-gates.md)
+
+### 7维度35分快速自评
+```
+请对这篇论文进行7维度质量评估（各5分）：
+
+1. 原创性（Originality）：[1-5分] [理由]
+2. 论证质量（Argumentation）：[1-5分] [理由]
+3. 文献覆盖（Literature Coverage）：[1-5分] [理由]
+4. 方法严谨性（Methodological Rigor）：[1-5分] [理由]
+5. 语言清晰度（Clarity）：[1-5分] [理由]
+6. 学术影响（Academic Impact）：[1-5分] [理由]
+7. 技术准确性（Technical Accuracy）：[1-5分] [理由]
+
+总分：[X]/35
+
+≥28 ✅ 可投稿 / 24-27 ⚠️ 需改进 / <24 ❌ 重大修改
+
+对得分≤3的维度给出具体改进建议
+```
+
+### R&R修订可追溯矩阵（返修必用）
+```
+请生成R&R修订可追溯矩阵，核查我声称的修改是否真实存在：
+
+| 意见编号 | 审稿人意见 | 我声称的修改 | 修改位置 | 真实存在？ | 是否响应意见？|
+|---------|----------|------------|---------|----------|------------|
+| R1.1 | [意见] | [修改] | [位置] | ✅/❌ | ✅/⚠️/❌ |
+
+[粘贴审稿意见 + 回复信 + 修订稿相关段落]
+
+对❌/⚠️项给出修复方案
+```
+
+---
+
+## 20. CRediT作者贡献声明
+
+CRediT（Contributor Roles Taxonomy）是ICMJE和多数顶刊现在要求的标准化作者贡献声明格式，包含14个标准角色。
+
+### CRediT声明生成
+```
+请根据以下信息，生成符合CRediT规范的作者贡献声明：
+
+作者列表及贡献：
+- 作者A（通讯作者）：负责了[具体工作]
+- 作者B：负责了[具体工作]
+- 作者C：负责了[具体工作]
+- 作者D：负责了[具体工作]
+
+CRediT 14个标准角色（每位作者对应哪些）：
+1. Conceptualization（概念化/研究思路提出）
+2. Data curation（数据整理/管理）
+3. Formal analysis（统计/数学分析）
+4. Funding acquisition（资金获取）
+5. Investigation（实验执行/数据收集）
+6. Methodology（研究方法设计）
+7. Project administration（项目管理）
+8. Resources（资源提供，如仪器/材料/数据）
+9. Software（代码开发/编程）
+10. Supervision（监督指导）
+11. Validation（验证结果可重复性）
+12. Visualization（数据可视化/图表制作）
+13. Writing – original draft（原稿写作）
+14. Writing – review & editing（审阅与修改）
+
+输出格式（Nature/Elsevier标准）：
+"[作者A]: Conceptualization, Methodology, Writing – original draft, Supervision. [作者B]: Software, Validation, Visualization. ..."
+
+注意：每位作者至少有1个角色；通讯作者通常有Conceptualization和Supervision
+```
+
+### CRediT声明语言润色
+```
+请将以下CRediT声明润色为期刊发表标准：
+
+原始声明：
+[粘贴你的初始描述]
+
+要求：
+1. 使用CRediT标准的14个角色名称（不要自创角色名）
+2. 按作者顺序（通讯作者放最后或标注*）
+3. 每位作者的角色用逗号分隔，作者间用句号分隔
+4. 语言简洁，不添加额外解释
+
+输出标准格式的CRediT声明
+```
+
+---
+
+## 21. 伦理声明、利益冲突与预印本
+
+这三类声明在顶刊投稿中越来越重要，缺少会直接导致退稿或重大修改。
+
+### 伦理声明起草
+```
+请帮我起草这篇论文的伦理声明：
+
+研究类型：[人体研究/动物实验/数据研究/纯算法研究]
+
+我的伦理情况：
+- 伦理审批机构：[机构名称，如：XX大学医学伦理委员会]
+- 审批编号：[编号，如：XXIRBXXXXXX，或"待获取"（标注[AUTHOR_INPUT_NEEDED]）]
+- 是否涉及人体受试者：[是/否]
+- 是否获得知情同意：[是/否/豁免（说明原因）]
+- 是否涉及动物实验：[是/否]
+- 数据是否为公开匿名数据（无需伦理审批）：[是/否]
+
+输出：
+1. 中文版伦理声明（用于国内期刊）
+2. 英文版伦理声明（用于SCI/国际期刊，符合[目标期刊]要求）
+3. 若信息不完整，用[AUTHOR_INPUT_NEEDED: xxx]标注缺失项
+```
+
+### 利益冲突声明（COI）
+```
+请帮我起草这篇论文的利益冲突声明（Conflict of Interest Statement）：
+
+情况：[以下选择/描述实际情况]
+- 所有作者均无利益冲突
+- 资助方：[资金来源，如：国家自然科学基金NSFC No.XXXXXXXX]
+- 是否与商业公司有合作：[是/否]
+- 是否持有相关专利：[是/否]
+- 是否为期刊编委：[是/否]
+
+目标期刊：[期刊名]（不同期刊COI格式略有不同）
+
+输出：符合[目标期刊]要求的利益冲突声明标准格式
+```
+
+### 资金致谢（Funding/Acknowledgement）
+```
+请帮我生成资金支持致谢部分：
+
+资金来源：
+- [基金名称 + 批准号 + 资助作者姓名]
+- [例：国家自然科学基金 No.62373123（陈X）]
+- [例：National Natural Science Foundation of China (NSFC) under Grant 62373123]
+
+其他致谢（可选）：
+- 计算资源：[如：感谢XX大学HPC中心]
+- 数据来源：[如：感谢XX数据库提供公开数据集]
+- 技术支持：[如有]
+
+输出：中英文两版致谢，格式符合[目标期刊]要求
+```
+
+### 预印本工作流（arXiv/bioRxiv）
+```
+我计划在投稿前/同时将论文上传到预印本服务器。请指导：
+
+预印本平台选择：
+- arXiv：适合 CS/数学/物理/统计/电气工程 → 分类建议：[cs.XX / eess.XX / stat.XX]
+- bioRxiv：适合生命科学/生物医学
+- medRxiv：适合临床/公共卫生
+- SSRN：适合社会科学/经济/法律
+
+我的论文方向：[领域]
+
+请告诉我：
+1. 推荐上传哪个预印本平台？具体分类（category）？
+2. 目标期刊[期刊名]是否允许预印本（Sherpa/RoMEO政策）？
+3. 上传预印本时需要准备哪些内容（标题/作者/摘要/PDF/关键词）？
+4. 预印本上传后，在论文中如何引用自己的预印本？
+5. 期刊接收后，是否需要在预印本页面更新发表信息？
+
+给出完整的预印本发布流程
+```
+
+### AI辅助声明
+```
+越来越多期刊要求作者声明是否使用了AI写作工具（如ChatGPT/Claude/Grammarly等）。
+
+请帮我起草AI使用声明：
+
+我使用AI的情况：
+- 是否使用AI生成文字：[是（哪些部分）/否]
+- 是否使用AI修改语言/润色：[是/否]
+- 是否使用AI辅助代码：[是/否]
+- 是否使用AI辅助分析数据：[是/否]
+- 使用的工具：[Claude/ChatGPT/Grammarly/其他]
+
+目标期刊[期刊名]的AI声明政策：
+- Nature系列：要求在Methods中声明
+- Elsevier：需在Author Statement中填写
+- IEEE：目前建议但不强制
+
+输出：符合[目标期刊]政策要求的AI使用声明（若无需声明也说明原因）
+```
+
+---
+
 ## Common Mistakes
 
 - **忘记识别论文类型**：不同类型（discovery/methods/review）叙事结构不同，先识别类型再写作
+- **写完再选刊**：应该先选好目标期刊再写作，否则风格、深度、格式均可能需要大改
+- **引用未核查就投稿**：AI幻觉引用是退稿常见原因之一，务必使用citation-integrity.md核查
 - **审稿回复编造修改**：不要声称做了实验或修改却没有对应的论文位置，用`[作者需提供：XXX]`占位
+- **忽略CRediT声明**：Nature/Elsevier/Springer期刊均要求CRediT，缺少会退回要求补充
 - **提示词太短**：审稿类需明确"不补实验的基础上"、"生成word在桌面上"等约束
 - **忘记指定输出格式**：每次说清楚生成word/latex/pdf，以及生成到哪个路径
 - **LaTeX修订不精确**：要加"精确告诉我修改哪一行，修改前后对比"，否则找不到修改位置
 - **绘图前未定图表合同**：先回答"这图证明什么"再绘图，否则容易做出与文章脱节的图
 - **翻译后未校对**：中译英后必须做"修改前标蓝，修改后标红"的对比校对
+- **不做质量门控直接投稿**：使用quality-gates.md确保≥28/35再提交，低分强投成功率极低

@@ -50,7 +50,12 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 | 🔍 学术文献检索 | 多源搜索策略、MeSH检索、引用核查、相关文献发现 |
 | 🗂️ 文件与桌面管理 | 桌面归类整理、合同分析、试卷解答生成 |
 | 🧹 去AI化写作 | 18类AI模式检测、全文扫描、摘要去AI化、投稿前快速自查 |
-| 📋 IMRAD与报告规范 | CONSORT 2025 / PRISMA 2020 / STROBE / ARRIVE 2.0 逐条合规检查 |
+| 📋 IMRAD与报告规范 | CONSORT 2025 / PRISMA 2020 / STROBE / ARRIVE 2.0 / SPIRIT / CARE 逐条合规检查 |
+| 🎯 期刊优先策略 | 写作前先选刊、FINER研究问题评分（满25分）、期刊风格校准卡、梯阶投稿规划 |
+| 🔍 引用诚信核查 | AI引用幻觉扫描、Trust-Chain三层溯源、DOI核实、R&R修订引用追踪 |
+| ✅ 质量门控自评 | 7维35分评估体系（≥28/35方可投稿）、R&R可追溯矩阵、Devil's Advocate自审 |
+| 👥 作者声明系列 | CRediT作者贡献声明、伦理声明、利益冲突声明、资金致谢、AI辅助声明 |
+| 📤 预印本工作流 | arXiv/bioRxiv平台选择、分类建议、期刊预印本政策核查、发布流程指导 |
 
 ---
 
@@ -460,9 +465,14 @@ Compared to generic prompts, paper-skill adds:
 
 ```
 paper-skill/
-├── SKILL.md      # Skill definition (works on Claude Code, Codex CLI, OpenClaw)
-└── README.md     # This file
+├── SKILL.md               # Main skill — 22 scenarios, 中英双语提示词库
+├── citation-integrity.md  # Companion — 引用诚信、防幻觉、Trust-Chain溯源
+├── journal-strategy.md    # Companion — 期刊优先决策、FINER评分、风格校准
+├── quality-gates.md       # Companion — 7维度35分门控、R&R矩阵、Devil's Advocate
+└── README.md              # This file
 ```
+
+> Companion modules are loaded alongside SKILL.md for deeper specialist capabilities. SKILL.md remains fully functional as a standalone file.
 
 ---
 
