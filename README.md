@@ -8,7 +8,10 @@
 - 审稿意见看懂了，用英文回复却词不达意？
 - 润色完了担心有 AI 痕迹被编辑识别？
 
-**paper-skill 专门为此设计**：22 个场景覆盖从读文献到投稿全流程，**中英双语提示词**，直接用中文和 AI 对话即可，无需翻译。支持 Claude Code / Qwen Code / Kimi Code 等 8 个平台（含 5 个国产平台）。
+**paper-skill 专门为此设计**：22 个场景覆盖从读文献到投稿全流程，**中英双语提示词**，直接用中文和 AI 对话即可，无需翻译。
+
+**主力平台：[Claude Code](https://claude.ai/code) · [OpenAI Codex CLI](https://github.com/openai/codex)**  
+另支持 Qwen Code / Kimi Code / DeepSeek / Comate / 通义灵码 / OpenClaw 等 6 个平台。
 
 ---
 
@@ -39,23 +42,25 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 ## Supported Platforms
 
-### 国际平台
+### ⭐ 主力平台（Primary）
 
-| Platform | Version | Install Method | Skill Path |
-|----------|---------|----------------|------------|
-| **Claude Code** | Latest | [claude.ai/code](https://claude.ai/code) | `~/.claude/skills/paper-skill/` |
-| **OpenAI Codex CLI** | v0.139.0+ (Jun 2026) | `npm install -g @openai/codex` | `~/.codex/skills/paper-skill/` |
-| **OpenClaw** | v2026.6.6+ | `npm install -g openclaw@latest` | `~/.openclaw/skills/paper-skill/` |
+> paper-skill 为 Claude Code 和 OpenAI Codex CLI 深度优化，推荐使用这两个平台。
 
-### 国产平台
+| Platform | Install | Invoke | Skill Path |
+|----------|---------|--------|------------|
+| 🤖 **Claude Code** | [claude.ai/code](https://claude.ai/code) | `/paper-skill` | `~/.claude/skills/paper-skill/` |
+| ⚡ **OpenAI Codex CLI** | `npm install -g @openai/codex` | `$paper-skill` | `~/.codex/skills/paper-skill/` |
 
-| 平台 | 厂商 | 安装命令 | Skill 路径 |
-|------|------|---------|-----------|
-| **Qwen Code** | 阿里 / 通义 | `npm install -g @qwen-code/qwen-code` | `~/.qwen/skills/paper-skill/` |
-| **Kimi Code CLI** | 月之暗面 | `npm install -g @moonshot-ai/kimi-code` | `~/.kimi/skills/paper-skill/` |
-| **Deep Code** | DeepSeek | `npm install -g deep-code` | `~/.deepseek/skills/paper-skill/` |
-| **Baidu Comate** | 百度 | `npm install -g @baidu/comate-cli` | `~/.comate/skills/paper-skill/` |
-| **通义灵码 / Qoder CN** | 阿里云 | `npm install -g @alicloud/qoder` | `~/.lingma/skills/paper-skill/` |
+### 其他支持平台（Also Supported）
+
+| Platform | 厂商 | Skill 路径 |
+|----------|------|-----------|
+| OpenClaw | — | `~/.openclaw/skills/paper-skill/` |
+| Qwen Code | 阿里 / 通义 | `~/.qwen/skills/paper-skill/` |
+| Kimi Code CLI | 月之暗面 | `~/.kimi/skills/paper-skill/` |
+| Deep Code | DeepSeek | `~/.deepseek/skills/paper-skill/` |
+| Baidu Comate | 百度 | `~/.comate/skills/paper-skill/` |
+| 通义灵码 / Qoder CN | 阿里云 | `~/.lingma/skills/paper-skill/` |
 
 ---
 
@@ -91,27 +96,9 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 ## Installation
 
-### 一键安装（推荐）
+### 🤖 Claude Code（主力平台）
 
-**自动部署到你机器上所有已支持的平台，已安装的会自动更新。**
-
-**macOS / Linux：**
-```bash
-curl -fsSL https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.sh | bash
-```
-
-**Windows（PowerShell）：**
-```powershell
-irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
-```
-
-运行后会同时安装到所有平台（Claude Code / Qwen Code / Kimi Code / Deep Code / Comate / 通义灵码 / Codex CLI / OpenClaw），已有安装自动 `git pull` 更新，未安装的平台会跳过但不报错。
-
----
-
-### 手动安装（按平台）
-
-### Claude Code
+> Requires: [Claude Code](https://claude.ai/code) (latest) · Platform: macOS · Linux · Windows
 
 > Requires: [Claude Code](https://claude.ai/code) (latest)
 > Platform: macOS · Linux · Windows
@@ -133,7 +120,7 @@ git clone https://github.com/cLin-c/paper-skill "$env:USERPROFILE\.claude\skills
 
 ---
 
-### OpenAI Codex CLI
+### ⚡ OpenAI Codex CLI（主力平台）
 
 > Requires: Node.js 18+ · Codex CLI v0.139.0+ (June 2026)
 > Platform: macOS · Linux · Windows (PowerShell / WSL2)
@@ -165,6 +152,25 @@ $paper-skill         # invoke directly in prompt
 > **Windows note:** Native PowerShell with npm (Node.js 22+) is recommended. Use WSL2 for a full Linux environment.
 
 ---
+
+### 一键安装全部平台（可选）
+
+**自动部署到机器上所有已支持的平台，已安装的会自动更新：**
+
+**macOS / Linux：**
+```bash
+curl -fsSL https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.sh | bash
+```
+
+**Windows（PowerShell）：**
+```powershell
+irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
+```
+
+---
+
+<details>
+<summary>其他平台安装说明（OpenClaw / Qwen Code / Kimi Code / DeepSeek / Comate / 通义灵码）</summary>
 
 ### OpenClaw
 
@@ -301,6 +307,10 @@ git clone https://github.com/cLin-c/paper-skill ~/.lingma/skills/paper-skill
 ```
 /paper-skill
 ```
+
+---
+
+</details>
 
 ---
 
