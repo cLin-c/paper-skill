@@ -1,6 +1,35 @@
 # paper-skill
 
-> 🎓 A multi-platform AI coding assistant skill — prompt library for the full academic paper workflow.
+> 🎓 专为中文学者设计的学术写作 AI 工具库 | Academic Paper Skill for Chinese Researchers
+
+**你是否面临这些困境？**
+- 中文写完不知道怎么转成地道英文？
+- 投稿信（Cover Letter）不知道从何下手？
+- 审稿意见看懂了，用英文回复却词不达意？
+- 润色完了担心有 AI 痕迹被编辑识别？
+
+**paper-skill 专门为此设计**：22 个场景覆盖从读文献到投稿全流程，**中英双语提示词**，直接用中文和 AI 对话即可，无需翻译。支持 Claude Code / Qwen Code / Kimi Code 等 8 个平台（含 5 个国产平台）。
+
+---
+
+## 🇨🇳 中文学者快速导航
+
+| 你的场景 | 用哪个提示词 |
+|---------|------------|
+| 中文稿件 → 地道英文论文 | [§22 中文母语者专项](#22-中文母语者写英文期刊专项) → 中译英全文 |
+| 写投稿信（Cover Letter） | [§22 投稿信生成](#投稿信-cover-letter-生成) |
+| 英文论文有 Chinglish | [§22 Chinglish 检测](#chinglish-检测与修复) |
+| 审稿人意见看懂了但不会英文回复 | [§5 审稿意见逐点回复](#5-审稿意见逐点回复) + [§22 英文回复润色](#英文审稿回复润色中文母语者版) |
+| 去掉 AI 写作痕迹 | [§15 去AI化写作](#15-去ai化写作检测与修复) |
+| 投 SCI 前质量自查 | [§19 质量门控](#19-质量门控自评) ≥28/35 再投 |
+| 做答辩 PPT | [§10 PPT制作](#10-ppt-制作与答辩) |
+| 中英文并排读论文 | [§11 对照阅读](#11-中英文对照阅读) |
+
+---
+
+> 🌐 English overview below | 以下为英文说明
+
+---
 
 Covers every stage from literature reading to journal submission, with prompts optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 
@@ -56,6 +85,7 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 | ✅ 质量门控自评 | 7维35分评估体系（≥28/35方可投稿）、R&R可追溯矩阵、Devil's Advocate自审 |
 | 👥 作者声明系列 | CRediT作者贡献声明、伦理声明、利益冲突声明、资金致谢、AI辅助声明 |
 | 📤 预印本工作流 | arXiv/bioRxiv平台选择、分类建议、期刊预印本政策核查、发布流程指导 |
+| 🇨🇳 中文母语者专项 | 投稿信生成、Chinglish检测、中式英语修正、英文摘要专项、英文审稿回复润色 |
 
 ---
 

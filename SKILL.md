@@ -42,6 +42,7 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | Quality gate self-assessment | [质量门控自评](#19-质量门控自评) |
 | CRediT author contributions | [CRediT作者贡献声明](#20-credit作者贡献声明) |
 | Ethics, COI & preprint workflow | [伦理声明与预印本](#21-伦理声明利益冲突与预印本) |
+| 中文母语者写英文期刊（投稿信/Chinglish/英文审稿回复） | [中文母语者专项](#22-中文母语者写英文期刊专项) |
 
 ---
 
@@ -1387,6 +1388,222 @@ CRediT 14个标准角色（每位作者对应哪些）：
 - IEEE：目前建议但不强制
 
 输出：符合[目标期刊]政策要求的AI使用声明（若无需声明也说明原因）
+```
+
+---
+
+## 22. 中文母语者写英文期刊专项
+
+中文母语者在投英文期刊时，面临四个特有挑战：**投稿信不会写、中式英语（Chinglish）、审稿回复词不达意、英文表达缺乏逻辑层次**。本节针对这四个痛点提供专项提示词。
+
+---
+
+### 投稿信（Cover Letter）生成
+
+Cover Letter 是编辑看到的第一份文件，直接影响是否送审。中文学者最常见的问题：过于简短、缺少贡献声明、语气太平。
+
+```
+请帮我写一封投稿信（Cover Letter），提交给[期刊名]。
+
+论文信息：
+- 标题：[论文英文标题]
+- 作者：[所有作者姓名]
+- 通讯作者：[通讯作者姓名 + 邮箱]
+- 论文类型：[Original Article / Research Article / Letter / Review]
+
+核心贡献（用1-2句话描述，无需学术化，我来提供，你来润色）：
+[用中文描述你的核心创新和贡献]
+
+目标期刊范围和读者群：
+[该期刊的主要领域，例如：机器人学、生物医学、计算机视觉]
+
+是否有利益冲突：[无 / 有（说明）]
+是否有推荐审稿人：[无 / 有（提供姓名+单位）]
+是否有排除审稿人：[无 / 有（说明原因）]
+
+投稿信结构要求：
+1. 首段：投稿声明（期刊名 + 论文标题 + 类型）
+2. 第二段：研究背景与问题（2-3句，漏斗式从大到小）
+3. 第三段：核心贡献声明（具体，避免"novel/significant"等空洞词）
+4. 第四段：为何适合该期刊（与期刊定位/读者群的关联）
+5. 末段：标准结束语（独家投稿声明 + 联系方式）
+
+语气要求：专业、自信、简洁，控制在 350 词以内。
+生成英文版 Cover Letter，并附一个中文对照说明每段的写法逻辑
+```
+
+---
+
+### Chinglish 检测与修复
+
+中文母语者在英文写作中最容易犯的20类中式英语错误，涵盖语法、逻辑、表达习惯三个层面。
+
+#### 中式英语20类常见模式速查
+
+| # | 错误模式 | 中式写法示例 | 地道英文写法 |
+|---|---------|------------|------------|
+| 1 | **冗余主语** | "This paper proposes a method. The method is..." | "We propose a method that..." |
+| 2 | **缺少冠词** | "proposed method achieves best performance" | "the proposed method achieves the best performance" |
+| 3 | **中文逻辑连词直译** | "Through experiments, it can be seen that..." | "Experiments show that..." |
+| 4 | **"research status"** | "the research status of object detection" | "the state of the art in object detection" |
+| 5 | **"has been widely studied"** | "X problem has been widely studied" | "X has attracted significant research attention" |
+| 6 | **过度堆砌形容词** | "a novel, efficient, robust, lightweight method" | 选1-2个，用数据支撑 |
+| 7 | **"in order to"滥用** | "In order to improve accuracy, we..." | "To improve accuracy, we..." |
+| 8 | **"respectively"位置错误** | "A and B are 90% and 85%, respectively" ✅ | 不要放在句首 |
+| 9 | **数字书写** | "3 methods are proposed" | "Three methods are proposed"（10以内拼写） |
+| 10 | **"adopt"误用** | "We adopt ResNet as backbone" | "We use ResNet as the backbone" |
+| 11 | **"realize"误用** | "we realize the detection in real-time" | "we achieve real-time detection" |
+| 12 | **"work"误用** | "Our work is better than existing works" | "Our method outperforms existing approaches" |
+| 13 | **比较句不完整** | "Our method is faster" | "Our method is faster than [X] by [Y]%" |
+| 14 | **介词错误** | "experiments on the dataset of COCO" | "experiments on the COCO dataset" |
+| 15 | **被动语态滥用（无施动者）** | "It was found that..." | "We found that..." / "Results show that..." |
+| 16 | **"verify"误用** | "experiments verify the effectiveness" | "experiments demonstrate the effectiveness" |
+| 17 | **过于简短的段落** | 每段只有1-2句 | 学术段落通常4-6句，有主题句+展开+证据+总结 |
+| 18 | **"such as"后无逗号** | "such as COCO VOC and ImageNet" | "such as COCO, VOC, and ImageNet" |
+| 19 | **时态混用** | 在同一个结果描述段落里混用过去时和现在时 | 结果用过去时，已知事实用现在时 |
+| 20 | **"obtain"与"achieve"混用** | "we obtain a 95% accuracy" | "we achieve 95% accuracy"（成就用achieve，获取数据用obtain） |
+
+---
+
+### 全文 Chinglish 扫描
+```
+你是专业英文学术编辑，请对以下论文段落进行 Chinglish 扫描和修复：
+
+重点检查以下20类中式英语模式：
+1. 冗余主语/重复指代
+2. 缺少冠词（the/a）
+3. 中文逻辑连词直译（"Through...it can be seen"类）
+4. "research status" → "state of the art"
+5. "has been widely studied" 类套话
+6. 形容词堆砌（novel/efficient/robust/lightweight叠加）
+7. "in order to" 冗余（→ "To"）
+8. 数字10以内未拼写
+9. "adopt/realize/work" 误用
+10. 比较句缺少参照对象
+11. 介词搭配错误
+12. 被动语态无施动者
+13. "verify" 误用（→ demonstrate/show）
+14. 段落过短（<4句）
+15. "such as" 后列举无牛津逗号
+16. 时态混用
+17. "obtain"与"achieve"混用
+18. 句式单一（连续多个 Subject+Verb+Object 简单句）
+19. 缺少逻辑过渡（直接跳结论而没有中间推理）
+20. 重复词汇（连续多句用同一个词）
+
+输出格式：
+- 每条：原句 → 问题类型（编号）→ 修改后版本 → 修改原因（中文说明）
+- 最后给出整体 Chinglish 密度评分（低/中/高）和最需要优先解决的3个问题
+生成完整修改报告 word
+```
+
+---
+
+### 中式英语精准清除（指定段落）
+```
+请对以下段落进行中式英语修复，只处理语言层面，不改变科学内容：
+
+[粘贴段落]
+
+要求：
+1. 检查并修复冠词使用（the/a/an）
+2. 修复动词搭配（adopt→use, realize→achieve, verify→demonstrate）
+3. 消除重复指代（"The proposed method. The method..."）
+4. 比较句补全参照对象
+5. 将连续简单句改写为有从句层次的复杂句（不超过1处）
+6. 时态统一（结果描述用过去时）
+
+修改前标蓝，修改后标红，中文说明每处修改原因
+生成修改对比 word
+```
+
+---
+
+### 英文摘要专项（从中文材料出发）
+
+摘要是 Chinglish 重灾区，也是编辑/审稿人第一眼判断论文质量的地方。
+
+```
+我的研究材料是中文的，请帮我写一个投 [目标期刊] 的英文摘要。
+
+我的研究内容（中文描述即可）：
+- 研究问题：[中文描述你解决了什么问题]
+- 方法核心：[中文描述你怎么做的]
+- 主要结果：[中文描述关键数字和对比结果]
+- 意义：[中文描述这个工作对哪类读者/应用有价值]
+
+目标期刊：[期刊名]（有摘要字数限制：[字数]）
+
+英文摘要写作要求：
+1. 第一句：直接说研究问题或核心发现，不以"In recent years"或"With the rapid development of"开头
+2. 第二句：现有方法的局限（1句话，具体）
+3. 第三句：我们的方法是什么（动词用"propose/present/introduce"，不用"adopt"）
+4. 第四句：实验结果（包含具体数字和对比基线）
+5. 第五句：意义（对哪类读者/应用的价值）
+6. 禁用词：novel, innovative, groundbreaking, revolutionary, significant improvement, delve, robust（如需用，替换为具体数据）
+7. 控制在 [字数] 词以内
+
+同时检查：冠词、时态（摘要通常全文过去时或现在时统一）、中式表达
+
+输出英文摘要，并附中文逐句回译，确认没有歪曲原意
+```
+
+---
+
+### 英文审稿回复润色（中文母语者版）
+
+很多中文研究者可以用中文理解审稿意见、想清楚回复思路，但英文表达生硬或过于简短，缺少学术礼貌用语。
+
+```
+我已经想清楚了对以下审稿意见的回复思路，但需要帮我润色成地道的英文学术回复。
+
+审稿人原文：
+[粘贴审稿人意见英文原文]
+
+我的回复思路（中文描述即可）：
+[用中文说明你打算怎么回复，包括：同意还是不同意，做了什么修改，修改在哪里]
+
+英文回复要求：
+1. 开头：感谢审稿人的建议（1句，不要过度奉承）
+2. 立场陈述：明确同意/部分同意/有礼貌地不同意
+3. 修改说明：具体描述做了什么修改（用 "We have revised..." / "We have added..." 开头）
+4. 修改位置：精确引用修改位置（"Page X, Line Y" 或 "Section X.X"）
+5. 如果不同意：给出理由（引用数据/文献支撑，不是情绪化反驳）
+6. 结尾：礼貌收尾（可选）
+
+语气：尊重、专业、坚定，避免过度道歉（"Sorry" 不要出现超过1次）
+输出润色后的英文回复，并附中文说明每段的逻辑
+```
+
+---
+
+### 中文论文英文化全流程（从中文稿到可投稿英文版）
+
+```
+这是我的中文论文全稿，我要将其英文化后投稿到 [目标期刊]。
+
+请分以下步骤处理（每步单独生成，不要合并）：
+
+Step 1 — 结构诊断：
+检查中文稿的逻辑结构是否符合 [目标期刊] 的投稿要求（IMRAD/字数/图表数量限制），列出需要在翻译前先调整的结构问题
+
+Step 2 — 全文翻译：
+逐节翻译，要求：
+- 不丢失参考文献编号和公式
+- Nature 主编级英语标准：准确、简洁、无 Chinglish
+- 专业术语保留英文（第一次出现附中文括注）
+- 生成完整英文 word，翻译后保留中文对照（双栏格式）
+
+Step 3 — Chinglish 扫描：
+对翻译后的英文版做全文 Chinglish 扫描（按§22中的20类模式），标注所有问题
+
+Step 4 — 投稿信生成：
+基于翻译后的英文稿，生成投稿到 [目标期刊] 的 Cover Letter
+
+Step 5 — 去AI化检查：
+对全文做投稿前 AI 痕迹快速自查（§15 清单），生成修改报告
+
+每步生成独立 word 文件，放到桌面的 [论文名] 文件夹
 ```
 
 ---
