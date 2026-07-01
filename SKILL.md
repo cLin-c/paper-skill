@@ -13,7 +13,10 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 > - [`citation-integrity.md`](citation-integrity.md) — AI引用幻觉检测、Trust-Chain溯源、DOI核查
 > - [`journal-strategy.md`](journal-strategy.md) — 期刊优先决策、FINER评分、期刊风格校准
 > - [`quality-gates.md`](quality-gates.md) — 7维度35分质量门控、R&R可追溯矩阵、Devil's Advocate自审
-> - [`references/prompt-bank.md`](references/prompt-bank.md) — 高频提示词模板库：论文修改、代码调试、绘图提示词、Word/PPT、网站组织、商务合同、运维等
+> - [`references/paper-writing-prompts.md`](references/paper-writing-prompts.md) — 论文写作子技能：文献精读、综述、SCI一区审稿式修改、引言/相关工作/方法/实验重写
+> - [`references/figure-prompts.md`](references/figure-prompts.md) — 学术绘图子技能：方法流程图、实验结果图、表格转图、图题图注、图表质量审计
+> - [`references/prompt-bank.md`](references/prompt-bank.md) — 子技能模块索引
+> - [`references/auxiliary-prompts.md`](references/auxiliary-prompts.md) — 扩展辅助子技能：代码、Word/LaTeX/PPT、文件、网站、合同、运维等非论文核心任务
 
 ---
 
@@ -26,10 +29,12 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | Write a paper from scratch | [论文写作与生成](#2-论文写作与生成) |
 | Polish / fix existing draft | [论文润色与修改](#3-论文润色与修改) |
 | Review / submission feedback | [论文审稿与投稿](#4-论文审稿与投稿) |
+| Rewrite paper story / innovation / experiments | [`references/paper-writing-prompts.md`](references/paper-writing-prompts.md) |
 | Reply to reviewer comments | [审稿意见逐点回复](#5-审稿意见逐点回复) |
 | Translate paper (CN↔EN) | [论文翻译](#6-论文翻译) |
 | Fix / audit references | [参考文献管理](#7-参考文献管理) |
-| Debug / generate code | [代码相关](#8-代码相关) |
+| Generate method / experiment figure prompts | [`references/figure-prompts.md`](references/figure-prompts.md) |
+| Debug / generate code | [`references/auxiliary-prompts.md`](references/auxiliary-prompts.md) |
 | Generate figure prompts | [绘图与可视化](#9-绘图与可视化提示词) |
 | Make defense PPT | [PPT制作与答辩](#10-ppt-制作与答辩) |
 | Read paper bilingually | [中英文对照阅读](#11-中英文对照阅读) |
@@ -44,7 +49,7 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | CRediT author contributions | [CRediT作者贡献声明](#20-credit作者贡献声明) |
 | Ethics, COI & preprint workflow | [伦理声明与预印本](#21-伦理声明利益冲突与预印本) |
 | 中文母语者写英文期刊（投稿信/Chinglish/英文审稿回复） | [中文母语者专项](#22-中文母语者写英文期刊专项) |
-| 高频实战提示词模板 | [`references/prompt-bank.md`](references/prompt-bank.md) |
+| 子技能模块索引 | [`references/prompt-bank.md`](references/prompt-bank.md) |
 
 ---
 

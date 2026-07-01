@@ -10,8 +10,75 @@
 
 **paper-skill 专门为此设计**：22 个场景覆盖从读文献到投稿全流程，**中英双语提示词**，直接用中文和 AI 对话即可，无需翻译。
 
+核心优势不是“提示词多”，而是把论文写作拆成可复用的学术工作流：**读文献 → 搭故事线 → 写论文 → 改语言 → 查引用 → 画图表 → 审稿预演 → 投稿回复**。
+
 **主力平台：[Claude Code](https://claude.ai/code) · [OpenAI Codex CLI](https://github.com/openai/codex)**  
 另支持 Qwen Code / Kimi Code / DeepSeek / Comate / 通义灵码 / OpenClaw 等 6 个平台。
+
+---
+
+## 🧠 paper-skill 子技能架构
+
+```mermaid
+flowchart LR
+  A[paper-skill] --> B[论文写作子技能]
+  A --> C[学术绘图子技能]
+  A --> D[引用核查子技能]
+  A --> E[投稿策略子技能]
+  A --> F[质量门控子技能]
+  A --> G[扩展辅助子技能]
+
+  B --> B1[文献精读]
+  B --> B2[引言/相关工作]
+  B --> B3[方法/实验重写]
+  B --> B4[SCI一区审稿式修改]
+
+  C --> C1[方法流程图]
+  C --> C2[实验结果图]
+  C --> C3[表格转图]
+  C --> C4[图题图注]
+
+  D --> D1[DOI核查]
+  D --> D2[引用内容匹配]
+  D --> D3[表格数据溯源]
+
+  E --> E1[选刊]
+  E --> E2[拒稿后转投]
+  E --> E3[期刊风格校准]
+
+  F --> F1[7维质量门控]
+  F --> F2[Devil's Advocate自审]
+  F --> F3[R&R可追溯矩阵]
+
+  G --> G1[代码/Word/LaTeX/PPT]
+  G --> G2[文件/网站/合同/运维]
+```
+
+## 🧩 论文写作工作流
+
+```mermaid
+flowchart TD
+  S[输入材料: 论文草稿 / 实验结果 / 参考文献 / 图表] --> P1[Step 1 识别论文类型与核心科学问题]
+  P1 --> P2[Step 2 重构故事线与创新点]
+  P2 --> P3[Step 3 写作引言、相关工作、方法、实验]
+  P3 --> P4[Step 4 SCI一区语言润色与逻辑压缩]
+  P4 --> P5[Step 5 参考文献真实性与引用匹配核查]
+  P5 --> P6[Step 6 方法图、实验图、图题图注重制]
+  P6 --> P7[Step 7 质量门控与审稿人预演]
+  P7 --> O[输出: 可投稿论文 / 修改报告 / 图表提示词 / 回复信]
+```
+
+## 🎨 学术绘图工作流
+
+```mermaid
+flowchart LR
+  M[方法与实验结果] --> A1[提炼图要证明的核心论点]
+  A1 --> A2[选择图型: 流程图/热力图/柱状图/矩阵图/轨迹图]
+  A2 --> A3[生成绘图提示词]
+  A3 --> A4[nano banana / Gemini / 其他绘图工具]
+  A4 --> A5[图表质量审计]
+  A5 --> A6[图题、图注、正文引用]
+```
 
 ---
 
@@ -20,6 +87,9 @@
 | 你的场景 | 用哪个提示词 |
 |---------|------------|
 | 中文稿件 → 地道英文论文 | [§22 中文母语者专项](#22-中文母语者写英文期刊专项) → 中译英全文 |
+| 重写论文故事线/创新点 | [论文写作子技能](references/paper-writing-prompts.md) |
+| 按 SCI 一区审稿标准修改全文 | [论文写作子技能](references/paper-writing-prompts.md) |
+| 生成方法图/实验结果图提示词 | [学术绘图子技能](references/figure-prompts.md) |
 | 写投稿信（Cover Letter） | [§22 投稿信生成](#投稿信-cover-letter-生成) |
 | 英文论文有 Chinglish | [§22 Chinglish 检测](#chinglish-检测与修复) |
 | 审稿人意见看懂了但不会英文回复 | [§5 审稿意见逐点回复](#5-审稿意见逐点回复) + [§22 英文回复润色](#英文审稿回复润色中文母语者版) |
@@ -27,7 +97,7 @@
 | 投 SCI 前质量自查 | [§19 质量门控](#19-质量门控自评) ≥28/35 再投 |
 | 做答辩 PPT | [§10 PPT制作](#10-ppt-制作与答辩) |
 | 中英文并排读论文 | [§11 对照阅读](#11-中英文对照阅读) |
-| 高频实战任务提示词 | [高频提示词模板库](references/prompt-bank.md) |
+| 查看全部子技能模块 | [模块索引](references/prompt-bank.md) |
 
 ---
 
@@ -69,6 +139,8 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 
 | Category | Highlights |
 |----------|-----------|
+| 🧠 论文写作子技能 | 文献精读、综述、引言/相关工作、方法、实验、拒稿后转投、核心创新重构 |
+| 🎨 学术绘图子技能 | 方法流程图、实验结果图、表格转图、图题图注、图表质量审计 |
 | 📐 论文类型与叙事结构 | 识别论文类型（discovery/methods/resource/review），确定叙事弧 |
 | 📖 文献阅读与分析 | 精读、综述撰写、领域现状、论证链提取 |
 | ✍️ 论文写作与生成 | 从材料生成全文、引言/相关工作、证据-主张检查 |
@@ -77,14 +149,11 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 | 💬 审稿意见逐点回复 | triage分类、point-by-point回复信起草、修改位置映射、QA检查 |
 | 🌐 论文翻译 | 中译英全文/部分章节、准确性校对（标蓝标红） |
 | 📚 参考文献管理 | 编号排序、引用匹配、文献真实性核实 |
-| 💻 代码相关 | 报错修复、定向代码修改 |
-| 🎨 绘图与可视化 | 图表合同、nano banana 方法图/实验图、图表质量审计 |
-| 🧰 高频提示词模板库 | 论文审稿、代码调试、Word/PPT、LaTeX、网站组织、合同审查、运维等常用任务模板 |
+| 🔬 绘图与可视化 | 图表合同、nano banana 方法图/实验图、图表质量审计 |
 | 📊 PPT制作与答辩 | 论文类型驱动PPT、演讲稿生成、Slide质量检查 |
 | 🔤 中英文对照阅读 | 全文并排Markdown阅读（图表就近定位）、术语对照表 |
 | 📋 数据可用性声明 | FAIR合规声明起草、FAIR元数据审计、repository选择建议 |
 | 🔍 学术文献检索 | 多源搜索策略、MeSH检索、引用核查、相关文献发现 |
-| 🗂️ 文件与桌面管理 | 桌面归类整理、合同分析、试卷解答生成 |
 | 🧹 去AI化写作 | 18类AI模式检测、全文扫描、摘要去AI化、投稿前快速自查 |
 | 📋 IMRAD与报告规范 | CONSORT 2025 / PRISMA 2020 / STROBE / ARRIVE 2.0 / SPIRIT / CARE 逐条合规检查 |
 | 🎯 期刊优先策略 | 写作前先选刊、FINER研究问题评分（满25分）、期刊风格校准卡、梯阶投稿规划 |
@@ -93,6 +162,20 @@ Inspired by and extended from [nature-skills](https://github.com/Yuan1z0825/natu
 | 👥 作者声明系列 | CRediT作者贡献声明、伦理声明、利益冲突声明、资金致谢、AI辅助声明 |
 | 📤 预印本工作流 | arXiv/bioRxiv平台选择、分类建议、期刊预印本政策核查、发布流程指导 |
 | 🇨🇳 中文母语者专项 | 投稿信生成、Chinglish检测、中式英语修正、英文摘要专项、英文审稿回复润色 |
+| 🧰 扩展辅助子技能 | 代码、Word、LaTeX、PPT、文件、网站、合同、运维等放入独立扩展模块，不占论文主流程 |
+
+---
+
+## 📚 Prompt Modules
+
+| Module | File | Purpose |
+|---|---|---|
+| Paper Writing & Review | [`references/paper-writing-prompts.md`](references/paper-writing-prompts.md) | 论文写作、重构、审稿式修改、拒稿转投、实验方案 |
+| Academic Figure Design | [`references/figure-prompts.md`](references/figure-prompts.md) | 方法图、实验图、表格转图、图注、绘图提示词 |
+| Citation Integrity | [`citation-integrity.md`](citation-integrity.md) | 引用真实性、DOI、表格数据、AI 引用幻觉 |
+| Journal Strategy | [`journal-strategy.md`](journal-strategy.md) | 选刊、转投、期刊风格、FINER 评分 |
+| Quality Gates | [`quality-gates.md`](quality-gates.md) | 投稿前质量门控、R&R、审稿人预演 |
+| Auxiliary Workflows | [`references/auxiliary-prompts.md`](references/auxiliary-prompts.md) | 非核心辅助任务，已从论文主流程拆出 |
 
 ---
 
