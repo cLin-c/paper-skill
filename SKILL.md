@@ -13,6 +13,7 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 > - [`citation-integrity.md`](citation-integrity.md) — AI引用幻觉检测、Trust-Chain溯源、DOI核查
 > - [`journal-strategy.md`](journal-strategy.md) — 期刊优先决策、FINER评分、期刊风格校准
 > - [`quality-gates.md`](quality-gates.md) — 7维度35分质量门控、R&R可追溯矩阵、Devil's Advocate自审
+> - [`references/prompt-bank.md`](references/prompt-bank.md) — 高频提示词模板库：论文修改、代码调试、绘图提示词、Word/PPT、网站组织、商务合同、运维等
 
 ---
 
@@ -43,6 +44,7 @@ Optimized for **SCI / IEEE / Nature / IJCAI / TRO** submissions.
 | CRediT author contributions | [CRediT作者贡献声明](#20-credit作者贡献声明) |
 | Ethics, COI & preprint workflow | [伦理声明与预印本](#21-伦理声明利益冲突与预印本) |
 | 中文母语者写英文期刊（投稿信/Chinglish/英文审稿回复） | [中文母语者专项](#22-中文母语者写英文期刊专项) |
+| 高频实战提示词模板 | [`references/prompt-bank.md`](references/prompt-bank.md) |
 
 ---
 
