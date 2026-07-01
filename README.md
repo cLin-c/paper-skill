@@ -2,6 +2,10 @@
 
 > 🎓 专为中文学者设计的学术写作 AI 工具库 | Academic Paper Skill for Chinese Researchers
 
+<p align="center">
+  <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
+</p>
+
 **你是否面临这些困境？**
 - 中文写完不知道怎么转成地道英文？
 - 投稿信（Cover Letter）不知道从何下手？
@@ -17,68 +21,26 @@
 
 ---
 
-## 🧠 paper-skill 子技能架构
+## 🧠 核心能力
 
-```mermaid
-flowchart LR
-  A[paper-skill] --> B[论文写作子技能]
-  A --> C[学术绘图子技能]
-  A --> D[引用核查子技能]
-  A --> E[投稿策略子技能]
-  A --> F[质量门控子技能]
-  A --> G[扩展辅助子技能]
-
-  B --> B1[文献精读]
-  B --> B2[引言/相关工作]
-  B --> B3[方法/实验重写]
-  B --> B4[SCI一区审稿式修改]
-
-  C --> C1[方法流程图]
-  C --> C2[实验结果图]
-  C --> C3[表格转图]
-  C --> C4[图题图注]
-
-  D --> D1[DOI核查]
-  D --> D2[引用内容匹配]
-  D --> D3[表格数据溯源]
-
-  E --> E1[选刊]
-  E --> E2[拒稿后转投]
-  E --> E3[期刊风格校准]
-
-  F --> F1[7维质量门控]
-  F --> F2[Devil's Advocate自审]
-  F --> F3[R&R可追溯矩阵]
-
-  G --> G1[代码/Word/LaTeX/PPT]
-  G --> G2[文件/网站/合同/运维]
-```
+| 子技能 | 解决的问题 | 输出 |
+|---|---|---|
+| **论文写作子技能** | 文献精读、综述、引言/相关工作、方法、实验、拒稿后转投、核心创新重构 | 可投稿段落、修改报告、实验方案 |
+| **学术绘图子技能** | 方法流程图、实验结果图、表格转图、图题图注、图表质量审计 | nano banana/Gemini 绘图提示词、图注、正文引用 |
+| **引用核查子技能** | DOI、引用真实性、表格数据来源、AI 引用幻觉 | 引用修订清单、替换文献建议 |
+| **投稿质量门控** | 投稿前总检、审稿人预演、R&R 可追溯矩阵 | 质量评分、拒稿风险、逐项修改方案 |
 
 ## 🧩 论文写作工作流
 
-```mermaid
-flowchart TD
-  S[输入材料: 论文草稿 / 实验结果 / 参考文献 / 图表] --> P1[Step 1 识别论文类型与核心科学问题]
-  P1 --> P2[Step 2 重构故事线与创新点]
-  P2 --> P3[Step 3 写作引言、相关工作、方法、实验]
-  P3 --> P4[Step 4 SCI一区语言润色与逻辑压缩]
-  P4 --> P5[Step 5 参考文献真实性与引用匹配核查]
-  P5 --> P6[Step 6 方法图、实验图、图题图注重制]
-  P6 --> P7[Step 7 质量门控与审稿人预演]
-  P7 --> O[输出: 可投稿论文 / 修改报告 / 图表提示词 / 回复信]
-```
+<p align="center">
+  <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
+</p>
 
-## 🎨 学术绘图工作流
+## 🎨 学术绘图能力
 
-```mermaid
-flowchart LR
-  M[方法与实验结果] --> A1[提炼图要证明的核心论点]
-  A1 --> A2[选择图型: 流程图/热力图/柱状图/矩阵图/轨迹图]
-  A2 --> A3[生成绘图提示词]
-  A3 --> A4[nano banana / Gemini / 其他绘图工具]
-  A4 --> A5[图表质量审计]
-  A5 --> A6[图题、图注、正文引用]
-```
+<p align="center">
+  <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
+</p>
 
 ---
 
