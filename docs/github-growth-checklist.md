@@ -30,14 +30,14 @@ ai-writing
 
 ## Release
 
-- Create tag: `v0.2.3`
+- Create tag: `v0.4.0`
 - Release title:
 
 ```text
-v0.3.1 - Icon polish
+v0.4.0 - Toolchain and examples
 ```
 
-- Use the release body from [releases/v0.3.1-icon-polish-notes.md](releases/v0.3.1-icon-polish-notes.md).
+- Use the release body from [releases/v0.4.0-toolchain-examples-notes.md](releases/v0.4.0-toolchain-examples-notes.md).
 
 ## README Promotion
 

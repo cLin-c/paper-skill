@@ -10,13 +10,18 @@ These examples are designed for README links, GitHub visitors, and social sharin
 | Reviewer response | Users preparing R&R or rebuttal replies | [reviewer-response.md](reviewer-response.md) |
 | Citation integrity audit | Users worried about hallucinated citations and over-claims | [citation-integrity-audit.md](citation-integrity-audit.md) |
 | Full submission package | Users preparing a complete pre-submission package | [full-submission-package.md](full-submission-package.md) |
+| Before / after Chinese abstract | Visitors who want to see output quality immediately | [before-after-chinese-abstract.md](before-after-chinese-abstract.md) |
+| Before / after reviewer response | Visitors comparing weak replies with traceable R&R replies | [reviewer-response-before-after.md](reviewer-response-before-after.md) |
+| Before / after citation audit | Visitors evaluating citation safety behavior | [citation-audit-before-after.md](citation-audit-before-after.md) |
+| Runnable submission package check | Users who want an executable validation example | [submission-package-check.json](submission-package-check.json) |
 
 ## Recommended Demo Flow
 
 1. Start with `chinese-abstract-to-english.md` because the pain point is immediate.
 2. Show `reviewer-response.md` to demonstrate submission-stage value.
 3. Finish with `citation-integrity-audit.md` to show quality and safety differentiation.
-4. Use `full-submission-package.md` for a longer walkthrough or video demo.
+4. Use the before/after examples to make output quality visible without a long explanation.
+5. Run `python tools/paper_skill_gate.py examples/submission-package-check.json` for the executable stage-gate demo.
 
 ## Copyable First Prompt
 

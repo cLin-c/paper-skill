@@ -1,0 +1,53 @@
+{
+  "title": "Robust Graph Planning for Field Robots in Partially Observed Outdoor Environments",
+  "target_journal": "IEEE Transactions on Robotics",
+  "paper_type": "methods",
+  "chinese_source_summary": "本文提出一种面向野外机器人的鲁棒图规划方法。方法通过不确定性感知边权、在线地图修复和路径一致性检查，提高部分可观测环境下的任务完成率。",
+  "english_abstract": "Field robots often fail when planners are evaluated only in clean simulation settings. This study introduces a robust graph planning framework that combines uncertainty-aware edge weighting, online map repair, and route-level consistency checks. Experiments on outdoor navigation logs show improved completion rate and reduced replanning frequency across cluttered and partially observed environments. The results suggest that explicitly modeling graph uncertainty can improve deployment robustness without changing the robot hardware, while the remaining failure cases indicate that perception uncertainty and long-horizon recovery still require further study.",
+  "claims": [
+    {
+      "id": "C1",
+      "text": "The proposed planner improves task completion in partially observed outdoor environments.",
+      "evidence_ids": ["E1"]
+    },
+    {
+      "id": "C2",
+      "text": "Online map repair reduces unnecessary replanning.",
+      "evidence_ids": ["E2"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "type": "experiment",
+      "summary": "Outdoor navigation benchmark comparing completion rate against baseline graph planners."
+    },
+    {
+      "id": "E2",
+      "type": "ablation",
+      "summary": "Ablation removing online map repair increases replanning frequency."
+    }
+  ],
+  "references": [
+    {
+      "title": "A Survey of Robot Motion Planning in Dynamic Environments",
+      "doi": "10.1000/example.motion.1",
+      "supports_claims": ["C1"]
+    },
+    {
+      "title": "Uncertainty-Aware Mapping for Field Robotics",
+      "doi": "10.1000/example.mapping.2",
+      "supports_claims": ["C1", "C2"]
+    }
+  ],
+  "cover_letter": "Dear Editor, we submit this methods manuscript for consideration because it addresses robust navigation in partially observed outdoor environments.",
+  "highlights": [
+    "Uncertainty-aware graph planning for field robots.",
+    "Online map repair reduces unnecessary replanning.",
+    "Outdoor navigation logs support the main claim."
+  ],
+  "declarations": {
+    "conflict_of_interest": "The authors declare no competing interests.",
+    "data_availability": "The dataset availability statement should be finalized before submission."
+  }
+}

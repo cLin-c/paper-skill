@@ -24,7 +24,7 @@ Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
   <img src="https://img.shields.io/badge/Overleaf-writing%20pipeline-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf writing pipeline">
 </p>
 
-paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
+paper-skill is designed for non-native English researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
 
 <p align="center">
   <a href="#what-it-does"><img src="https://img.shields.io/badge/Storyline-paper%20arc-111827?style=for-the-badge&logo=readme&logoColor=white" alt="storyline module"></a>
@@ -104,6 +104,21 @@ paper-skill is modular. Use one module directly or combine modules into a full s
 | `figure-audit` | Figure-claim audit, caption fixes, missing evidence list |
 | `reference-tools` | DOI/title checklist, duplicate/missing reference warnings |
 
+## Executable Toolchain
+
+paper-skill now includes a runnable stage-gate checker, so it is not only a prompt library.
+
+```bash
+python tools/paper_skill_gate.py examples/submission-package-check.json
+python -m unittest discover -s tests
+```
+
+| Tool | Purpose |
+|---|---|
+| [tools/paper_skill_gate.py](tools/paper_skill_gate.py) | Checks identity, claim-evidence mapping, citation integrity, and submission package completeness |
+| [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
+| [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
+
 ## Workflow Overview
 
 <p align="center">
@@ -129,8 +144,9 @@ The figure module defines scientific purpose before visual generation: what the 
 
 ## Why It Is Different
 
-- Chinese-first workflows rather than English-only prompts.
+- Built for non-native English researchers, with Chinese-first workflows rather than English-only prompts.
 - Submission-focused instead of general note-taking.
+- Runnable stage-gate checks for submission package completeness.
 - Built-in refusal to invent data, DOI, experiments, journal policies, or reviewer identities.
 - Citation integrity and over-claim checks before submission.
 - Reviewer response workflow with traceable manuscript locations.
@@ -143,6 +159,7 @@ See [examples/README.md](examples/README.md):
 - Chinese abstract to academic English.
 - Reviewer comment to point-by-point response.
 - Citation integrity and over-claim audit.
+- Before / after examples that show weak output versus paper-skill output.
 
 ## Core Files
 
@@ -153,6 +170,7 @@ See [examples/README.md](examples/README.md):
 | `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first strategy and FINER scoring |
 | `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |
 | `workflows` | [workflows/README.md](workflows/README.md) | Modular workflow pages for submission package, literature review, figure audit, and references |
+| `tools` | [tools/README.md](tools/README.md) | Runnable stage-gate checker and validation workflow |
 | `writing` | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Writing and review prompts |
 | `figures` | [references/figure-prompts.md](references/figure-prompts.md) | Academic figure prompts |
 | `literature-review` | [workflows/literature-review.md](workflows/literature-review.md) | Related-work matrix, gap extraction, citation roles |

@@ -10,3 +10,9 @@ These workflow pages turn paper-skill's benchmarked capabilities into reusable m
 | [reference-tools](reference-tools.md) | Citation/reference matching, missing metadata, suspicious references |
 
 Use these workflows together with the core modules in [SKILL.md](../SKILL.md).
+
+For executable checks, see [tools/README.md](../tools/README.md) and run:
+
+```bash
+python tools/paper_skill_gate.py examples/submission-package-check.json
+```

@@ -113,6 +113,21 @@ paper-skill is organized as independent but composable modules. Use one module f
 | `figure-audit` | Check whether figures actually support manuscript claims. | Figure-claim audit, caption fixes, missing evidence list |
 | `reference-tools` | Run lightweight reference consistency checks. | DOI/title checklist, duplicate/missing reference warnings |
 
+## Executable Toolchain
+
+paper-skill now includes a small runnable stage-gate checker, so the project is not only a prompt library.
+
+```bash
+python tools/paper_skill_gate.py examples/submission-package-check.json
+python -m unittest discover -s tests
+```
+
+| Tool | Purpose |
+|---|---|
+| [tools/paper_skill_gate.py](tools/paper_skill_gate.py) | Checks identity, claim-evidence mapping, citation integrity, and submission package completeness |
+| [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
+| [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
+
 ## Workflow Overview
 
 <p align="center">
@@ -164,6 +179,9 @@ Copyable demos:
 - [Reviewer response](examples/reviewer-response.md)
 - [Citation integrity and over-claim audit](examples/citation-integrity-audit.md)
 - [Full submission package](examples/full-submission-package.md)
+- [Before / after: Chinese abstract](examples/before-after-chinese-abstract.md)
+- [Before / after: reviewer response](examples/reviewer-response-before-after.md)
+- [Before / after: citation audit](examples/citation-audit-before-after.md)
 
 Demo output shape:
 
@@ -187,6 +205,7 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first planning, FINER scoring, transfer strategy |
 | `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension score, R&R traceability, final checks |
 | `workflows` | [workflows/README.md](workflows/README.md) | Modular workflow pages for submission package, literature review, figure audit, and references |
+| `tools` | [tools/README.md](tools/README.md) | Runnable stage-gate checker and validation workflow |
 | `literature-review` | [workflows/literature-review.md](workflows/literature-review.md) | Related-work matrix, gap extraction, citation roles |
 | `submission-package` | [workflows/submission-package.md](workflows/submission-package.md) | Final submission artifact checklist |
 | `figure-audit` | [workflows/figure-audit.md](workflows/figure-audit.md) | Figure-to-claim alignment checks |
@@ -258,9 +277,8 @@ Project docs:
 
 ## Roadmap
 
-- `v0.3`: add `workflows/` pages for the core submission journeys.
-- `v0.4`: add anonymized screenshots and before/after examples.
-- `v0.5`: explore optional scripts for citation and quality checks.
+- `v0.4`: add executable stage-gate checks and before/after examples.
+- `v0.5`: add Markdown package parsing, optional DOI lookup, and journal-specific gate profiles.
 - `v1.0`: stabilize the Chinese-first English submission skill suite.
 
 ## License

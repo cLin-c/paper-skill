@@ -14,19 +14,22 @@
   - `figure-audit`
   - `reference-tools`
 
-## v0.4 - Evidence and Demo Assets
+## v0.4 - Toolchain and Visible Examples
 
-- Add screenshots of Codex / Claude Code outputs.
-- Add more anonymized before/after examples.
-- Add a complete demo from abstract to cover letter.
-- Add short tutorial scripts for Bilibili / Xiaohongshu / Zhihu.
+- Add a runnable stage-gate checker for submission package structure.
+- Add unit tests and CI for the checker.
+- Add before/after examples for:
+  - Chinese abstract rewriting.
+  - Reviewer response.
+  - Citation integrity audit.
+- Add a runnable sample submission package.
 
-## v0.5 - Lightweight Automation
+## v0.5 - Stronger Automation
 
-- Explore scripts for:
-  - Reference list consistency checks.
-  - Markdown claim-evidence matrix generation.
-  - Submission package checklist generation.
+- Add Markdown package parsing.
+- Add optional DOI lookup for reference verification.
+- Add journal-specific gate profiles for SCI, IEEE, Nature-family, and conference submissions.
+- Add cross-model review handoff notes for high-risk claims.
 - Keep scripts optional; the skill should remain usable as prompt workflows.
 
 ## v1.0 - Stable Submission Skill Suite
