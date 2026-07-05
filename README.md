@@ -17,11 +17,20 @@
 </p>
 
 <p align="center">
-  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-writing-2f80ed?style=for-the-badge" alt="writing module"></a>
-  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-translation-d64545?style=for-the-badge" alt="translation module"></a>
-  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-review--response-8b5cf6?style=for-the-badge" alt="review response module"></a>
-  <a href="citation-integrity.md"><img src="https://img.shields.io/badge/module-citation--integrity-2563eb?style=for-the-badge" alt="citation integrity module"></a>
-  <a href="quality-gates.md"><img src="https://img.shields.io/badge/module-quality--gates-0f766e?style=for-the-badge" alt="quality gates module"></a>
+  <img src="https://img.shields.io/badge/Google%20Scholar-literature%20map-0B57D0?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar literature map">
+  <img src="https://img.shields.io/badge/arXiv-preprint%20workflow-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv preprint workflow">
+  <img src="https://img.shields.io/badge/LaTeX-manuscript%20ready-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX manuscript ready">
+  <img src="https://img.shields.io/badge/IEEE-submission%20style-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE submission style">
+  <img src="https://img.shields.io/badge/Overleaf-writing%20pipeline-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf writing pipeline">
+</p>
+
+<p align="center">
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/Storyline-paper%20arc-111827?style=for-the-badge&logo=readme&logoColor=white" alt="storyline module"></a>
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/Translation-Chinese%20to%20English-D64545?style=for-the-badge&logo=deepl&logoColor=white" alt="translation module"></a>
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/Reviewer%20Response-R%26R%20matrix-8B5CF6?style=for-the-badge&logo=gitbook&logoColor=white" alt="review response module"></a>
+  <a href="citation-integrity.md"><img src="https://img.shields.io/badge/Citation%20Integrity-DOI%20audit-2563EB?style=for-the-badge&logo=zotero&logoColor=white" alt="citation integrity module"></a>
+  <a href="quality-gates.md"><img src="https://img.shields.io/badge/Quality%20Gates-7D%20check-0F766E?style=for-the-badge&logo=checkmarx&logoColor=white" alt="quality gates module"></a>
+  <a href="references/figure-prompts.md"><img src="https://img.shields.io/badge/Figures-visual%20contract-F59E0B?style=for-the-badge&logo=figma&logoColor=white" alt="figures module"></a>
 </p>
 
 paper-skill 帮中文科研作者把研究材料整理成可投稿英文包：论文结构、英文表达、引用诚信、审稿回复、图表提示词和投稿前质量门控。

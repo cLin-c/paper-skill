@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.3.0 - Visual module upgrade
+v0.3.1 - Icon polish
 ```
 
-- Use the release body from [releases/v0.3.0-visual-module-upgrade-notes.md](releases/v0.3.0-visual-module-upgrade-notes.md).
+- Use the release body from [releases/v0.3.1-icon-polish-notes.md](releases/v0.3.1-icon-polish-notes.md).
 
 ## README Promotion
 
