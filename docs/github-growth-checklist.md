@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.2.9 - Module hardening without star-count comparison
+v0.3.0 - Visual module upgrade
 ```
 
-- Use the release body from [releases/v0.2.9-module-hardening-notes.md](releases/v0.2.9-module-hardening-notes.md).
+- Use the release body from [releases/v0.3.0-visual-module-upgrade-notes.md](releases/v0.3.0-visual-module-upgrade-notes.md).
 
 ## README Promotion
 

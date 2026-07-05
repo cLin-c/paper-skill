@@ -16,6 +16,14 @@
   <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
 </p>
 
+<p align="center">
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-writing-2f80ed?style=for-the-badge" alt="writing module"></a>
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-translation-d64545?style=for-the-badge" alt="translation module"></a>
+  <a href="#modular-skill-architecture"><img src="https://img.shields.io/badge/module-review--response-8b5cf6?style=for-the-badge" alt="review response module"></a>
+  <a href="citation-integrity.md"><img src="https://img.shields.io/badge/module-citation--integrity-2563eb?style=for-the-badge" alt="citation integrity module"></a>
+  <a href="quality-gates.md"><img src="https://img.shields.io/badge/module-quality--gates-0f766e?style=for-the-badge" alt="quality gates module"></a>
+</p>
+
 paper-skill 帮中文科研作者把研究材料整理成可投稿英文包：论文结构、英文表达、引用诚信、审稿回复、图表提示词和投稿前质量门控。
 
 它不是单纯润色工具，而是面向真实投稿流程的 AI skill：**中文初稿 -> 英文摘要/正文 -> Cover Letter -> Reviewer Response -> Citation Audit -> Submission Checklist**。
@@ -25,6 +33,10 @@ English overview: [README_EN.md](README_EN.md)
 ## Flagship Strengths
 
 paper-skill 最强的能力是 **Chinese-first submission package**：从中文材料出发，生成英文投稿所需的一整套可核查材料。
+
+<p align="center">
+  <img src="assets/submission-package-flow.svg" alt="Chinese research materials to English submission package" width="100%">
+</p>
 
 | Strength | Why it matters |
 |---|---|
@@ -81,6 +93,10 @@ Verify installation:
 ## Modular Skill Architecture
 
 paper-skill is organized as independent but composable modules. Use one module for a narrow task, or combine modules into a full submission workflow.
+
+<p align="center">
+  <img src="assets/module-map.svg" alt="paper-skill modular architecture map" width="100%">
+</p>
 
 | Module | Use it when | Output |
 |---|---|---|

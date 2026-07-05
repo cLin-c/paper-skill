@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">paper-skill modular architecture</title>
+  <desc id="desc">A modular map of paper-skill capabilities for academic submission workflows.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .title { font: 700 34px Arial, sans-serif; fill: #152238; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #526173; }
+      .card-title { font: 700 18px Arial, sans-serif; fill: #162033; }
+      .card-text { font: 400 13px Arial, sans-serif; fill: #4d5c70; }
+      .tag { font: 700 12px Arial, sans-serif; fill: #ffffff; }
+      .line { stroke: #c5ced8; stroke-width: 2; fill: none; }
+      .hub { fill: #172033; }
+      .hub-text { font: 700 22px Arial, sans-serif; fill: #ffffff; }
+      .hub-small { font: 400 13px Arial, sans-serif; fill: #d6dce5; }
+      .icon { stroke: #172033; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="680"/>
+  <text class="title" x="60" y="62">Modular Skill Architecture</text>
+  <text class="subtitle" x="60" y="94">Use one module for a narrow task, or combine modules into a full English submission package.</text>
+
+  <rect class="hub" x="470" y="250" width="260" height="150" rx="8"/>
+  <text class="hub-text" x="600" y="310" text-anchor="middle">paper-skill</text>
+  <text class="hub-small" x="600" y="338" text-anchor="middle">Chinese research materials</text>
+  <text class="hub-small" x="600" y="362" text-anchor="middle">to English submission package</text>
+
+  <path class="line" d="M470 290 L350 190"/>
+  <path class="line" d="M470 328 L350 328"/>
+  <path class="line" d="M470 370 L350 490"/>
+  <path class="line" d="M730 290 L850 190"/>
+  <path class="line" d="M730 328 L850 328"/>
+  <path class="line" d="M730 370 L850 490"/>
+  <path class="line" d="M600 250 L600 165"/>
+  <path class="line" d="M600 400 L600 515"/>
+
+  <g transform="translate(60,145)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#2f80ed"/>
+    <path class="icon" d="M35 29 h38 M35 47 h50 M35 65 h32"/>
+    <text class="card-title" x="105" y="34">writing</text>
+    <text class="card-text" x="105" y="58">Outline, sections, claims</text>
+  </g>
+
+  <g transform="translate(60,283)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#d64545"/>
+    <path class="icon" d="M35 30 h28 M49 30 v36 M79 36 c-8 18-19 28-36 34 M46 52 h38"/>
+    <text class="card-title" x="105" y="34">translation</text>
+    <text class="card-text" x="105" y="58">Chinese draft to journal English</text>
+  </g>
+
+  <g transform="translate(60,465)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#8b5cf6"/>
+    <path class="icon" d="M38 30 h42 v30 h-24 l-14 14 v-14 h-4 z"/>
+    <text class="card-title" x="105" y="34">review-response</text>
+    <text class="card-text" x="105" y="58">Reply, revision matrix, rebuttal</text>
+  </g>
+
+  <g transform="translate(455,85)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#0f766e"/>
+    <path class="icon" d="M38 60 l14 14 l32-44 M42 30 h34"/>
+    <text class="card-title" x="105" y="34">quality-gates</text>
+    <text class="card-text" x="105" y="58">7-dimension submission check</text>
+  </g>
+
+  <g transform="translate(455,520)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#f59e0b"/>
+    <path class="icon" d="M38 66 l18-24 l16 16 l16-30 M38 72 h52"/>
+    <text class="card-title" x="105" y="34">figures</text>
+    <text class="card-text" x="105" y="58">Figure contract, captions, audit</text>
+  </g>
+
+  <g transform="translate(850,145)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#2563eb"/>
+    <path class="icon" d="M38 32 h38 M38 50 h50 M38 68 h28 M82 28 l12 12 l-28 28 h-12 v-12 z"/>
+    <text class="card-title" x="105" y="34">citation-integrity</text>
+    <text class="card-text" x="105" y="58">DOI, claim support, Trust-Chain</text>
+  </g>
+
+  <g transform="translate(850,283)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#059669"/>
+    <path class="icon" d="M40 68 c20-44 28-44 48 0 M48 54 h32"/>
+    <text class="card-title" x="105" y="34">journal-strategy</text>
+    <text class="card-text" x="105" y="58">Fit, FINER score, transfer plan</text>
+  </g>
+
+  <g transform="translate(850,465)">
+    <rect x="0" y="0" width="290" height="92" rx="8" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="0" y="0" width="7" height="92" rx="3" fill="#dc2626"/>
+    <path class="icon" d="M36 32 h48 v42 h-48 z M44 42 h32 M44 54 h32 M44 66 h20"/>
+    <text class="card-title" x="105" y="34">submission-package</text>
+    <text class="card-text" x="105" y="58">Title, abstract, cover letter, checklist</text>
+  </g>
+</svg>

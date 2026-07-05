@@ -14,9 +14,21 @@ Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
 paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
 
+<p align="center">
+  <a href="#what-it-does"><img src="https://img.shields.io/badge/module-writing-2f80ed?style=for-the-badge" alt="writing module"></a>
+  <a href="#what-it-does"><img src="https://img.shields.io/badge/module-translation-d64545?style=for-the-badge" alt="translation module"></a>
+  <a href="#what-it-does"><img src="https://img.shields.io/badge/module-review--response-8b5cf6?style=for-the-badge" alt="review response module"></a>
+  <a href="citation-integrity.md"><img src="https://img.shields.io/badge/module-citation--integrity-2563eb?style=for-the-badge" alt="citation integrity module"></a>
+  <a href="quality-gates.md"><img src="https://img.shields.io/badge/module-quality--gates-0f766e?style=for-the-badge" alt="quality gates module"></a>
+</p>
+
 ## Flagship Strengths
 
 paper-skill's strongest capability is the **Chinese-first submission package**: it starts from Chinese research materials and produces traceable English submission artifacts.
+
+<p align="center">
+  <img src="assets/submission-package-flow.svg" alt="Chinese research materials to English submission package" width="100%">
+</p>
 
 | Strength | Why it matters |
 |---|---|
@@ -68,6 +80,10 @@ Use $paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE 
 ## What It Does
 
 paper-skill is modular. Use one module directly or combine modules into a full submission workflow.
+
+<p align="center">
+  <img src="assets/module-map.svg" alt="paper-skill modular architecture map" width="100%">
+</p>
 
 | Module | Output |
 |---|---|
