@@ -1,27 +1,80 @@
 # paper-skill
 
-> 🎓 专为中文学者设计的学术写作 AI 工具库 | Academic Paper Skill for Chinese Researchers
+> Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
-> **v0.2 preview:** 新版增长入口已新增为 [README.v0.2.md](README.v0.2.md)，包含更清晰的定位、四条主工作流和可复制示例。英文入口见 [README_EN.md](README_EN.md)，示例见 [examples/README.md](examples/README.md)。
+[![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Codex CLI](https://img.shields.io/badge/Codex%20CLI-supported-brightgreen)](https://github.com/openai/codex)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-orange)](https://claude.ai/code)
 
 <p align="center">
   <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
 </p>
 
-**你是否面临这些困境？**
-- 中文写完不知道怎么转成地道英文？
-- 投稿信（Cover Letter）不知道从何下手？
-- 审稿意见看懂了，用英文回复却词不达意？
-- 润色完了担心有 AI 痕迹被编辑识别？
+paper-skill 帮中文科研作者把研究材料整理成可投稿英文包：论文结构、英文表达、引用诚信、审稿回复、图表提示词和投稿前质量门控。
 
-**paper-skill 专门为此设计**：22 个场景覆盖从读文献到投稿全流程，**中英双语提示词**，直接用中文和 AI 对话即可，无需翻译。
+它不是单纯润色工具，而是面向真实投稿流程的 AI skill：**中文初稿 -> 英文摘要/正文 -> Cover Letter -> Reviewer Response -> Citation Audit -> Submission Checklist**。
 
-核心优势不是“提示词多”，而是把论文写作拆成可复用的学术工作流：**读文献 → 搭故事线 → 写论文 → 改语言 → 查引用 → 画图表 → 审稿预演 → 投稿回复**。
-
-**主力平台：[Claude Code](https://claude.ai/code) · [OpenAI Codex CLI](https://github.com/openai/codex)**  
-另支持 Qwen Code / Kimi Code / DeepSeek / Comate / 通义灵码 / OpenClaw 等 6 个平台。
+English overview: [README_EN.md](README_EN.md)
 
 ---
+
+## Who It Is For
+
+- 中文研究生、博士、青年教师，正在准备 SCI / IEEE / Nature-family 投稿。
+- 已有中文论文、毕业论文、实验记录，但需要转成地道英文稿。
+- 正在写 Cover Letter、审稿回复、R&R 修改说明或 rebuttal。
+- 想在投稿前检查引用幻觉、主张过强、实验支撑不足和图表表达问题的作者或课题组。
+
+## 60-Second Demo
+
+Input:
+
+```text
+我的论文是中文初稿，目标期刊是 IEEE TRO。请先判断论文类型，重构核心故事线，然后给我一版英文摘要、投稿前风险清单和需要作者补充的信息。不要编造实验数据和引用。
+```
+
+Expected output shape:
+
+```text
+Paper type: methods paper
+Storyline: problem -> limitation -> method -> evidence -> contribution
+English abstract: ...
+Unsupported claims: ...
+AUTHOR_INPUT_NEEDED: baselines, metrics, scenario count, DOI list
+Submission risk: claim-evidence mismatch, missing real-world details, broad robustness language
+```
+
+这个 demo 展示了 paper-skill 的核心行为：提升英文表达，同时把缺失证据显式标出来，而不是替作者编造实验、DOI 或结论。
+
+## Try It First
+
+Install with Codex CLI:
+
+```bash
+git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
+```
+
+Invoke in Codex:
+
+```text
+$paper-skill
+```
+
+First prompt:
+
+```text
+我的论文是中文初稿，目标期刊是 IEEE TRO。请先判断论文类型，重构核心故事线，然后给我一版英文摘要、投稿前风险清单和需要作者补充的信息。不要编造实验数据和引用。
+```
+
+## Four Workflows
+
+| Workflow | Use it when | Output |
+|---|---|---|
+| Manuscript Writing | You need to build or rewrite a paper from notes, thesis text, experiment records, or a rough draft. | Outline, section drafts, claim-evidence map, revision plan |
+| Chinese-to-English Submission | You have a Chinese manuscript and need publishable English. | English abstract, translated sections, Chinglish report, cover letter |
+| Reviewer Response | You received reviewer comments or want pre-submission review. | Point-by-point response, revision matrix, risk triage |
+| Citation & Quality Gates | You need to prevent hallucinated citations and over-claims before submission. | Citation audit, DOI checks, 7-dimension score, final checklist |
 
 ## 🧠 核心能力
 
@@ -62,6 +115,22 @@
 | 做答辩 PPT | [§10 PPT制作](#10-ppt-制作与答辩) |
 | 中英文并排读论文 | [§11 对照阅读](#11-中英文对照阅读) |
 | 查看全部子技能模块 | [模块索引](references/prompt-bank.md) |
+
+## Example Gallery
+
+可直接复制使用的案例：
+
+- [中文摘要转英文](examples/chinese-abstract-to-english.md)
+- [审稿回复](examples/reviewer-response.md)
+- [引用诚信与主张过强检查](examples/citation-integrity-audit.md)
+- [完整投稿包工作流](examples/full-submission-package.md)
+
+## Star This Repo If
+
+- 你写论文时习惯先用中文组织思路，但最终要投英文期刊。
+- 你需要的不只是润色，而是审稿回复、引用检查和投稿前质量门控。
+- 你希望同一套工作流能在 Codex CLI、Claude Code、Qwen、Kimi、DeepSeek 等平台使用。
+- 你想把论文写作流程沉淀成课题组可复用的 AI skill。
 
 ---
 
