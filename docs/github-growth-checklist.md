@@ -30,14 +30,14 @@ ai-writing
 
 ## Release
 
-- Create tag: `v0.4.0`
+- Create tag: `v0.4.1`
 - Release title:
 
 ```text
-v0.4.0 - Toolchain and examples
+v0.4.1 - Installation guide
 ```
 
-- Use the release body from [releases/v0.4.0-toolchain-examples-notes.md](releases/v0.4.0-toolchain-examples-notes.md).
+- Use the release body from [releases/v0.4.1-installation-notes.md](releases/v0.4.1-installation-notes.md).
 
 ## README Promotion
 

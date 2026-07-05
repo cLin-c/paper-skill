@@ -1,8 +1,8 @@
-# paper-skill universal installer — installs to all supported AI coding platforms
+# paper-skill universal installer - installs to all supported AI coding platforms.
 # Usage: irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
 $ErrorActionPreference = 'Stop'
 
-$Repo  = "https://github.com/cLin-c/paper-skill"
+$Repo = "https://github.com/cLin-c/paper-skill"
 $Skill = "paper-skill"
 
 $Targets = @(
@@ -16,25 +16,27 @@ $Targets = @(
   "$env:USERPROFILE\.lingma\skills\$Skill"
 )
 
-$ok = 0; $upd = 0; $fail = 0
+$ok = 0
+$upd = 0
+$fail = 0
 
-Write-Host "📦  paper-skill installer"
-Write-Host ("━" * 50)
+Write-Host "paper-skill installer"
+Write-Host ("-" * 50)
 
 foreach ($Target in $Targets) {
   $Label = $Target.Replace($env:USERPROFILE, "~")
   if (Test-Path "$Target\.git") {
-    Write-Host ("↻  {0,-48}" -f $Label) -NoNewline
+    Write-Host ("-> {0,-48}" -f $Label) -NoNewline
     try {
       git -C $Target pull --ff-only -q 2>$null
       Write-Host " updated"
       $upd++
     } catch {
-      Write-Host " (already up to date)"
+      Write-Host " already up to date"
       $upd++
     }
   } else {
-    Write-Host ("✓  {0,-48}" -f $Label) -NoNewline
+    Write-Host ("+  {0,-48}" -f $Label) -NoNewline
     try {
       New-Item -ItemType Directory -Force -Path (Split-Path $Target) | Out-Null
       git clone --depth=1 -q $Repo $Target 2>$null
@@ -47,8 +49,10 @@ foreach ($Target in $Targets) {
   }
 }
 
-Write-Host ("━" * 50)
-Write-Host "✅  $ok installed, $upd updated, $fail failed"
+Write-Host ("-" * 50)
+Write-Host "$ok installed, $upd updated, $fail failed"
 Write-Host ""
-Write-Host "Invoke in any supported platform:"
-Write-Host "  /paper-skill"
+Write-Host "Invoke in supported platforms:"
+Write-Host "  Codex CLI:   `$paper-skill"
+Write-Host "  Claude Code: /paper-skill"
+Write-Host "  Others:      /paper-skill or /skill:paper-skill"

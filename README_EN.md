@@ -68,16 +68,43 @@ paper-skill is not a large prompt dump. It turns submission preparation into reu
 
 ## Quick Start
 
-Install for Codex CLI:
+One-command install for Codex CLI, Claude Code, Qwen Code, Kimi Code CLI, DeepSeek / Deep Code, Baidu Comate, Qoder / Lingma, and OpenClaw:
 
 ```bash
-git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
+curl -fsSL https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.sh | bash
 ```
 
-Invoke:
+Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
+```
+
+Manual install:
+
+| Platform | Install command | Invoke |
+|---|---|---|
+| Codex CLI | `git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill` | `$paper-skill` |
+| Claude Code | `git clone https://github.com/cLin-c/paper-skill ~/.claude/skills/paper-skill` | `/paper-skill` |
+| Qwen Code | `git clone https://github.com/cLin-c/paper-skill ~/.qwen/skills/paper-skill` | `/paper-skill` |
+| Kimi Code CLI | `git clone https://github.com/cLin-c/paper-skill ~/.kimi/skills/paper-skill` | `/skill:paper-skill` |
+| DeepSeek / Deep Code | `git clone https://github.com/cLin-c/paper-skill ~/.deepseek/skills/paper-skill` | `/paper-skill` |
+| Baidu Comate | `git clone https://github.com/cLin-c/paper-skill ~/.comate/skills/paper-skill` | `/paper-skill` |
+| Qoder / Lingma | `git clone https://github.com/cLin-c/paper-skill ~/.lingma/skills/paper-skill` | `/paper-skill` |
+| OpenClaw | `git clone https://github.com/cLin-c/paper-skill ~/.openclaw/skills/paper-skill` | `/paper-skill` |
+
+Full installation guide: [docs/installation.md](docs/installation.md)
+
+Invoke in Codex CLI:
 
 ```text
 $paper-skill
+```
+
+Invoke in Claude Code and most slash-command platforms:
+
+```text
+/paper-skill
 ```
 
 First prompt:
@@ -166,6 +193,7 @@ See [examples/README.md](examples/README.md):
 | Module | File | Purpose |
 |---|---|
 | `main` | [SKILL.md](SKILL.md) | Routing and core scenarios |
+| `installation` | [docs/installation.md](docs/installation.md) | One-command and manual installation across supported AI platforms |
 | `citation-integrity` | [citation-integrity.md](citation-integrity.md) | Citation hallucination and Trust-Chain checks |
 | `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first strategy and FINER scoring |
 | `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |

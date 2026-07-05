@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# paper-skill universal installer — installs to all supported AI coding platforms
+# paper-skill universal installer - installs to all supported AI coding platforms.
 # Usage: curl -fsSL https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.sh | bash
 set -e
 
@@ -17,24 +17,26 @@ TARGETS=(
   "$HOME/.lingma/skills/$SKILL"
 )
 
-ok=0; upd=0; fail=0
+ok=0
+upd=0
+fail=0
 
-echo "📦  paper-skill installer"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "paper-skill installer"
+echo "--------------------------------------------------"
 
 for TARGET in "${TARGETS[@]}"; do
   LABEL=$(echo "$TARGET" | sed "s|$HOME/||")
   if [ -d "$TARGET/.git" ]; then
-    printf "↻  %-45s" "$LABEL"
+    printf "-> %-45s" "$LABEL"
     if git -C "$TARGET" pull --ff-only -q 2>/dev/null; then
       echo " updated"
       upd=$((upd + 1))
     else
-      echo " (already up to date)"
+      echo " already up to date"
       upd=$((upd + 1))
     fi
   else
-    printf "✓  %-45s" "$LABEL"
+    printf "+  %-45s" "$LABEL"
     mkdir -p "$(dirname "$TARGET")"
     if git clone --depth=1 -q "$REPO" "$TARGET" 2>/dev/null; then
       echo " installed"
@@ -46,8 +48,10 @@ for TARGET in "${TARGETS[@]}"; do
   fi
 done
 
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "✅  $ok installed, $upd updated, $fail failed"
+echo "--------------------------------------------------"
+echo "$ok installed, $upd updated, $fail failed"
 echo ""
-echo "Invoke in any supported platform:"
-echo "  /paper-skill"
+echo "Invoke in supported platforms:"
+echo "  Codex CLI:   \$paper-skill"
+echo "  Claude Code: /paper-skill"
+echo "  Others:      /paper-skill or /skill:paper-skill"
