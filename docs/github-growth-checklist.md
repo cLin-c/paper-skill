@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.2.7 - Comparison and figure wording polish
+v0.2.8 - Benchmark capabilities and flagship strengths
 ```
 
-- Use the release body from [releases/v0.2.7-comparison-polish-notes.md](releases/v0.2.7-comparison-polish-notes.md).
+- Use the release body from [releases/v0.2.8-benchmark-capabilities-notes.md](releases/v0.2.8-benchmark-capabilities-notes.md).
 
 ## README Promotion
 
