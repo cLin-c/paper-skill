@@ -30,20 +30,20 @@ ai-writing
 
 ## Release
 
-- Create tag: `v0.2.0`
+- Create tag: `v0.2.3`
 - Release title:
 
 ```text
-v0.2.0 - Chinese-to-English submission workflow and example gallery
+v0.2.3 - Nature-skills-inspired community and roadmap polish
 ```
 
-- Use the release body from [v0.2.0-release-notes.md](v0.2.0-release-notes.md).
+- Use the release body from [v0.2.3-nature-skills-inspired-notes.md](v0.2.3-nature-skills-inspired-notes.md).
 
 ## README Promotion
 
-- Keep the original README as the stable landing page until v0.2 is reviewed.
-- Share [README.v0.2.md](../README.v0.2.md) as the preview page.
-- After feedback, either replace the top half of `README.md` with the v0.2 positioning or keep both pages.
+- The main README now uses the v0.2 positioning.
+- Keep [README.v0.2.md](../README.v0.2.md) as a historical preview page.
+- Link [COMMUNITY.md](../COMMUNITY.md) and [ROADMAP.md](../ROADMAP.md) in social posts when asking for feedback.
 
 ## Social Posts
 
@@ -78,3 +78,4 @@ GitHub: https://github.com/cLin-c/paper-skill
 - Add one anonymized full workflow example.
 - Add screenshots of Codex / Claude Code output.
 - Pin one GitHub Discussion asking users for target journals and pain points.
+- Add a community QR code or tutorial link when available.

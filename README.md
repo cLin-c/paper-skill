@@ -19,6 +19,20 @@ English overview: [README_EN.md](README_EN.md)
 
 ---
 
+## Project Philosophy
+
+paper-skill 参考了 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 的 skill 化科研理念，但定位更聚焦：**为中文科研作者建立一套英文投稿工作流**。
+
+我的判断是：中文科研作者最缺的往往不是“让 AI 写得更华丽”，而是一个稳定流程，能把中文材料、实验结果、参考文献和审稿意见转换成可追踪、可核查、可投稿的英文材料。
+
+因此 paper-skill 的设计原则是：
+
+- 先识别论文类型和故事线，再写作。
+- 先核对证据，再强化表达。
+- 缺少数据、DOI、页码、实验细节时，标注 `[AUTHOR_INPUT_NEEDED: ...]`，不替作者编造。
+- 把审稿回复、引用核查、质量门控纳入同一个投稿流程。
+- 把可复用的科研写作流程沉淀成 skill，而不是每次从零写提示词。
+
 ## Who It Is For
 
 - 中文研究生、博士、青年教师，正在准备 SCI / IEEE / Nature-family 投稿。
@@ -59,6 +73,12 @@ Invoke in Codex:
 
 ```text
 $paper-skill
+```
+
+Verify installation:
+
+```text
+请使用 $paper-skill，告诉我它支持哪些论文投稿工作流，并给我一个中文摘要转英文摘要的最小示例。
 ```
 
 First prompt:
@@ -131,6 +151,21 @@ First prompt:
 - 你需要的不只是润色，而是审稿回复、引用检查和投稿前质量门控。
 - 你希望同一套工作流能在 Codex CLI、Claude Code、Qwen、Kimi、DeepSeek 等平台使用。
 - 你想把论文写作流程沉淀成课题组可复用的 AI skill。
+
+## Community and Roadmap
+
+这个项目会优先收集真实论文场景，而不是盲目堆功能。欢迎通过 GitHub Issues 提交：
+
+- [Example request](https://github.com/cLin-c/paper-skill/issues/new?template=example-request.yml)：希望增加的论文案例。
+- [Feature request](https://github.com/cLin-c/paper-skill/issues/new?template=feature-request.yml)：希望支持的新工作流。
+- [Bug report](https://github.com/cLin-c/paper-skill/issues/new?template=bug-report.yml)：发现的错误、幻觉或不安全输出。
+
+当前路线图：
+
+- `v0.3`：把核心流程拆成更清晰的 `workflows/` 文档。
+- `v0.4`：增加更多脱敏真实案例和截图。
+- `v0.5`：探索把 citation audit、quality gates 做成可运行脚本或检查器。
+- `v1.0`：形成稳定的中文科研作者英文投稿 skill 套件。
 
 ---
 
