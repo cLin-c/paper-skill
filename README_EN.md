@@ -9,6 +9,18 @@ Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
 paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
 
+## Core Value
+
+paper-skill is not a large prompt dump. It turns submission preparation into reusable modules.
+
+| Core | What it protects | What you get |
+|---|---|---|
+| Storyline first | Writing before the argument is clear | Paper type, narrative arc, contribution framing |
+| Evidence before claims | Over-claiming beyond experiments or citations | Claim-evidence matrix, unsupported-claim warnings |
+| Chinese-to-English submission | Literal translation and Chinglish | Journal-grade abstract, sections, cover letter |
+| Reviewer traceability | Vague or fabricated revision replies | Point-by-point response, revision-location mapping |
+| Citation integrity | Hallucinated or mismatched references | DOI/title checks, Trust-Chain notes, risk list |
+
 ## Who It Is For
 
 - Chinese researchers preparing SCI / IEEE / Nature-family submissions.
@@ -50,6 +62,29 @@ paper-skill is modular. Use one module directly or combine modules into a full s
 | `figures` | Figure contract, method/result figure prompts, captions, figure audit |
 | `journal-strategy` | Journal fit notes, FINER score, transfer plan |
 
+## Workflow Overview
+
+<p align="center">
+  <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
+</p>
+
+The workflow can be used end to end or module by module:
+
+1. Identify paper type and target journal.
+2. Build the scientific storyline.
+3. Draft or rewrite manuscript sections.
+4. Translate and polish for English submission.
+5. Audit citations and claim-evidence alignment.
+6. Prepare figures, cover letter, reviewer response, and final checks.
+
+## Academic Figure Support
+
+<p align="center">
+  <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
+</p>
+
+The figure module defines scientific purpose before visual generation: what the figure must prove, which figure type fits, how to caption it, and whether it supports the manuscript claim.
+
 ## Why It Is Different
 
 - Chinese-first workflows rather than English-only prompts.
@@ -77,6 +112,17 @@ See [examples/README.md](examples/README.md):
 | `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |
 | `writing` | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Writing and review prompts |
 | `figures` | [references/figure-prompts.md](references/figure-prompts.md) | Academic figure prompts |
+
+## Typical Use Cases
+
+| Scenario | Recommended modules |
+|---|---|
+| Chinese draft to English submission | `writing` + `translation` + `quality-gates` |
+| Reviewer response | `review-response` + `quality-gates` |
+| Citation hallucination or mismatch concerns | `citation-integrity` + `quality-gates` |
+| Weak paper storyline | `journal-strategy` + `writing` |
+| Academic method/result figures | `figures` + `writing` |
+| Transfer after rejection | `journal-strategy` + `writing` + `review-response` |
 
 ## Safety Principles
 

@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.2.5 - Modular architecture and clean positioning
+v0.2.6 - Visual workflow and core module polish
 ```
 
-- Use the release body from [releases/v0.2.5-modular-cleanup-notes.md](releases/v0.2.5-modular-cleanup-notes.md).
+- Use the release body from [releases/v0.2.6-visual-core-notes.md](releases/v0.2.6-visual-core-notes.md).
 
 ## README Promotion
 
