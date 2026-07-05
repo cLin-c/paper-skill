@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.2.3 - Nature-skills-inspired community and roadmap polish
+v0.2.5 - Modular architecture and clean positioning
 ```
 
-- Use the release body from [releases/v0.2.4-cleanup-notes.md](releases/v0.2.4-cleanup-notes.md).
+- Use the release body from [releases/v0.2.5-modular-cleanup-notes.md](releases/v0.2.5-modular-cleanup-notes.md).
 
 ## README Promotion
 

@@ -49,19 +49,23 @@ Verify installation:
 请使用 $paper-skill，告诉我它支持哪些论文投稿工作流，并给我一个中文摘要转英文摘要的最小示例。
 ```
 
-## Core Workflows
+## Modular Skill Architecture
 
-| Workflow | Use it when | Output |
+paper-skill is organized as independent but composable modules. Use one module for a narrow task, or combine modules into a full submission workflow.
+
+| Module | Use it when | Output |
 |---|---|---|
-| Manuscript Writing | You need to build or rewrite a paper from notes, thesis text, experiment records, or a rough draft. | Outline, section drafts, claim-evidence map, revision plan |
-| Chinese-to-English Submission | You have a Chinese manuscript and need publishable English. | English abstract, translated sections, Chinglish report, cover letter |
-| Reviewer Response | You received reviewer comments or want pre-submission review. | Point-by-point response, revision matrix, risk triage |
-| Citation & Quality Gates | You need to prevent hallucinated citations and over-claims before submission. | Citation audit, DOI checks, 7-dimension score, final checklist |
-| Academic Figures | You need method figures, result figures, captions, or figure review. | Figure contract, prompt, caption, text-reference guidance |
+| `writing` | Build or rewrite a paper from notes, thesis text, experiment records, or a rough draft. | Outline, section drafts, claim-evidence map, revision plan |
+| `translation` | Convert Chinese manuscript text into journal-grade English. | English abstract, translated sections, Chinglish report |
+| `review-response` | Reply to reviewer comments or prepare rebuttal / R&R materials. | Point-by-point response, revision matrix, risk triage |
+| `citation-integrity` | Prevent hallucinated citations, unsupported claims, and DOI/title mismatch. | Citation audit, DOI checks, Trust-Chain notes |
+| `quality-gates` | Check manuscript readiness before submission. | 7-dimension score, final checklist, rejection-risk list |
+| `figures` | Design method figures, result figures, captions, or figure-review prompts. | Figure contract, prompt, caption, text-reference guidance |
+| `journal-strategy` | Select or adapt to a target journal before writing or transferring. | Journal fit notes, FINER score, transfer plan |
 
 ## Why It Exists
 
-paper-skill 参考了 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 的 skill 化科研理念，但定位更聚焦：**为中文科研作者建立一套英文投稿工作流**。
+paper-skill 的定位很聚焦：**为中文科研作者建立一套英文投稿工作流**。
 
 中文科研作者最缺的往往不是“让 AI 写得更华丽”，而是一个稳定流程，能把中文材料、实验结果、参考文献和审稿意见转换成可追踪、可核查、可投稿的英文材料。
 
@@ -97,12 +101,12 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 
 | Module | File | Purpose |
 |---|---|---|
-| Main skill | [SKILL.md](SKILL.md) | 22 paper-writing, revision, translation, and submission scenarios |
-| Writing prompts | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Literature reading, SCI revision, sections, experiments, reviewer risks |
-| Figure prompts | [references/figure-prompts.md](references/figure-prompts.md) | Method diagrams, result figures, captions, figure audits |
-| Citation integrity | [citation-integrity.md](citation-integrity.md) | DOI checks, hallucination scan, Trust-Chain sourcing |
-| Journal strategy | [journal-strategy.md](journal-strategy.md) | Journal-first planning, FINER scoring, transfer strategy |
-| Quality gates | [quality-gates.md](quality-gates.md) | 7-dimension score, R&R traceability, final checks |
+| `main` | [SKILL.md](SKILL.md) | Routing and core scenarios |
+| `writing` | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Literature reading, SCI revision, sections, experiments, reviewer risks |
+| `figures` | [references/figure-prompts.md](references/figure-prompts.md) | Method diagrams, result figures, captions, figure audits |
+| `citation-integrity` | [citation-integrity.md](citation-integrity.md) | DOI checks, hallucination scan, Trust-Chain sourcing |
+| `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first planning, FINER scoring, transfer strategy |
+| `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension score, R&R traceability, final checks |
 
 ## Supported Platforms
 
@@ -137,7 +141,6 @@ Project docs:
 | Need | Better choice |
 |---|---|
 | Chinese-to-English SCI / IEEE submission workflow | paper-skill |
-| Deep Nature-style writing and figure stack | [nature-skills](https://github.com/Yuan1z0825/nature-skills) |
 | Large all-in-one research automation suite | [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) |
 | General scholar assistant with coding and knowledge base workflows | [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) |
 

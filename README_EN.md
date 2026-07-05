@@ -38,13 +38,17 @@ Use $paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE 
 
 ## What It Does
 
-| Workflow | Output |
+paper-skill is modular. Use one module directly or combine modules into a full submission workflow.
+
+| Module | Output |
 |---|---|
-| Manuscript Writing | Outline, section drafts, claim-evidence map, revision plan |
-| Chinese-to-English Submission | English abstract, translated sections, Chinglish report, cover letter |
-| Reviewer Response | Point-by-point response, revision matrix, risk triage |
-| Citation & Quality Gates | Citation audit, DOI checks, 7-dimension score, final checklist |
-| Academic Figures | Figure contract, method/result figure prompts, captions, figure audit |
+| `writing` | Outline, section drafts, claim-evidence map, revision plan |
+| `translation` | English abstract, translated sections, Chinglish report |
+| `review-response` | Point-by-point response, revision matrix, risk triage |
+| `citation-integrity` | Citation audit, DOI checks, Trust-Chain notes |
+| `quality-gates` | 7-dimension score, final checklist, rejection-risk list |
+| `figures` | Figure contract, method/result figure prompts, captions, figure audit |
+| `journal-strategy` | Journal fit notes, FINER score, transfer plan |
 
 ## Why It Is Different
 
@@ -65,14 +69,14 @@ See [examples/README.md](examples/README.md):
 
 ## Core Files
 
-| File | Purpose |
+| Module | File | Purpose |
 |---|---|
-| [SKILL.md](SKILL.md) | Main skill with 22 academic paper scenarios |
-| [citation-integrity.md](citation-integrity.md) | Citation hallucination and Trust-Chain checks |
-| [journal-strategy.md](journal-strategy.md) | Journal-first strategy and FINER scoring |
-| [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |
-| [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Writing and review prompts |
-| [references/figure-prompts.md](references/figure-prompts.md) | Academic figure prompts |
+| `main` | [SKILL.md](SKILL.md) | Routing and core scenarios |
+| `citation-integrity` | [citation-integrity.md](citation-integrity.md) | Citation hallucination and Trust-Chain checks |
+| `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first strategy and FINER scoring |
+| `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |
+| `writing` | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Writing and review prompts |
+| `figures` | [references/figure-prompts.md](references/figure-prompts.md) | Academic figure prompts |
 
 ## Safety Principles
 
