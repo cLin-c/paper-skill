@@ -2,6 +2,8 @@
 
 > 🎓 专为中文学者设计的学术写作 AI 工具库 | Academic Paper Skill for Chinese Researchers
 
+> **v0.2 preview:** 新版增长入口已新增为 [README.v0.2.md](README.v0.2.md)，包含更清晰的定位、四条主工作流和可复制示例。英文入口见 [README_EN.md](README_EN.md)，示例见 [examples/README.md](examples/README.md)。
+
 <p align="center">
   <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
 </p>

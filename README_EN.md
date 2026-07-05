@@ -1,0 +1,71 @@
+# paper-skill
+
+Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
+
+paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
+
+## Quick Start
+
+Install for Codex CLI:
+
+```bash
+git clone https://github.com/cLin-c/paper-skill ~/.codex/skills/paper-skill
+```
+
+Invoke:
+
+```text
+$paper-skill
+```
+
+First prompt:
+
+```text
+Use $paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE journal. First identify the paper type, then rewrite the abstract in academic English, flag unsupported claims, and list the information I must provide. Do not invent data or references.
+```
+
+## What It Does
+
+| Workflow | Output |
+|---|---|
+| Manuscript Writing | Outline, section drafts, claim-evidence map, revision plan |
+| Chinese-to-English Submission | English abstract, translated sections, Chinglish report, cover letter |
+| Reviewer Response | Point-by-point response, revision matrix, risk triage |
+| Citation & Quality Gates | Citation audit, DOI checks, 7-dimension score, final checklist |
+| Academic Figures | Figure contract, method/result figure prompts, captions, figure audit |
+
+## Why It Is Different
+
+- Chinese-first workflows rather than English-only prompts.
+- Submission-focused instead of general note-taking.
+- Built-in refusal to invent data, DOI, experiments, journal policies, or reviewer identities.
+- Citation integrity and over-claim checks before submission.
+- Reviewer response workflow with traceable manuscript locations.
+- Multi-platform support across Codex CLI, Claude Code, Qwen, Kimi, DeepSeek, Comate, Qoder / Lingma, and OpenClaw.
+
+## Examples
+
+See [examples/README.md](examples/README.md):
+
+- Chinese abstract to academic English.
+- Reviewer comment to point-by-point response.
+- Citation integrity and over-claim audit.
+
+## Core Files
+
+| File | Purpose |
+|---|---|
+| [SKILL.md](SKILL.md) | Main skill with 22 academic paper scenarios |
+| [citation-integrity.md](citation-integrity.md) | Citation hallucination and Trust-Chain checks |
+| [journal-strategy.md](journal-strategy.md) | Journal-first strategy and FINER scoring |
+| [quality-gates.md](quality-gates.md) | 7-dimension quality gates and R&R traceability |
+| [references/paper-writing-prompts.md](references/paper-writing-prompts.md) | Writing and review prompts |
+| [references/figure-prompts.md](references/figure-prompts.md) | Academic figure prompts |
+
+## Safety Principles
+
+paper-skill should mark missing information as `[AUTHOR_INPUT_NEEDED: ...]`, distinguish supplied evidence from model inference, and avoid strengthening claims beyond the available evidence.
+
+## License
+
+MIT
