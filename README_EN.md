@@ -12,6 +12,10 @@ Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 [![Reviewer Response](https://img.shields.io/badge/reviewer-response-teal)](#what-it-does)
 [![Academic Figures](https://img.shields.io/badge/academic-figures-yellow)](references/figure-prompts.md)
 
+<p align="center">
+  <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
+</p>
+
 paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
 
 <p align="center">
@@ -25,10 +29,6 @@ paper-skill is designed for researchers who draft, think, and revise in Chinese 
 ## Flagship Strengths
 
 paper-skill's strongest capability is the **Chinese-first submission package**: it starts from Chinese research materials and produces traceable English submission artifacts.
-
-<p align="center">
-  <img src="assets/submission-package-flow.svg" alt="Chinese research materials to English submission package" width="100%">
-</p>
 
 | Strength | Why it matters |
 |---|---|
@@ -80,10 +80,6 @@ Use $paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE 
 ## What It Does
 
 paper-skill is modular. Use one module directly or combine modules into a full submission workflow.
-
-<p align="center">
-  <img src="assets/module-map.svg" alt="paper-skill modular architecture map" width="100%">
-</p>
 
 | Module | Output |
 |---|---|

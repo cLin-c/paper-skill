@@ -34,10 +34,6 @@ English overview: [README_EN.md](README_EN.md)
 
 paper-skill 最强的能力是 **Chinese-first submission package**：从中文材料出发，生成英文投稿所需的一整套可核查材料。
 
-<p align="center">
-  <img src="assets/submission-package-flow.svg" alt="Chinese research materials to English submission package" width="100%">
-</p>
-
 | Strength | Why it matters |
 |---|---|
 | 中文初稿到英文投稿包 | 不是只改句子，而是重构标题、摘要、贡献点、Cover Letter、质量清单 |
@@ -93,10 +89,6 @@ Verify installation:
 ## Modular Skill Architecture
 
 paper-skill is organized as independent but composable modules. Use one module for a narrow task, or combine modules into a full submission workflow.
-
-<p align="center">
-  <img src="assets/module-map.svg" alt="paper-skill modular architecture map" width="100%">
-</p>
 
 | Module | Use it when | Output |
 |---|---|---|
