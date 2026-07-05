@@ -1,0 +1,38 @@
+name: Example request
+description: Request a new academic writing example or workflow demo.
+title: "[Example] "
+labels: ["example", "documentation"]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What academic workflow should this example cover?
+      placeholder: "Example: Chinese thesis chapter to IEEE-style English methods section"
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow
+      options:
+        - Manuscript writing
+        - Chinese-to-English submission
+        - Reviewer response
+        - Citation integrity
+        - Quality gates
+        - Figures and captions
+        - Cover letter
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Target journal or field
+      placeholder: "Example: IEEE TRO, Nature Communications, SCI Q1 robotics"
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      placeholder: "What should paper-skill generate?"

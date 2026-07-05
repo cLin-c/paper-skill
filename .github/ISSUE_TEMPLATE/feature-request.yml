@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a new paper-skill capability.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What paper-writing or submission problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed workflow
+      description: Describe the workflow or prompt behavior you want.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What should the skill avoid inventing or changing?
+      placeholder: "Example: Do not invent experiments, DOI, reviewer identities, or journal policies."
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example input
+      description: Add a short anonymized prompt or manuscript snippet if possible.

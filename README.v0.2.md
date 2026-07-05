@@ -2,11 +2,44 @@
 
 > Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
+[![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Codex CLI](https://img.shields.io/badge/Codex%20CLI-supported-brightgreen)](https://github.com/openai/codex)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-orange)](https://claude.ai/code)
+
 paper-skill helps Chinese researchers turn research materials into a submission-ready package: manuscript structure, English polishing, citation integrity, reviewer response, figures, and final quality gates.
 
 It is optimized for users who think and draft in Chinese but need to submit in academic English.
 
 English overview: [README_EN.md](README_EN.md)
+
+## Who It Is For
+
+- Chinese graduate students preparing SCI / IEEE / Nature-family manuscripts.
+- Researchers who draft in Chinese but need journal-grade English.
+- Authors preparing reviewer responses, cover letters, and revision matrices.
+- Labs that want reusable AI workflows for paper writing, citation checks, and submission QA.
+
+## 60-Second Demo
+
+Input:
+
+```text
+我的论文是中文初稿，目标期刊是 IEEE TRO。请先判断论文类型，重构核心故事线，然后给我一版英文摘要、投稿前风险清单和需要作者补充的信息。不要编造实验数据和引用。
+```
+
+Expected output:
+
+```text
+Paper type: methods paper
+Storyline: problem -> limitation -> method -> evidence -> contribution
+English abstract: ...
+Unsupported claims: ...
+AUTHOR_INPUT_NEEDED: baselines, metrics, scenario count, DOI list
+Submission risk: claim-evidence mismatch, missing real-world details, broad robustness language
+```
+
+This demo shows the central behavior: paper-skill improves writing while forcing missing evidence to stay visible.
 
 ## Try It First
 
@@ -56,6 +89,7 @@ See [examples/README.md](examples/README.md) for copyable demonstrations:
 - Chinese abstract to journal-style English
 - Reviewer comment to point-by-point response
 - Citation integrity and over-claim audit
+- Full submission package workflow
 
 ## Core Modules
 
@@ -76,6 +110,13 @@ See [examples/README.md](examples/README.md) for copyable demonstrations:
 | Nature-only writing skills | Broader journal coverage with Chinese-first workflows |
 | Humanizer prompts | Focuses on quality, evidence, and Chinglish repair rather than hiding AI use |
 | One-shot writing prompts | Adds quality gates, citation checks, reviewer response, and author placeholders |
+
+## Star This Repo If
+
+- You write papers in Chinese and submit in English.
+- You want reviewer-response and citation-integrity workflows, not only polishing.
+- You want a lightweight skill that works across Codex CLI, Claude Code, and Chinese AI coding tools.
+- You want examples that can be copied into real academic workflows.
 
 ## Supported Platforms
 
@@ -102,4 +143,4 @@ paper-skill should:
 
 ## Release
 
-This versioned README is part of the v0.2 growth iteration. It does not replace the original README yet. See [docs/v0.2.0-release-notes.md](docs/v0.2.0-release-notes.md).
+This versioned README is part of the v0.2 growth iteration. It does not replace the original README yet. See [docs/v0.2.0-release-notes.md](docs/v0.2.0-release-notes.md) and [docs/v0.2.1-growth-notes.md](docs/v0.2.1-growth-notes.md).

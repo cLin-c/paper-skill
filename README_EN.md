@@ -2,7 +2,19 @@
 
 Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
+[![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Codex CLI](https://img.shields.io/badge/Codex%20CLI-supported-brightgreen)](https://github.com/openai/codex)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-orange)](https://claude.ai/code)
+
 paper-skill is designed for researchers who draft, think, and revise in Chinese but need to submit in academic English. It provides reusable workflows for manuscript writing, Chinese-to-English submission, reviewer response, citation integrity, academic figures, and final quality gates.
+
+## Who It Is For
+
+- Chinese researchers preparing SCI / IEEE / Nature-family submissions.
+- Graduate students turning thesis text or Chinese drafts into English manuscripts.
+- Authors preparing cover letters, reviewer responses, and revision matrices.
+- Labs that need a reusable writing and submission workflow across AI coding agents.
 
 ## Quick Start
 
