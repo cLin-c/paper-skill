@@ -143,4 +143,4 @@ paper-skill should:
 
 ## Release
 
-This versioned README is part of the v0.2 growth iteration. It does not replace the original README yet. See [docs/v0.2.0-release-notes.md](docs/v0.2.0-release-notes.md) and [docs/v0.2.1-growth-notes.md](docs/v0.2.1-growth-notes.md).
+This versioned README is part of the v0.2 growth iteration. It was later archived after the main README was cleaned up. See [v0.2.0-release-notes.md](v0.2.0-release-notes.md) and [v0.2.1-growth-notes.md](v0.2.1-growth-notes.md).

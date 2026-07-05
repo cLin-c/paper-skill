@@ -37,12 +37,12 @@ ai-writing
 v0.2.3 - Nature-skills-inspired community and roadmap polish
 ```
 
-- Use the release body from [v0.2.3-nature-skills-inspired-notes.md](v0.2.3-nature-skills-inspired-notes.md).
+- Use the release body from [releases/v0.2.4-cleanup-notes.md](releases/v0.2.4-cleanup-notes.md).
 
 ## README Promotion
 
 - The main README now uses the v0.2 positioning.
-- Keep [README.v0.2.md](../README.v0.2.md) as a historical preview page.
+- Keep [README.v0.2.md](releases/README.v0.2.md) as a historical preview page.
 - Link [COMMUNITY.md](../COMMUNITY.md) and [ROADMAP.md](../ROADMAP.md) in social posts when asking for feedback.
 
 ## Social Posts
