@@ -34,10 +34,10 @@ ai-writing
 - Release title:
 
 ```text
-v0.2.8 - Benchmark capabilities and flagship strengths
+v0.2.9 - Module hardening without star-count comparison
 ```
 
-- Use the release body from [releases/v0.2.8-benchmark-capabilities-notes.md](releases/v0.2.8-benchmark-capabilities-notes.md).
+- Use the release body from [releases/v0.2.9-module-hardening-notes.md](releases/v0.2.9-module-hardening-notes.md).
 
 ## README Promotion
 

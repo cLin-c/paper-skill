@@ -2,13 +2,17 @@
 
 ## v0.3 - Workflow Structure
 
-- Add `workflows/` directory for the core user journeys.
-- Split the main README examples into reusable workflow docs.
-- Add workflow pages for:
+- Expand the new `workflows/` directory into a stable workflow layer.
+- Add more workflow pages for:
   - Chinese draft to English submission package.
   - Reviewer response and R&R matrix.
   - Citation integrity audit.
   - Pre-submission quality gates.
+- Tighten existing workflow pages:
+  - `literature-review`
+  - `submission-package`
+  - `figure-audit`
+  - `reference-tools`
 
 ## v0.4 - Evidence and Demo Assets
 

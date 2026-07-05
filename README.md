@@ -6,6 +6,11 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Codex CLI](https://img.shields.io/badge/Codex%20CLI-supported-brightgreen)](https://github.com/openai/codex)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-orange)](https://claude.ai/code)
+[![Chinese-first](https://img.shields.io/badge/Chinese--first-submission%20workflow-red)](#flagship-strengths)
+[![Citation Integrity](https://img.shields.io/badge/citation-integrity-blue)](citation-integrity.md)
+[![Quality Gates](https://img.shields.io/badge/quality-gates-purple)](quality-gates.md)
+[![Reviewer Response](https://img.shields.io/badge/reviewer-response-teal)](#modular-skill-architecture)
+[![Academic Figures](https://img.shields.io/badge/academic-figures-yellow)](references/figure-prompts.md)
 
 <p align="center">
   <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
@@ -86,6 +91,10 @@ paper-skill is organized as independent but composable modules. Use one module f
 | `quality-gates` | Check manuscript readiness before submission. | 7-dimension score, final checklist, rejection-risk list |
 | `figures` | Design method figures, result figures, captions, or figure-review prompts. | Figure contract, prompt, caption, text-reference guidance |
 | `journal-strategy` | Select or adapt to a target journal before writing or transferring. | Journal fit notes, FINER score, transfer plan |
+| `literature-review` | Build a related-work map and research-gap matrix. | Literature matrix, gap map, citation role table |
+| `submission-package` | Assemble final submission artifacts. | Title, abstract, cover letter, highlights, declarations, checklist |
+| `figure-audit` | Check whether figures actually support manuscript claims. | Figure-claim audit, caption fixes, missing evidence list |
+| `reference-tools` | Run lightweight reference consistency checks. | DOI/title checklist, duplicate/missing reference warnings |
 
 ## Workflow Overview
 
@@ -160,6 +169,11 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | `citation-integrity` | [citation-integrity.md](citation-integrity.md) | DOI checks, hallucination scan, Trust-Chain sourcing |
 | `journal-strategy` | [journal-strategy.md](journal-strategy.md) | Journal-first planning, FINER scoring, transfer strategy |
 | `quality-gates` | [quality-gates.md](quality-gates.md) | 7-dimension score, R&R traceability, final checks |
+| `workflows` | [workflows/README.md](workflows/README.md) | Modular workflow pages for submission package, literature review, figure audit, and references |
+| `literature-review` | [workflows/literature-review.md](workflows/literature-review.md) | Related-work matrix, gap extraction, citation roles |
+| `submission-package` | [workflows/submission-package.md](workflows/submission-package.md) | Final submission artifact checklist |
+| `figure-audit` | [workflows/figure-audit.md](workflows/figure-audit.md) | Figure-to-claim alignment checks |
+| `reference-tools` | [workflows/reference-tools.md](workflows/reference-tools.md) | Lightweight reference consistency workflow |
 
 ## Typical Use Cases
 
@@ -171,29 +185,15 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | 论文故事线混乱 | `journal-strategy` + `writing` |
 | 方法图/实验图不够学术 | `figures` + `writing` |
 | 拒稿后转投 | `journal-strategy` + `writing` + `review-response` |
-
-## High-Star Skill Comparison
-
-Stars checked on 2026-07-06 via GitHub API.
-
-| Project | Stars | Main focus | paper-skill difference |
-|---|---:|---|---|
-| [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | 36,372 | Large academic research pipeline: research, write, review, revise, finalize | Lighter and more focused on Chinese-to-English submission packages |
-| [nature-skills](https://github.com/Yuan1z0825/nature-skills) | 26,143 | High-impact paper expression, research figures, and skill-based research workflows | Broader Chinese-first submission workflow: translation, reviewer response, citation integrity, quality gates, and journal transfer |
-| [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) | 4,506 | Semi-automated research assistant across literature, coding, experiments, writing, and knowledge management | Less infrastructure-heavy; easier to use as a paper submission skill |
-| [claude-prism](https://github.com/delibae/claude-prism) | 1,646 | Offline-first scientific writing workspace with LaTeX, Python, and many scientific skills | Not a workspace; focuses on reusable manuscript workflows |
-| [codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills) | 1,471 | Chinese academic skills for writing, Office documents, and scientific computing | More submission-centered: reviewer response, citation integrity, and quality gates |
-| [academic-paper-skills](https://github.com/lishix520/academic-paper-skills) | 994 | Academic paper planning and writing with strategist/composer workflow | Broader Chinese-to-English, reviewer reply, citation audit, and figure prompt coverage |
-| [paper-craft-skills](https://github.com/zsyggg/paper-craft-skills) | 774 | Paper reading, deep analysis, summaries, and visual explanation | More focused on preparing manuscripts for submission |
-| [paper-skill](https://github.com/cLin-c/paper-skill) | 40 | Chinese-first English submission workflow | Modular submission suite for writing, translation, review response, citation integrity, figures, and quality gates |
-
-The goal is not to become the largest research automation suite. paper-skill aims to be the clearest path from Chinese research materials to an English submission package.
+| 写相关工作没有逻辑 | `literature-review` + `writing` + `citation-integrity` |
+| 投稿前材料不完整 | `submission-package` + `quality-gates` |
+| 图表不能支撑结论 | `figure-audit` + `figures` + `quality-gates` |
 
 ## Benchmark Capability Map
 
 paper-skill will keep absorbing the best patterns from high-star academic skill projects, but package them around its own strongest use case: **Chinese research materials -> English submission package**.
 
-| High-star pattern | Why users like it | paper-skill implementation |
+| Benchmark pattern | Why users like it | paper-skill implementation |
 |---|---|---|
 | End-to-end research pipeline | Users want one workflow from idea to final manuscript | `writing` + `journal-strategy` + `quality-gates` compose the manuscript pipeline |
 | High-impact journal style | Users want polished, concise, journal-grade expression | `translation` and `writing` focus on non-literal English, Chinglish repair, and contribution framing |
@@ -202,13 +202,6 @@ paper-skill will keep absorbing the best patterns from high-star academic skill 
 | Citation verification | AI-written references can hallucinate or mismatch claims | `citation-integrity` checks DOI/title support and claim-reference alignment |
 | Quality gates | Authors need a pre-submission stop/go signal | `quality-gates` provides 7-dimension scoring and rejection-risk lists |
 | Community examples | Users trust concrete before/after workflows | `examples/` collects copyable submission scenarios |
-
-Next modules to strengthen:
-
-- `literature-review`: more structured related-work matrices and gap extraction.
-- `submission-package`: one-command checklist for title, abstract, cover letter, highlights, declarations, references, and figures.
-- `figure-audit`: stronger rules for whether a figure actually supports the claim.
-- `reference-tools`: optional scripts for reference consistency and DOI checking.
 
 ## Supported Platforms
 
