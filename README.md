@@ -90,7 +90,7 @@ The workflow is meant to be used end to end, but each stage can also be used ind
 5. Audit citations and claim-evidence alignment.
 6. Prepare figures, cover letter, reviewer response, and final checks.
 
-## Academic Figure Support
+## Academic Figures & Visualization
 
 <p align="center">
   <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
@@ -159,6 +159,22 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | 论文故事线混乱 | `journal-strategy` + `writing` |
 | 方法图/实验图不够学术 | `figures` + `writing` |
 | 拒稿后转投 | `journal-strategy` + `writing` + `review-response` |
+
+## High-Star Skill Comparison
+
+Stars checked on 2026-07-06 via GitHub API.
+
+| Project | Stars | Main focus | paper-skill difference |
+|---|---:|---|---|
+| [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | 36,372 | Large academic research pipeline: research, write, review, revise, finalize | Lighter and more focused on Chinese-to-English submission packages |
+| [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) | 4,506 | Semi-automated research assistant across literature, coding, experiments, writing, and knowledge management | Less infrastructure-heavy; easier to use as a paper submission skill |
+| [claude-prism](https://github.com/delibae/claude-prism) | 1,646 | Offline-first scientific writing workspace with LaTeX, Python, and many scientific skills | Not a workspace; focuses on reusable manuscript workflows |
+| [codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills) | 1,471 | Chinese academic skills for writing, Office documents, and scientific computing | More submission-centered: reviewer response, citation integrity, and quality gates |
+| [academic-paper-skills](https://github.com/lishix520/academic-paper-skills) | 994 | Academic paper planning and writing with strategist/composer workflow | Broader Chinese-to-English, reviewer reply, citation audit, and figure prompt coverage |
+| [paper-craft-skills](https://github.com/zsyggg/paper-craft-skills) | 774 | Paper reading, deep analysis, summaries, and visual explanation | More focused on preparing manuscripts for submission |
+| [paper-skill](https://github.com/cLin-c/paper-skill) | 40 | Chinese-first English submission workflow | Modular submission suite for writing, translation, review response, citation integrity, figures, and quality gates |
+
+The goal is not to become the largest research automation suite. paper-skill aims to be the clearest path from Chinese research materials to an English submission package.
 
 ## Supported Platforms
 
