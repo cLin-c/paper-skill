@@ -14,6 +14,7 @@ These examples are designed for README links, GitHub visitors, and social sharin
 | Before / after reviewer response | Visitors comparing weak replies with traceable R&R replies | [reviewer-response-before-after.md](reviewer-response-before-after.md) |
 | Before / after citation audit | Visitors evaluating citation safety behavior | [citation-audit-before-after.md](citation-audit-before-after.md) |
 | Runnable submission package check | Users who want an executable validation example | [submission-package-check.json](submission-package-check.json) |
+| Section-level before/after rewrites | Users improving Abstract, Introduction, Related Work, Method, Experiments, and Discussion | [section-rewrites.md](section-rewrites.md) |
 
 ## Recommended Demo Flow
 

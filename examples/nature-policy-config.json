@@ -1,0 +1,15 @@
+{
+  "journal": "Nature",
+  "pages": [
+    {
+      "url": "https://www.nature.com/nature/for-authors/initial-submission",
+      "official_domain_confirmed_by_user": true,
+      "categories": {
+        "initial_submission": ["initial submission", "manuscript"],
+        "data_availability": ["data availability", "data"],
+        "cover_letter": ["cover letter"]
+      }
+    }
+  ]
+}
+

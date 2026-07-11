@@ -1,0 +1,17 @@
+{
+  "responses": [
+    {
+      "comment_id": "R1.1",
+      "reviewer_comment": "Please quantify the improvement against the baseline.",
+      "location": "Section 3.2 Results",
+      "revised_text": "The proposed method reduced the mean localization error by 12 percent relative to the named baseline on the held-out field dataset."
+    },
+    {
+      "comment_id": "R2.3",
+      "reviewer_comment": "Please clarify the limits of generalization.",
+      "location": "Section 4 Limitations",
+      "revised_text": "The evaluation covers one field site and does not establish generalization to other environments."
+    }
+  ]
+}
+

@@ -1,0 +1,9 @@
+{
+  "submission_package": "full-workflow-package.json",
+  "journal_policy_config": "nature-policy-config.json",
+  "revised_manuscript": "revised-manuscript.md",
+  "response_matrix": "response-matrix.json",
+  "network_timeout": 25,
+  "revision_threshold": 0.9
+}
+

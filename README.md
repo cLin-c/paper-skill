@@ -134,6 +134,8 @@ paper-skill is organized as independent but composable modules. Use one module f
 | `figure-audit` | Check whether figures actually support manuscript claims. | Figure-claim audit, caption fixes, missing evidence list |
 | `reference-tools` | Run lightweight reference consistency checks. | DOI/title checklist, duplicate/missing reference warnings |
 
+The writing module now includes dedicated guides for paragraph architecture, Abstract, Introduction, Related Work, Method, Experiments, Discussion, and Conclusion. Each guide combines pre-writing questions, argument structure, evidence gates, failure modes, and an output contract. See the [original synthetic section rewrites](examples/section-rewrites.md).
+
 ## Executable Toolchain
 
 paper-skill now includes a small runnable stage-gate checker, so the project is not only a prompt library.
@@ -145,7 +147,11 @@ python -m unittest discover -s tests
 
 | Tool | Purpose |
 |---|---|
-| [tools/paper_skill_gate.py](tools/paper_skill_gate.py) | Checks identity, claim-evidence mapping, citation integrity, and submission package completeness |
+| [tools/paper_skill_gate.py](tools/paper_skill_gate.py) | Runs 7 deterministic gates: identity, provenance, claim-evidence links, citations, reporting, package completeness, and unresolved inputs |
+| [tools/scholarly_verify.py](tools/scholarly_verify.py) | Verifies DOI/title/year metadata against live Crossref and OpenAlex records |
+| [tools/journal_policy_verify.py](tools/journal_policy_verify.py) | Captures official policy-page evidence with URL, timestamp, snippets, and content hash |
+| [tools/revision_trace.py](tools/revision_trace.py) | Verifies response-letter locations and revised text across manuscript files |
+| [tools/run_full_workflow.py](tools/run_full_workflow.py) | Runs submission gates, references, policies, and revision trace end to end |
 | [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
 | [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
 
@@ -300,6 +306,11 @@ Project docs:
 ## Roadmap
 
 - `v0.4`: add executable stage-gate checks and before/after examples.
+- `v0.5`: make `SKILL.md` a concise router; add evidence-state policy, output contracts, reporting-guideline routing, JSON reports, and strict CI gates.
+- `v0.6`: add live Crossref/OpenAlex verification, auditable journal-policy retrieval, cross-file revision tracing, and a complete workflow runner.
+- `v0.7`: add deep section-by-section writing guides, reverse-outline checks, Need-Design-Effect method writing, question-driven experiments, and original before/after examples.
+
+Writing-workflow inspiration and MIT attribution are recorded in [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
 - `v0.5`: add Markdown package parsing, optional DOI lookup, and journal-specific gate profiles.
 - `v1.0`: stabilize the Chinese-first English submission skill suite.
 

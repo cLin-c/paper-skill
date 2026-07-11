@@ -2,7 +2,16 @@
   "title": "Robust Graph Planning for Field Robots in Partially Observed Outdoor Environments",
   "target_journal": "IEEE Transactions on Robotics",
   "paper_type": "methods",
+  "study_design": "methods paper",
   "chinese_source_summary": "本文提出一种面向野外机器人的鲁棒图规划方法。方法通过不确定性感知边权、在线地图修复和路径一致性检查，提高部分可观测环境下的任务完成率。",
+  "source_files": [
+    {
+      "name": "robot-planning-manuscript-v3.docx",
+      "version": "v3",
+      "role": "manuscript",
+      "authoritative": true
+    }
+  ],
   "english_abstract": "Field robots often fail when planners are evaluated only in clean simulation settings. This study introduces a robust graph planning framework that combines uncertainty-aware edge weighting, online map repair, and route-level consistency checks. Experiments on outdoor navigation logs show improved completion rate and reduced replanning frequency across cluttered and partially observed environments. The results suggest that explicitly modeling graph uncertainty can improve deployment robustness without changing the robot hardware, while the remaining failure cases indicate that perception uncertainty and long-horizon recovery still require further study.",
   "claims": [
     {
@@ -32,11 +41,13 @@
     {
       "title": "A Survey of Robot Motion Planning in Dynamic Environments",
       "doi": "10.1000/example.motion.1",
+      "verification_status": "UNVERIFIED",
       "supports_claims": ["C1"]
     },
     {
       "title": "Uncertainty-Aware Mapping for Field Robotics",
       "doi": "10.1000/example.mapping.2",
+      "verification_status": "UNVERIFIED",
       "supports_claims": ["C1", "C2"]
     }
   ],

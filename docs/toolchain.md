@@ -7,6 +7,8 @@ paper-skill is moving from a prompt-only library toward a verifiable submission 
 | Tool | Command | Purpose |
 |---|---|---|
 | Stage-gate checker | `python tools/paper_skill_gate.py examples/submission-package-check.json` | Checks whether a submission package has the minimum structure for paper-skill review |
+| JSON report | `python tools/paper_skill_gate.py package.json --format json` | Emits results suitable for CI and other agents |
+| Strict gate | `python tools/paper_skill_gate.py package.json --strict` | Treats unresolved warnings as a nonzero result |
 | Unit tests | `python -m unittest discover -s tests` | Guards the checker behavior |
 
 ## Stage-Gate Philosophy
@@ -28,7 +30,7 @@ The checker follows the same editorial policy as the skill:
 
 ## Roadmap
 
-- Add Markdown package parsing.
+- Add Markdown and DOCX package parsing.
 - Add reference DOI lookup as an optional networked check.
-- Add cross-model review handoff notes for high-risk claims.
-- Add journal-specific gate profiles for SCI, IEEE, Nature-family, and conference submissions.
+- Add journal-policy profiles sourced from official pages with access dates.
+- Add manuscript/rebuttal cross-file location verification.
