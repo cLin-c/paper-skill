@@ -15,7 +15,7 @@
 [![Academic Figures](https://img.shields.io/badge/academic-figures-yellow)](references/figure-prompts.md)
 
 <p align="center">
-  <img src="assets/paper-skill-hero-v2.png" alt="paper-skill evidence-verified academic writing workflow" width="100%">
+  <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
 </p>
 
 <p align="center">
