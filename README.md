@@ -1,7 +1,5 @@
 # paper-skill
 
-<img src="assets/paper-skill-icon-v2.png" alt="paper-skill icon" width="112" align="right">
-
 > Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
@@ -41,7 +39,7 @@ paper-skill 帮中文科研作者把研究材料整理成可投稿英文包：�
 
 English overview: [README_EN.md](README_EN.md)
 
-## Flagship Strengths
+## ✨ Flagship Strengths
 
 paper-skill 最强的能力是 **Chinese-first submission package**：从中文材料出发，生成英文投稿所需的一整套可核查材料。
 
@@ -53,7 +51,7 @@ paper-skill 最强的能力是 **Chinese-first submission package**：从中文�
 | 投稿前质量门控 | 用 7 维度质量门控提前暴露拒稿风险 |
 | 模块化组合 | `writing`、`translation`、`review-response`、`citation-integrity`、`quality-gates`、`figures` 可单独用，也可组合成完整流程 |
 
-## Core Value
+## 🎯 Core Value
 
 paper-skill 的核心不是“提示词多”，而是把论文投稿拆成可复用、可检查、可组合的模块：
 
@@ -65,7 +63,7 @@ paper-skill 的核心不是“提示词多”，而是把论文投稿拆成可�
 | Reviewer traceability | Avoid vague or fabricated revision replies. | Point-by-point response, revision-location mapping |
 | Citation integrity | Avoid hallucinated or mismatched references. | DOI/title checks, Trust-Chain notes, risk list |
 
-## Quick Start
+## 🚀 Quick Start
 
 One-command install for Codex CLI, Claude Code, Qwen Code, Kimi Code CLI, DeepSeek / Deep Code, Baidu Comate, Qoder / Lingma, and OpenClaw:
 
@@ -118,7 +116,7 @@ Verify installation:
 请使用 $paper-skill，告诉我它支持哪些论文投稿工作流，并给我一个中文摘要转英文摘要的最小示例。
 ```
 
-## Modular Skill Architecture
+## 🧩 Modular Skill Architecture
 
 paper-skill is organized as independent but composable modules. Use one module for a narrow task, or combine modules into a full submission workflow.
 
@@ -138,7 +136,7 @@ paper-skill is organized as independent but composable modules. Use one module f
 
 The writing module now includes dedicated guides for paragraph architecture, Abstract, Introduction, Related Work, Method, Experiments, Discussion, and Conclusion. Each guide combines pre-writing questions, argument structure, evidence gates, failure modes, and an output contract. See the [original synthetic section rewrites](examples/section-rewrites.md).
 
-## Executable Toolchain
+## 🛠️ Executable Toolchain
 
 paper-skill now includes a small runnable stage-gate checker, so the project is not only a prompt library.
 
@@ -157,7 +155,7 @@ python -m unittest discover -s tests
 | [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
 | [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
 
-## Workflow Overview
+## 🔄 Workflow Overview
 
 <p align="center">
   <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
@@ -172,7 +170,7 @@ The workflow is meant to be used end to end, but each stage can also be used ind
 5. Audit citations and claim-evidence alignment.
 6. Prepare figures, cover letter, reviewer response, and final checks.
 
-## Academic Figures & Visualization
+## 📊 Academic Figures & Visualization
 
 <p align="center">
   <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
@@ -186,7 +184,7 @@ The figure module focuses on scientific purpose before visual generation:
 - Draft captions and in-text references.
 - Audit whether the figure supports the manuscript claim.
 
-## Why It Exists
+## 💡 Why It Exists
 
 paper-skill 的定位很聚焦：**为中文科研作者建立一套英文投稿工作流**。
 
@@ -200,7 +198,7 @@ Design principles:
 - Do not invent experiments, DOI, page numbers, journal policies, or reviewer identities.
 - Keep reviewer replies traceable to manuscript locations.
 
-## Examples
+## 🧪 Examples
 
 Copyable demos:
 
@@ -223,7 +221,7 @@ AUTHOR_INPUT_NEEDED: baselines, metrics, scenario count, DOI list
 Submission risk: claim-evidence mismatch, missing real-world details, broad robustness language
 ```
 
-## What's Inside
+## 📦 What's Inside
 
 | Module | File | Purpose |
 |---|---|---|
@@ -240,7 +238,7 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | `figure-audit` | [workflows/figure-audit.md](workflows/figure-audit.md) | Figure-to-claim alignment checks |
 | `reference-tools` | [workflows/reference-tools.md](workflows/reference-tools.md) | Lightweight reference consistency workflow |
 
-## Typical Use Cases
+## 📝 Typical Use Cases
 
 | Scenario | Recommended modules |
 |---|---|
@@ -254,7 +252,7 @@ Submission risk: claim-evidence mismatch, missing real-world details, broad robu
 | 投稿前材料不完整 | `submission-package` + `quality-gates` |
 | 图表不能支撑结论 | `figure-audit` + `figures` + `quality-gates` |
 
-## Benchmark Capability Map
+## 🗺️ Benchmark Capability Map
 
 paper-skill will keep absorbing the best patterns from high-star academic skill projects, but package them around its own strongest use case: **Chinese research materials -> English submission package**.
 
@@ -268,7 +266,7 @@ paper-skill will keep absorbing the best patterns from high-star academic skill 
 | Quality gates | Authors need a pre-submission stop/go signal | `quality-gates` provides 7-dimension scoring and rejection-risk lists |
 | Community examples | Users trust concrete before/after workflows | `examples/` collects copyable submission scenarios |
 
-## Supported Platforms
+## 💻 Supported Platforms
 
 | Platform | Invoke | Skill path |
 |---|---|---|
@@ -281,7 +279,7 @@ paper-skill will keep absorbing the best patterns from high-star academic skill 
 | Qoder / Lingma | `/paper-skill` | `~/.lingma/skills/paper-skill/` |
 | OpenClaw | `/paper-skill` | `~/.openclaw/skills/paper-skill/` |
 
-## Community
+## 🤝 Community
 
 This project prioritizes real paper-writing scenarios over feature bloat.
 
@@ -297,7 +295,7 @@ Project docs:
 - [Growth checklist](docs/github-growth-checklist.md)
 - [Demo video script](docs/demo-video-script.md)
 
-## Comparison
+## ⚖️ Comparison
 
 | Need | Better choice |
 |---|---|
@@ -305,7 +303,7 @@ Project docs:
 | Large all-in-one research automation suite | [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) |
 | General scholar assistant with coding and knowledge base workflows | [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) |
 
-## Roadmap
+## 🛣️ Roadmap
 
 - `v0.4`: add executable stage-gate checks and before/after examples.
 - `v0.5`: make `SKILL.md` a concise router; add evidence-state policy, output contracts, reporting-guideline routing, JSON reports, and strict CI gates.
@@ -316,6 +314,6 @@ Writing-workflow inspiration and MIT attribution are recorded in [ATTRIBUTIONS.m
 - `v0.5`: add Markdown package parsing, optional DOI lookup, and journal-specific gate profiles.
 - `v1.0`: stabilize the Chinese-first English submission skill suite.
 
-## License
+## 📄 License
 
 MIT

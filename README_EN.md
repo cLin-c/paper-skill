@@ -1,7 +1,5 @@
 # paper-skill
 
-<img src="assets/paper-skill-icon-v2.png" alt="paper-skill icon" width="112" align="right">
-
 Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
@@ -37,7 +35,7 @@ paper-skill is designed for non-native English researchers who draft, think, and
   <a href="references/figure-prompts.md"><img src="https://img.shields.io/badge/Figures-visual%20contract-F59E0B?style=for-the-badge&logo=figma&logoColor=white" alt="figures module"></a>
 </p>
 
-## Flagship Strengths
+## ✨ Flagship Strengths
 
 paper-skill's strongest capability is the **Chinese-first submission package**: it starts from Chinese research materials and produces traceable English submission artifacts.
 
@@ -49,7 +47,7 @@ paper-skill's strongest capability is the **Chinese-first submission package**: 
 | Pre-submission quality gates | Exposes rejection risks before submission |
 | Modular composition | `writing`, `translation`, `review-response`, `citation-integrity`, `quality-gates`, and `figures` can be used separately or together |
 
-## Core Value
+## 🎯 Core Value
 
 paper-skill is not a large prompt dump. It turns submission preparation into reusable modules.
 
@@ -61,14 +59,14 @@ paper-skill is not a large prompt dump. It turns submission preparation into reu
 | Reviewer traceability | Vague or fabricated revision replies | Point-by-point response, revision-location mapping |
 | Citation integrity | Hallucinated or mismatched references | DOI/title checks, Trust-Chain notes, risk list |
 
-## Who It Is For
+## 👥 Who It Is For
 
 - Chinese researchers preparing SCI / IEEE / Nature-family submissions.
 - Graduate students turning thesis text or Chinese drafts into English manuscripts.
 - Authors preparing cover letters, reviewer responses, and revision matrices.
 - Labs that need a reusable writing and submission workflow across AI coding agents.
 
-## Quick Start
+## 🚀 Quick Start
 
 One-command install for Codex CLI, Claude Code, Qwen Code, Kimi Code CLI, DeepSeek / Deep Code, Baidu Comate, Qoder / Lingma, and OpenClaw:
 
@@ -115,7 +113,7 @@ First prompt:
 Use $paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE journal. First identify the paper type, then rewrite the abstract in academic English, flag unsupported claims, and list the information I must provide. Do not invent data or references.
 ```
 
-## What It Does
+## 🧩 What It Does
 
 paper-skill is modular. Use one module directly or combine modules into a full submission workflow.
 
@@ -135,7 +133,7 @@ paper-skill is modular. Use one module directly or combine modules into a full s
 
 The writing module now includes dedicated guides for paragraph architecture, Abstract, Introduction, Related Work, Method, Experiments, Discussion, and Conclusion, plus original synthetic before/after examples in [section-rewrites.md](examples/section-rewrites.md). Writing-workflow inspiration and MIT attribution are recorded in [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
 
-## Executable Toolchain
+## 🛠️ Executable Toolchain
 
 paper-skill now includes a runnable stage-gate checker, so it is not only a prompt library.
 
@@ -154,7 +152,7 @@ python -m unittest discover -s tests
 | [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
 | [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
 
-## Workflow Overview
+## 🔄 Workflow Overview
 
 <p align="center">
   <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
@@ -169,7 +167,7 @@ The workflow can be used end to end or module by module:
 5. Audit citations and claim-evidence alignment.
 6. Prepare figures, cover letter, reviewer response, and final checks.
 
-## Academic Figures & Visualization
+## 📊 Academic Figures & Visualization
 
 <p align="center">
   <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
@@ -177,7 +175,7 @@ The workflow can be used end to end or module by module:
 
 The figure module defines scientific purpose before visual generation: what the figure must prove, which figure type fits, how to caption it, and whether it supports the manuscript claim.
 
-## Why It Is Different
+## 💡 Why It Is Different
 
 - Built for non-native English researchers, with Chinese-first workflows rather than English-only prompts.
 - Submission-focused instead of general note-taking.
@@ -187,7 +185,7 @@ The figure module defines scientific purpose before visual generation: what the 
 - Reviewer response workflow with traceable manuscript locations.
 - Multi-platform support across Codex CLI, Claude Code, Qwen, Kimi, DeepSeek, Comate, Qoder / Lingma, and OpenClaw.
 
-## Examples
+## 🧪 Examples
 
 See [examples/README.md](examples/README.md):
 
@@ -196,7 +194,7 @@ See [examples/README.md](examples/README.md):
 - Citation integrity and over-claim audit.
 - Before / after examples that show weak output versus paper-skill output.
 
-## Core Files
+## 📦 Core Files
 
 | Module | File | Purpose |
 |---|---|
@@ -214,7 +212,7 @@ See [examples/README.md](examples/README.md):
 | `figure-audit` | [workflows/figure-audit.md](workflows/figure-audit.md) | Figure-to-claim alignment checks |
 | `reference-tools` | [workflows/reference-tools.md](workflows/reference-tools.md) | Lightweight reference consistency workflow |
 
-## Typical Use Cases
+## 📝 Typical Use Cases
 
 | Scenario | Recommended modules |
 |---|---|
@@ -228,7 +226,7 @@ See [examples/README.md](examples/README.md):
 | Submission package is incomplete | `submission-package` + `quality-gates` |
 | Figures do not support the claims | `figure-audit` + `figures` + `quality-gates` |
 
-## Benchmark Capability Map
+## 🗺️ Benchmark Capability Map
 
 paper-skill follows the strongest patterns from high-star academic skill projects, but organizes them around its own primary use case: **Chinese research materials -> English submission package**.
 
@@ -242,10 +240,10 @@ paper-skill follows the strongest patterns from high-star academic skill project
 | Quality gates | Authors need a pre-submission stop/go signal | `quality-gates` provides 7-dimension scoring and rejection-risk lists |
 | Community examples | Users trust concrete before/after workflows | `examples/` collects copyable submission scenarios |
 
-## Safety Principles
+## 🛡️ Safety Principles
 
 paper-skill should mark missing information as `[AUTHOR_INPUT_NEEDED: ...]`, distinguish supplied evidence from model inference, and avoid strengthening claims beyond the available evidence.
 
-## License
+## 📄 License
 
 MIT
