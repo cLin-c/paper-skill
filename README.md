@@ -1,5 +1,7 @@
 # paper-skill
 
+<img src="assets/paper-skill-icon-v2.png" alt="paper-skill icon" width="112" align="right">
+
 > Chinese-first academic paper skill for SCI / Nature / IEEE submissions.
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
@@ -13,7 +15,7 @@
 [![Academic Figures](https://img.shields.io/badge/academic-figures-yellow)](references/figure-prompts.md)
 
 <p align="center">
-  <img src="assets/paper-skill-hero.png" alt="paper-skill academic writing AI workflow" width="100%">
+  <img src="assets/paper-skill-hero-v2.png" alt="paper-skill evidence-verified academic writing workflow" width="100%">
 </p>
 
 <p align="center">

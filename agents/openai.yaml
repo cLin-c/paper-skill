@@ -1,6 +1,9 @@
 interface:
   display_name: "Paper Skill"
   short_description: "Evidence-traceable academic writing and submission workflow"
+  icon_small: "./assets/paper-skill-icon-v2.png"
+  icon_large: "./assets/paper-skill-icon-v2.png"
+  brand_color: "#2563EB"
   default_prompt: "Use $paper-skill to turn my research materials into a verified manuscript or submission artifact without inventing evidence."
 policy:
   allow_implicit_invocation: true
