@@ -152,6 +152,14 @@ python -m unittest discover -s tests
 | [tools/journal_policy_verify.py](tools/journal_policy_verify.py) | Captures official policy-page evidence with URL, timestamp, snippets, and content hash |
 | [tools/revision_trace.py](tools/revision_trace.py) | Verifies response-letter locations and revised text across manuscript files |
 | [tools/run_full_workflow.py](tools/run_full_workflow.py) | Runs submission gates, references, policies, and revision trace end to end |
+
+### 🔎 Citation integrity in action
+
+Cross-check each manuscript claim against real scholarly records before it enters the final paper. Fabricated or mismatched citations are surfaced as review items instead of being silently accepted.
+
+<p align="center">
+  <img src="assets/comic-citation-detective.png" alt="Comic showing claim-to-source citation verification and hallucinated-reference detection" width="100%">
+</p>
 | [examples/submission-package-check.json](examples/submission-package-check.json) | Runnable sample input for the checker |
 | [docs/toolchain.md](docs/toolchain.md) | Explains the stage-gate workflow and roadmap |
 
@@ -159,6 +167,12 @@ python -m unittest discover -s tests
 
 <p align="center">
   <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
+</p>
+
+From a scattered draft to an evidence-linked, policy-checked submission package:
+
+<p align="center">
+  <img src="assets/comic-submission-workflow.png" alt="Comic showing a researcher turning a chaotic draft into a verified journal submission" width="100%">
 </p>
 
 The workflow is meant to be used end to end, but each stage can also be used independently:
