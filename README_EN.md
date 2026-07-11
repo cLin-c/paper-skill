@@ -191,6 +191,14 @@ The figure module defines scientific purpose before visual generation: what the 
 
 ## 💡 Why It Is Different
 
+### 🐷 A little submission story
+
+After repeated rejections, the pig researcher meets the orange paper-skill mascot. Together they rebuild the storyline, connect claims to evidence, verify citations, improve figures, and prepare a complete submission package. The Q1 TOP acceptance and PhD graduation are a playful fictional ending—not an acceptance guarantee.
+
+<p align="center">
+  <img src="assets/comic-pig-paper-skill-story.png" alt="Four-panel comic about a pig researcher improving a rejected manuscript with paper-skill and graduating with a PhD" width="100%">
+</p>
+
 - Built for non-native English researchers, with Chinese-first workflows rather than English-only prompts.
 - Submission-focused instead of general note-taking.
 - Runnable stage-gate checks for submission package completeness.

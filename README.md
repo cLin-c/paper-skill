@@ -204,6 +204,14 @@ paper-skill 的定位很聚焦：**为中文科研作者建立一套英文投稿
 
 中文科研作者最缺的往往不是“让 AI 写得更华丽”，而是一个稳定流程，能把中文材料、实验结果、参考文献和审稿意见转换成可追踪、可核查、可投稿的英文材料。
 
+### 🐷 小猪的投稿故事
+
+小猪一次次投稿失败，直到遇见橙子带来的 paper-skill：先理清论文故事线，再核对主张、实验、引用和图表，最后形成完整投稿包。漫画里的一区 TOP 录用和博士毕业是趣味故事，不代表录用保证；真正重要的是让每一次投稿都更扎实、更可核查。
+
+<p align="center">
+  <img src="assets/comic-pig-paper-skill-story.png" alt="Four-panel comic about a pig researcher improving a rejected manuscript with paper-skill and graduating with a PhD" width="100%">
+</p>
+
 Design principles:
 
 - Identify paper type and storyline before writing.
