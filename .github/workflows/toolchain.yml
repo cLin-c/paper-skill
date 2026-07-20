@@ -53,5 +53,5 @@ jobs:
           $failureTarget = Join-Path $env:RUNNER_TEMP 'paper-skill-failure'
           New-Item -ItemType Directory -Force -Path $failureTarget | Out-Null
           Set-Content -Encoding UTF8 (Join-Path $failureTarget 'SKILL.md') 'legacy-preserved'
-          try { ./install.ps1 -Repo (Join-Path $env:RUNNER_TEMP 'missing-repository') -Targets @($failureTarget); throw 'expected installer failure' } catch {}
+          try { ./install.ps1 -Repo (Join-Path $env:RUNNER_TEMP 'missing-repository') -Targets @($failureTarget); throw 'expected installer failure' } catch { $global:LASTEXITCODE = 0 }
           if ((Get-Content -Raw (Join-Path $failureTarget 'SKILL.md')).Trim() -ne 'legacy-preserved') { throw 'legacy install was not preserved' }
