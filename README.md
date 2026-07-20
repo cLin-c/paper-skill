@@ -4,7 +4,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
 [![CI](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml/badge.svg)](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml)
-[![Version](https://img.shields.io/badge/version-0.8.1-2563EB)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.8.2-2563EB)](VERSION)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Codex](https://img.shields.io/badge/Codex-supported-111827)](https://github.com/openai/codex)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-D97706)](https://claude.ai/code)
@@ -117,21 +117,35 @@ python -m unittest discover -s tests
 | [revision_trace.py](tools/revision_trace.py) | 核对审稿回复中的修改位置和修订文本 |
 | [run_full_workflow.py](tools/run_full_workflow.py) | 串联投稿门控、引用、政策和修订一致性检查 |
 
-<p align="center">
-  <img src="assets/comic-citation-detective.png" alt="Comic showing claim-to-source citation verification and hallucinated-reference detection" width="100%">
-</p>
-<p align="center">
-  <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
-</p>
-<p align="center">
-  <img src="assets/comic-submission-workflow.png" alt="Comic showing a researcher turning a chaotic draft into a verified journal submission" width="100%">
-</p>
-<p align="center">
-  <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
-</p>
-<p align="center">
-  <img src="assets/comic-pig-paper-skill-story.png" alt="Four-panel comic about a pig researcher improving a rejected manuscript with paper-skill and graduating with a PhD" width="100%">
-</p>
+### 图 1：引用侦探——从主张追到真实来源
+
+这张图说明 `citation-integrity` 的核心流程：把论文主张连接到参考文献，核对 DOI/标题，并把疑似幻觉或错引标成待审问题。
+
+<p align="center"><img src="assets/comic-citation-detective.png" alt="引用核验漫画：从主张追踪到真实来源" width="100%"></p>
+
+### 图 2：论文全流程——从散乱材料到可核验投稿包
+
+这张流程图展示 paper-skill 的主线：识别论文类型、建立故事线、写作与翻译、检查证据和图表，最后生成审稿回复与投稿材料。
+
+<p align="center"><img src="assets/paper-workflow.png" alt="论文写作与投稿全流程图" width="100%"></p>
+
+### 图 3：投稿工作流——把每个阶段连接起来
+
+这张漫画把完整投稿过程串成连续步骤：整理研究问题、形成英文稿、核对引用和图表、处理审稿意见，并在最终提交前保留未解决事项。
+
+<p align="center"><img src="assets/comic-submission-workflow.png" alt="从混乱初稿到核验投稿包的投稿流程漫画" width="100%"></p>
+
+### 图 4：学术绘图——先定义证据，再设计视觉表达
+
+这张图强调 figures 工作流不是先追求好看，而是先回答“图要证明什么”，再选择方法图、结果图或图形摘要，并检查 caption 与正文的一致性。
+
+<p align="center"><img src="assets/figure-generation.png" alt="学术图表生成与核验流程图" width="100%"></p>
+
+### 图 5：小猪的投稿故事——一次完整的 paper-skill 使用示例
+
+这是项目的叙事入口：小猪研究者经历“初稿混乱 → 故事线重构 → 主张、实验、引用和图表核验 → 审稿回复与投稿包整理”。它是帮助新用户快速理解产品价值的虚构示例，不代表录用保证。
+
+<p align="center"><img src="assets/comic-pig-paper-skill-story.png" alt="小猪研究者使用 paper-skill 改进论文并准备投稿的四格漫画" width="100%"></p>
 
 ## 公开、可复现的 benchmark
 

@@ -4,7 +4,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
 [![CI](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml/badge.svg)](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml)
-[![Version](https://img.shields.io/badge/version-0.8.1-2563EB)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.8.2-2563EB)](VERSION)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 <p align="center">
@@ -82,11 +82,35 @@ The public deterministic safety benchmark currently classifies **8/8 cases corre
 
 This benchmark measures structured package risk classification only—not prose quality, novelty, or acceptance probability.
 
-<p align="center"><img src="assets/comic-citation-detective.png" alt="Citation verification workflow" width="100%"></p>
-<p align="center"><img src="assets/paper-workflow.png" alt="Paper writing workflow" width="100%"></p>
-<p align="center"><img src="assets/comic-submission-workflow.png" alt="Submission workflow" width="100%"></p>
-<p align="center"><img src="assets/figure-generation.png" alt="Academic figure workflow" width="100%"></p>
-<p align="center"><img src="assets/comic-pig-paper-skill-story.png" alt="Paper skill story" width="100%"></p>
+### Figure 1: Citation detective — trace every claim to a real source
+
+This visual explains the `citation-integrity` route: connect claims to references, check DOI/title metadata, and surface suspected hallucinations or mismatches for review.
+
+<p align="center"><img src="assets/comic-citation-detective.png" alt="Citation verification comic: tracing claims to sources" width="100%"></p>
+
+### Figure 2: The paper workflow — from scattered material to a traceable package
+
+This diagram shows the main path: identify the paper type, build the storyline, write and translate, verify evidence and figures, then prepare reviewer responses and submission artifacts.
+
+<p align="center"><img src="assets/paper-workflow.png" alt="Academic paper writing and submission workflow" width="100%"></p>
+
+### Figure 3: Submission workflow — connect every stage
+
+This comic presents the continuous submission process: clarify the research question, produce the English manuscript, audit citations and figures, address reviewer comments, and keep unresolved items visible before submission.
+
+<p align="center"><img src="assets/comic-submission-workflow.png" alt="Submission workflow from a rough draft to a verified package" width="100%"></p>
+
+### Figure 4: Academic figures — define the evidence before the visual
+
+The figure workflow starts by asking what a visual must prove, then selects a method diagram, result figure, or graphical abstract and checks caption/text consistency.
+
+<p align="center"><img src="assets/figure-generation.png" alt="Academic figure generation and audit workflow" width="100%"></p>
+
+### Figure 5: The pig researcher story — a complete paper-skill example
+
+The pig researcher moves through four fictional stages: a chaotic draft, storyline reconstruction, claim/experiment/citation/figure verification, and a final reviewer response and submission package. It explains the product value and is not an acceptance guarantee.
+
+<p align="center"><img src="assets/comic-pig-paper-skill-story.png" alt="Four-panel story of a pig researcher using paper-skill to prepare a submission" width="100%"></p>
 
 ## Reliable upgrades
 
