@@ -4,13 +4,30 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
 [![CI](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml/badge.svg)](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml)
-[![Version](https://img.shields.io/badge/version-0.8.0-2563EB)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.8.1-2563EB)](VERSION)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Codex](https://img.shields.io/badge/Codex-supported-111827)](https://github.com/openai/codex)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-D97706)](https://claude.ai/code)
 
 <p align="center">
   <img src="assets/paper-skill-hero.png" alt="paper-skill evidence-first publication workflow" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Google%20Scholar-literature%20map-0B57D0?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar literature map">
+  <img src="https://img.shields.io/badge/arXiv-preprint%20workflow-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv preprint workflow">
+  <img src="https://img.shields.io/badge/LaTeX-manuscript%20ready-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX manuscript ready">
+  <img src="https://img.shields.io/badge/IEEE-submission%20style-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE submission style">
+  <img src="https://img.shields.io/badge/Overleaf-writing%20pipeline-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf writing pipeline">
+</p>
+
+<p align="center">
+  <a href="#三个旗舰入口"><img src="https://img.shields.io/badge/Storyline-paper%20arc-111827?style=for-the-badge&logo=readme&logoColor=white" alt="storyline module"></a>
+  <a href="#三个旗舰入口"><img src="https://img.shields.io/badge/Translation-Chinese%20to%20English-D64545?style=for-the-badge&logo=deepl&logoColor=white" alt="translation module"></a>
+  <a href="#三个旗舰入口"><img src="https://img.shields.io/badge/Reviewer%20Response-R%26R%20matrix-8B5CF6?style=for-the-badge&logo=gitbook&logoColor=white" alt="review response module"></a>
+  <a href="citation-integrity.md"><img src="https://img.shields.io/badge/Citation%20Integrity-DOI%20audit-2563EB?style=for-the-badge&logo=zotero&logoColor=white" alt="citation integrity module"></a>
+  <a href="quality-gates.md"><img src="https://img.shields.io/badge/Quality%20Gates-7D%20check-0F766E?style=for-the-badge&logo=checkmarx&logoColor=white" alt="quality gates module"></a>
+  <a href="references/figure-prompts.md"><img src="https://img.shields.io/badge/Figures-visual%20contract-F59E0B?style=for-the-badge&logo=figma&logoColor=white" alt="figures module"></a>
 </p>
 
 把中文初稿、实验结果、图表和参考文献转换为可核查的英文投稿材料：
@@ -99,6 +116,22 @@ python -m unittest discover -s tests
 | [journal_policy_verify.py](tools/journal_policy_verify.py) | 保存官方政策 URL、时间、证据片段和内容哈希 |
 | [revision_trace.py](tools/revision_trace.py) | 核对审稿回复中的修改位置和修订文本 |
 | [run_full_workflow.py](tools/run_full_workflow.py) | 串联投稿门控、引用、政策和修订一致性检查 |
+
+<p align="center">
+  <img src="assets/comic-citation-detective.png" alt="Comic showing claim-to-source citation verification and hallucinated-reference detection" width="100%">
+</p>
+<p align="center">
+  <img src="assets/paper-workflow.png" alt="paper-skill scientific paper writing workflow" width="100%">
+</p>
+<p align="center">
+  <img src="assets/comic-submission-workflow.png" alt="Comic showing a researcher turning a chaotic draft into a verified journal submission" width="100%">
+</p>
+<p align="center">
+  <img src="assets/figure-generation.png" alt="paper-skill academic figure generation workflow" width="100%">
+</p>
+<p align="center">
+  <img src="assets/comic-pig-paper-skill-story.png" alt="Four-panel comic about a pig researcher improving a rejected manuscript with paper-skill and graduating with a PhD" width="100%">
+</p>
 
 ## 公开、可复现的 benchmark
 

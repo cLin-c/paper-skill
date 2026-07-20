@@ -4,8 +4,19 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
 [![CI](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml/badge.svg)](https://github.com/cLin-c/paper-skill/actions/workflows/toolchain.yml)
-[![Version](https://img.shields.io/badge/version-0.8.0-2563EB)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.8.1-2563EB)](VERSION)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+<p align="center">
+  <img src="assets/paper-skill-hero.png" alt="paper-skill evidence-first publication workflow" width="100%">
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Google%20Scholar-literature%20map-0B57D0?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar literature map">
+  <img src="https://img.shields.io/badge/arXiv-preprint%20workflow-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv preprint workflow">
+  <img src="https://img.shields.io/badge/LaTeX-manuscript%20ready-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX manuscript ready">
+  <img src="https://img.shields.io/badge/IEEE-submission%20style-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE submission style">
+  <img src="https://img.shields.io/badge/Overleaf-writing%20pipeline-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf writing pipeline">
+</p>
 
 paper-skill turns Chinese drafts, experiments, figures, and references into traceable English submission artifacts.
 
@@ -70,6 +81,12 @@ python -m unittest discover -s tests
 The public deterministic safety benchmark currently classifies **8/8 cases correctly**. It covers missing identity, unsupported claims, broken evidence links, suspicious DOI metadata, false verification claims, unresolved author input, and reporting-guideline gaps. The fixtures are public in [benchmarks/gate-cases.json](benchmarks/gate-cases.json).
 
 This benchmark measures structured package risk classification only—not prose quality, novelty, or acceptance probability.
+
+<p align="center"><img src="assets/comic-citation-detective.png" alt="Citation verification workflow" width="100%"></p>
+<p align="center"><img src="assets/paper-workflow.png" alt="Paper writing workflow" width="100%"></p>
+<p align="center"><img src="assets/comic-submission-workflow.png" alt="Submission workflow" width="100%"></p>
+<p align="center"><img src="assets/figure-generation.png" alt="Academic figure workflow" width="100%"></p>
+<p align="center"><img src="assets/comic-pig-paper-skill-story.png" alt="Paper skill story" width="100%"></p>
 
 ## Reliable upgrades
 
