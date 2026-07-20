@@ -2,6 +2,14 @@
 
 These tools make paper-skill more than a prompt collection. They provide lightweight checks that can run before final submission.
 
+## Public Benchmark
+
+```bash
+python tools/run_benchmark.py --output benchmarks/results.json
+```
+
+This runs the public synthetic safety-gate cases and exits nonzero on any classification mismatch. It intentionally does not claim to measure prose quality or acceptance probability.
+
 ## Stage-Gate Checker
 
 Run:

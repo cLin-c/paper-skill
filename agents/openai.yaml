@@ -1,6 +1,4 @@
 interface:
   display_name: "Paper Skill"
-  short_description: "Evidence-traceable academic writing and submission workflow"
-  default_prompt: "Use $paper-skill to turn my research materials into a verified manuscript or submission artifact without inventing evidence."
-policy:
-  allow_implicit_invocation: true
+  short_description: "Evidence-first Chinese-to-English publication workflow"
+  default_prompt: "Use $paper-skill to turn my Chinese research materials into an evidence-traceable English manuscript or submission package."

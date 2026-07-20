@@ -1,39 +1,24 @@
 # Roadmap
 
-## v0.3 - Workflow Structure
+## v0.8 — Reliable distribution and transparent evaluation
 
-- Expand the new `workflows/` directory into a stable workflow layer.
-- Add more workflow pages for:
-  - Chinese draft to English submission package.
-  - Reviewer response and R&R matrix.
-  - Citation integrity audit.
-  - Pre-submission quality gates.
-- Tighten existing workflow pages:
-  - `literature-review`
-  - `submission-package`
-  - `figure-audit`
-  - `reference-tools`
+- Safe migration of copy-based legacy installs on Windows and Unix.
+- Version, UTF-8, routing, and release-integrity validation.
+- Public deterministic safety-gate benchmark with machine-readable results.
+- Windows and Linux CI for tests, benchmark, and installer migration.
+- A focused product entry point: `write`, `review`, and `submit`.
 
-## v0.4 - Toolchain and Visible Examples
+## v0.9 — Human-rated quality evaluation
 
-- Add a runnable stage-gate checker for submission package structure.
-- Add unit tests and CI for the checker.
-- Add before/after examples for:
-  - Chinese abstract rewriting.
-  - Reviewer response.
-  - Citation integrity audit.
-- Add a runnable sample submission package.
+- Publish an anonymized Chinese-to-English translation fidelity set.
+- Add blinded evaluation for claim–evidence alignment and rebuttal coverage.
+- Report quality, latency, and token use against a no-skill baseline.
+- Add contributor instructions for benchmark cases and disciplinary profiles.
 
-## v0.5 - Stronger Automation
+## v1.0 — Stable publication workflow
 
-- Add Markdown package parsing.
-- Add optional DOI lookup for reference verification.
-- Add journal-specific gate profiles for SCI, IEEE, Nature-family, and conference submissions.
-- Add cross-model review handoff notes for high-risk claims.
-- Keep scripts optional; the skill should remain usable as prompt workflows.
-
-## v1.0 - Stable Submission Skill Suite
-
-- Stabilize core workflows.
-- Document compatibility across Codex CLI, Claude Code, Qwen, Kimi, DeepSeek, Comate, Qoder / Lingma, and OpenClaw.
-- Build a reliable example gallery for Chinese research authors.
+- Stabilize JSON schemas and version them.
+- Add cached Crossref, OpenAlex, ORCID, and optional Zotero adapters.
+- Publish a compatibility matrix based on automated host smoke tests.
+- Provide a complete, anonymized manuscript-to-submission showcase.
+- Require all critical routes to pass deterministic and human-rated gates.

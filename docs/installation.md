@@ -2,6 +2,8 @@
 
 paper-skill can be installed into the common skill directories used by Codex CLI, Claude Code, Qwen Code, Kimi Code CLI, DeepSeek / Deep Code, Baidu Comate, Qoder / Lingma, and OpenClaw.
 
+Prerequisites: Git, network access to GitHub, and a supported agent host. The optional executable verification tools require Python 3.10 or newer. Restart or reload the agent host after first installation if the skill is not discovered immediately.
+
 ## One-Command Install
 
 macOS / Linux / Git Bash:
@@ -16,7 +18,19 @@ Windows PowerShell:
 irm https://raw.githubusercontent.com/cLin-c/paper-skill/main/install.ps1 | iex
 ```
 
-The installer clones or updates this repository into all supported platform skill folders.
+The installer detects platform directories already present on the machine and installs only to those hosts; if none are detected, it defaults to Codex. It does not create eight unrelated platform installations. Since v0.8.0 it also detects legacy copy-based installs, clones and validates a replacement before switching, preserves the old copy as a timestamped backup, and rejects unrelated Git repositories.
+
+## Update or migrate an existing install
+
+Run the same one-command installer again. Git-managed installs receive a fast-forward update. A directory without `.git` is treated as a legacy install and preserved as `paper-skill.backup-YYYYMMDD-HHMMSS` before migration.
+
+The Windows script also supports a preview:
+
+```powershell
+./install.ps1 -DryRun
+```
+
+Each installed copy includes [VERSION](../VERSION). Confirm that the target directory contains both `SKILL.md` and `VERSION` after installation.
 
 ## Manual Install
 
@@ -67,3 +81,5 @@ Test prompt:
 ```text
 Use paper-skill. My manuscript is written in Chinese and targets an SCI / IEEE journal. First identify the paper type, then rewrite the abstract in academic English, flag unsupported claims, and list the information I must provide. Do not invent data or references.
 ```
+
+Success means the response identifies a route, distinguishes supplied evidence from missing author input, and does not invent bibliographic or experimental facts. If the skill is not found, confirm that `SKILL.md` and `VERSION` exist under the host path above, then restart/reload the host.

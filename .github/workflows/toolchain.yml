@@ -6,13 +6,52 @@ on:
 
 jobs:
   paper-skill-gate:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
       - name: Run unit tests
         run: python -m unittest discover -s tests
       - name: Run sample stage gate
         run: python tools/paper_skill_gate.py examples/submission-package-check.json
+      - name: Run public benchmark
+        run: python tools/run_benchmark.py --output benchmarks/results.json
+      - name: Confirm committed benchmark result is current
+        run: git diff --exit-code -- benchmarks/results.json
+      - name: Validate release integrity
+        run: python tools/validate_release.py
+      - name: Test legacy migration on Linux
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          target="$RUNNER_TEMP/paper-skill-legacy"
+          mkdir -p "$target"
+          printf 'legacy' > "$target/SKILL.md"
+          PAPER_SKILL_REPO="$GITHUB_WORKSPACE" PAPER_SKILL_TARGETS="$target" bash install.sh
+          test -f "$target/VERSION"
+          ls "$RUNNER_TEMP"/paper-skill-legacy.backup-*/SKILL.md
+          failure_target="$RUNNER_TEMP/paper-skill-failure"
+          mkdir -p "$failure_target"
+          printf 'legacy-preserved' > "$failure_target/SKILL.md"
+          if PAPER_SKILL_REPO="$RUNNER_TEMP/missing-repository" PAPER_SKILL_TARGETS="$failure_target" bash install.sh; then exit 1; fi
+          grep -q 'legacy-preserved' "$failure_target/SKILL.md"
+      - name: Test legacy migration on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $target = Join-Path $env:RUNNER_TEMP 'paper-skill-legacy'
+          New-Item -ItemType Directory -Force -Path $target | Out-Null
+          Set-Content -Encoding UTF8 (Join-Path $target 'SKILL.md') 'legacy'
+          ./install.ps1 -Repo $env:GITHUB_WORKSPACE -Targets @($target)
+          if (-not (Test-Path (Join-Path $target 'VERSION'))) { throw 'VERSION missing' }
+          if (-not (Get-ChildItem "$target.backup-*" -ErrorAction SilentlyContinue)) { throw 'backup missing' }
+          $failureTarget = Join-Path $env:RUNNER_TEMP 'paper-skill-failure'
+          New-Item -ItemType Directory -Force -Path $failureTarget | Out-Null
+          Set-Content -Encoding UTF8 (Join-Path $failureTarget 'SKILL.md') 'legacy-preserved'
+          try { ./install.ps1 -Repo (Join-Path $env:RUNNER_TEMP 'missing-repository') -Targets @($failureTarget); throw 'expected installer failure' } catch {}
+          if ((Get-Content -Raw (Join-Path $failureTarget 'SKILL.md')).Trim() -ne 'legacy-preserved') { throw 'legacy install was not preserved' }

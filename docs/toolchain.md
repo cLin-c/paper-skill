@@ -9,6 +9,8 @@ paper-skill is moving from a prompt-only library toward a verifiable submission 
 | Stage-gate checker | `python tools/paper_skill_gate.py examples/submission-package-check.json` | Checks whether a submission package has the minimum structure for paper-skill review |
 | JSON report | `python tools/paper_skill_gate.py package.json --format json` | Emits results suitable for CI and other agents |
 | Strict gate | `python tools/paper_skill_gate.py package.json --strict` | Treats unresolved warnings as a nonzero result |
+| Full workflow | `python tools/run_full_workflow.py examples/full-workflow-config.json --output full-report.json` | Runs gates, references, journal-policy evidence, and revision trace |
+| Public benchmark | `python tools/run_benchmark.py` | Replays transparent synthetic risk-classification cases |
 | Unit tests | `python -m unittest discover -s tests` | Guards the checker behavior |
 
 ## Stage-Gate Philosophy
@@ -28,9 +30,6 @@ The checker follows the same editorial policy as the skill:
 4. Resolve every `FAIL` before asking for final polishing.
 5. Treat every `WARN` as a human-review item.
 
-## Roadmap
+## Scope boundary
 
-- Add Markdown and DOCX package parsing.
-- Add reference DOI lookup as an optional networked check.
-- Add journal-policy profiles sourced from official pages with access dates.
-- Add manuscript/rebuttal cross-file location verification.
+The deterministic gate and public benchmark measure structured completeness and risk classification. They do not judge prose quality, novelty, or acceptance probability. Live DOI and policy verification require network access; record sources and access dates and keep failures visible as unverified.

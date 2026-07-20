@@ -1,11 +1,11 @@
 ---
 name: quality-gates
-description: Use for structured quality assessment before proceeding to next writing phase, pre-submission self-review, R&R revision traceability audit, and adversarial Devil's Advocate critique. Companion module for paper-skill. Requires ≥28/35 score to proceed to submission.
+description: Use for structured quality assessment before proceeding to the next writing phase, pre-submission self-review, R&R revision traceability audit, and adversarial Devil's Advocate critique. Companion module for paper-skill. Scores are advisory triage, never acceptance predictions or substitutes for evidence gates.
 ---
 
 # Quality Gates & Manuscript Assessment Module
 
-> **Why gates matter:** Research (lishix520/academic-paper-skills) shows that manuscripts passing a structured 7-dimension quality gate before submission have significantly higher acceptance rates. The threshold (≥28/35) filters manuscripts that need targeted improvement from those ready for submission.
+> **Why gates matter:** A structured checklist makes missing evidence and unresolved decisions visible. The 35-point score is an internal prioritization aid only; it is not validated against acceptance outcomes and cannot make a manuscript submission-ready when a critical evidence gate fails.
 
 ---
 
@@ -23,11 +23,11 @@ description: Use for structured quality assessment before proceeding to next wri
 
 ## 1. 7维度35分质量评估
 
-在进入下一写作阶段或提交前，对论文进行7个维度的系统评分。**≥28/35 方可继续，<28 需定向改进。**
+在进入下一写作阶段或提交前，对论文进行7个维度的系统评分。分数用于排序修改优先级；最终状态必须依据可核查证据输出 `READY`、`READY_WITH_WARNINGS` 或 `NOT_READY`，不得仅按总分决定。
 
 ### 完整质量评估
 ```
-你是顶级期刊匿名审稿人，对这篇论文进行7维度35分质量评估：
+以严格、可核查的匿名审稿标准，对这篇论文进行7维度35分内部质量评估。不要声称代表任何期刊；涉及近期文献时必须检索并引用一手来源，无法核验则标记UNVERIFIED：
 
 【维度1】原创性（Originality）— 满分5分
 评估标准：
@@ -49,7 +49,7 @@ description: Use for structured quality assessment before proceeding to next wri
 
 【维度3】文献覆盖（Literature Coverage）— 满分5分
 评估标准：
-5分：全面覆盖相关工作，包括最新进展（2024-2026），无明显遗漏
+5分：全面覆盖相关工作，包括截至检索日的最新进展，并附一手来源与检索日期，无明显遗漏
 4分：覆盖主要相关工作，少量最新进展可补充
 3分：覆盖基本工作，但遗漏了1-2个重要方向或近期关键论文
 2分：文献明显不足，存在重要的相关工作未被引用

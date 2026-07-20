@@ -1,0 +1,57 @@
+{
+  "benchmark": "paper-skill deterministic safety gates",
+  "scope": "Structured package risk classification; not prose quality or acceptance prediction.",
+  "cases": 8,
+  "correct": 8,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "id": "ready-methods-package",
+      "expected": "PASS",
+      "actual": "PASS",
+      "correct": true
+    },
+    {
+      "id": "missing-identity",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "correct": true
+    },
+    {
+      "id": "unsupported-central-claim",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "correct": true
+    },
+    {
+      "id": "broken-evidence-link",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "correct": true
+    },
+    {
+      "id": "suspicious-doi",
+      "expected": "WARN",
+      "actual": "WARN",
+      "correct": true
+    },
+    {
+      "id": "false-verified-reference",
+      "expected": "WARN",
+      "actual": "WARN",
+      "correct": true
+    },
+    {
+      "id": "unresolved-author-input",
+      "expected": "WARN",
+      "actual": "WARN",
+      "correct": true
+    },
+    {
+      "id": "reporting-guideline-gap",
+      "expected": "WARN",
+      "actual": "WARN",
+      "correct": true
+    }
+  ]
+}

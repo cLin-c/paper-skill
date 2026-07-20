@@ -1,0 +1,99 @@
+[
+  {
+    "id": "ready-methods-package",
+    "expected": "PASS",
+    "package": {
+      "title": "Uncertainty-aware Planning",
+      "target_journal": "IEEE TRO",
+      "paper_type": "methods",
+      "chinese_source_summary": "本文研究不确定环境中的机器人规划。",
+      "source_files": [{"name": "manuscript.docx", "authoritative": true}],
+      "study_design": "methods paper",
+      "claims": [{"id": "C1", "text": "The method improved completion rate.", "evidence_ids": ["E1"]}],
+      "evidence": [{"id": "E1", "summary": "Held-out field trials."}],
+      "references": [{"title": "Planning survey", "doi": "10.1000/example.1", "supports_claims": ["C1"], "verification_status": "UNVERIFIED"}],
+      "english_abstract": "Field robots can fail when planners are evaluated only in clean simulation. We introduce an uncertainty-aware planning method and evaluate it on held-out field logs. The supplied experiments report completion rate and replanning frequency under partial observation. Every numerical claim in the manuscript is linked to its source table, while unsupported generalization is explicitly excluded. These results support the stated comparison within the evaluated environments and do not imply performance in untested settings. The submission package preserves this scope in the abstract, highlights, cover letter, and declarations.",
+      "cover_letter": "Dear Editor",
+      "highlights": ["Evidence-linked evaluation"],
+      "declarations": {"conflict_of_interest": "None declared"}
+    }
+  },
+  {
+    "id": "missing-identity",
+    "expected": "FAIL",
+    "package": {"claims": []}
+  },
+  {
+    "id": "unsupported-central-claim",
+    "expected": "FAIL",
+    "package": {
+      "title": "Draft", "target_journal": "Journal", "paper_type": "methods",
+      "chinese_source_summary": "中文研究摘要。",
+      "claims": [{"id": "C1", "text": "The method is universally robust.", "evidence_ids": []}],
+      "evidence": [], "references": []
+    }
+  },
+  {
+    "id": "broken-evidence-link",
+    "expected": "FAIL",
+    "package": {
+      "title": "Draft", "target_journal": "Journal", "paper_type": "methods",
+      "chinese_source_summary": "中文研究摘要。",
+      "claims": [{"id": "C1", "text": "Claim", "evidence_ids": ["E404"]}],
+      "evidence": [{"id": "E1", "summary": "Existing result"}],
+      "references": [{"title": "Paper", "supports_claims": ["C1"]}]
+    }
+  },
+  {
+    "id": "suspicious-doi",
+    "expected": "WARN",
+    "package": {
+      "title": "Draft", "target_journal": "Journal", "paper_type": "methods",
+      "chinese_source_summary": "中文研究摘要。",
+      "claims": [{"id": "C1", "text": "Claim", "evidence_ids": ["E1"]}],
+      "evidence": [{"id": "E1", "summary": "Result"}],
+      "references": [{"title": "Paper", "doi": "not-a-doi", "supports_claims": ["C1"]}],
+      "english_abstract": "This synthetic abstract deliberately contains enough words to avoid the short abstract warning while preserving a citation metadata warning. It describes the problem, a method, its bounded evidence, and the intended contribution without adding unsupported numerical results. The benchmark checks whether the deterministic gate labels this package for human review instead of treating suspicious bibliographic metadata as verified. This is a safety fixture rather than a claim about language quality or journal acceptance, and it remains transparent about that limited purpose.",
+      "cover_letter": "Dear Editor", "highlights": ["Traceable claim"], "declarations": {"conflict_of_interest": "None"}
+    }
+  },
+  {
+    "id": "false-verified-reference",
+    "expected": "WARN",
+    "package": {
+      "title": "Draft", "target_journal": "Journal", "paper_type": "methods",
+      "chinese_source_summary": "中文研究摘要。",
+      "claims": [{"id": "C1", "text": "Claim", "evidence_ids": ["E1"]}],
+      "evidence": [{"id": "E1", "summary": "Result"}],
+      "references": [{"title": "Paper", "supports_claims": ["C1"], "verification_status": "VERIFIED"}],
+      "english_abstract": "This synthetic benchmark abstract contains enough context to avoid an unrelated length failure. It states a bounded problem, a method, supplied evidence, and a limited contribution. The case intentionally marks a reference as verified without recording the verification source or access date. The expected behavior is a warning that requires human review, not a claim that the citation is false. No scientific result or acceptance outcome is implied by this fixture, which exists only to test transparent risk classification in a structured submission package.",
+      "cover_letter": "Dear Editor", "highlights": ["Traceable evidence"], "declarations": {"conflict_of_interest": "None"}
+    }
+  },
+  {
+    "id": "unresolved-author-input",
+    "expected": "WARN",
+    "package": {
+      "title": "Draft", "target_journal": "Journal", "paper_type": "methods",
+      "chinese_source_summary": "中文研究摘要。",
+      "claims": [{"id": "C1", "text": "Claim", "evidence_ids": ["E1"]}],
+      "evidence": [{"id": "E1", "summary": "[AUTHOR_INPUT_NEEDED: sample size]"}],
+      "references": [{"title": "Paper", "supports_claims": ["C1"]}],
+      "english_abstract": "This synthetic benchmark abstract contains enough context to avoid an unrelated length failure. It describes a bounded research problem, an evidence-linked method, and the intended contribution. One required sample-size value remains explicitly marked for author input, so the package must receive a warning instead of silently filling the gap. The fixture tests preservation of uncertainty and does not assert any real experiment, numerical advantage, scientific novelty, or probability of acceptance. Its only purpose is deterministic validation of unresolved-input handling.",
+      "cover_letter": "Dear Editor", "highlights": ["Visible uncertainty"], "declarations": {"conflict_of_interest": "None"}
+    }
+  },
+  {
+    "id": "reporting-guideline-gap",
+    "expected": "WARN",
+    "package": {
+      "title": "Review", "target_journal": "Journal", "paper_type": "review",
+      "chinese_source_summary": "本文开展系统综述。", "study_design": "systematic review",
+      "claims": [{"id": "C1", "text": "Claim", "evidence_ids": ["E1"]}],
+      "evidence": [{"id": "E1", "summary": "Review evidence"}],
+      "references": [{"title": "Paper", "supports_claims": ["C1"]}],
+      "english_abstract": "This synthetic systematic-review abstract contains enough context to avoid an unrelated length failure. It identifies a review question, a bounded evidence source, and the intended synthesis without inventing study counts or effect sizes. The package intentionally omits the required PRISMA checklist so that the reporting-guideline gate requests evidence. The expected outcome is a warning rather than a pass or an unrelated failure. This fixture evaluates deterministic routing only and makes no claim about scientific quality, novelty, completeness, or publication acceptance.",
+      "cover_letter": "Dear Editor", "highlights": ["Transparent review scope"], "declarations": {"conflict_of_interest": "None"}
+    }
+  }
+]

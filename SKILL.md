@@ -27,15 +27,17 @@ First classify the request, then load only the indicated resources.
 |---|---|---|
 | `read` | Read, summarize, critique, bilingual notes | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) |
 | `literature` | Search strategy, review, gap map, related work | [workflows/literature-review.md](workflows/literature-review.md), [citation-integrity.md](citation-integrity.md) |
-| `plan-write` | Storyline, outline, draft, rewrite, polish, translate | Load the matching section guide below plus [references/output-contracts.md](references/output-contracts.md) |
+| `write` (`plan-write`) | Storyline, outline, draft, rewrite, polish, translate | Load the matching section guide below plus [references/output-contracts.md](references/output-contracts.md) |
 | `figures` | Method diagram, result figure, caption, figure audit | [references/figure-prompts.md](references/figure-prompts.md), [workflows/figure-audit.md](workflows/figure-audit.md) |
 | `review` | Pre-submission review, rejection risks, adversarial audit | [quality-gates.md](quality-gates.md), [references/output-contracts.md](references/output-contracts.md) |
 | `rebuttal` | Reviewer response, R&R, rebuttal, revision verification | [references/output-contracts.md](references/output-contracts.md), [quality-gates.md](quality-gates.md) |
 | `citations` | DOI audit, hallucination scan, claim-source match | [citation-integrity.md](citation-integrity.md), [workflows/reference-tools.md](workflows/reference-tools.md) |
 | `journal` | Venue selection, transfer, policy, formatting | [journal-strategy.md](journal-strategy.md), [references/verification-policy.md](references/verification-policy.md) |
-| `submission` | Cover letter, highlights, declarations, final package | [workflows/submission-package.md](workflows/submission-package.md), [references/output-contracts.md](references/output-contracts.md) |
+| `submit` (`submission`) | Cover letter, highlights, declarations, final package | [workflows/submission-package.md](workflows/submission-package.md), [references/output-contracts.md](references/output-contracts.md) |
 | `reporting` | CONSORT, PRISMA, STROBE, ARRIVE, CARE, SPIRIT | [references/reporting-guidelines.md](references/reporting-guidelines.md), [references/verification-policy.md](references/verification-policy.md) |
 | `full-verify` | DOI lookup, journal policy evidence, manuscript/rebuttal consistency | [workflows/full-verification.md](workflows/full-verification.md) |
+
+For IEEE Transactions on Robotics, also load [references/venues/ieee-tro.md](references/venues/ieee-tro.md). Treat every venue profile as a dated starting point and re-check its official links before submission.
 
 For a multi-route request, load the smallest combination that covers it. Do not load the general prompt bank unless the routed resources are insufficient; then use [references/prompt-bank.md](references/prompt-bank.md).
 
