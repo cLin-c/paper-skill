@@ -57,6 +57,20 @@ Build a claim–evidence map before rewriting the abstract. Do not invent missin
 data or references. Finish with verification states and submission blockers.
 ```
 
+## Personal writing style and manuscript structure
+
+The `write` route now uses the author's [personal writing profile](references/personal-writing-style.md), preserving all 14 sections of the supplied Chinese specification and its reusable prompt. It covers manuscript structure, section responsibilities, concrete prose, method dependencies, experimental reasoning, figures, and claim–evidence consistency. The original Word file is not required at runtime.
+
+The default argument runs from research question → concrete obstacle → design principle → mechanism → evidence → scoped conclusion. Explicit author preferences, requested scope, and verified venue requirements take precedence. Section, contribution, module, and experiment counts remain flexible; English writing preserves the same scientific meaning and evidence strength.
+
+```text
+Use $paper-skill and its personal writing profile to rewrite only the Introduction
+and Method from my attached materials. Write in English. Preserve the equations,
+terminology, and confirmed results. Connect the research need, obstacles, design
+principle, module dependencies, and evidence. Return the prose first, then key
+changes and unresolved author questions. Do not invent missing information.
+```
+
 ## Three flagship routes
 
 | Route | Use it for | Output |

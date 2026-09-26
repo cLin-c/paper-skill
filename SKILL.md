@@ -27,7 +27,7 @@ First classify the request, then load only the indicated resources.
 |---|---|---|
 | `read` | Read, summarize, critique, bilingual notes | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) |
 | `literature` | Search strategy, review, gap map, related work | [workflows/literature-review.md](workflows/literature-review.md), [citation-integrity.md](citation-integrity.md) |
-| `write` (`plan-write`) | Storyline, outline, draft, rewrite, polish, translate | Load the matching section guide below plus [references/output-contracts.md](references/output-contracts.md) |
+| `write` (`plan-write`) | Storyline, outline, draft, rewrite, polish, translate; personal writing style and full-manuscript structure | Apply the writing profile below, the matching section guide, and [references/output-contracts.md](references/output-contracts.md) |
 | `figures` | Method diagram, result figure, caption, figure audit | [references/figure-prompts.md](references/figure-prompts.md), [workflows/figure-audit.md](workflows/figure-audit.md) |
 | `review` | Pre-submission review, rejection risks, adversarial audit | [quality-gates.md](quality-gates.md), [references/output-contracts.md](references/output-contracts.md) |
 | `rebuttal` | Reviewer response, R&R, rebuttal, revision verification | [references/output-contracts.md](references/output-contracts.md), [quality-gates.md](quality-gates.md) |
@@ -40,6 +40,14 @@ First classify the request, then load only the indicated resources.
 For IEEE Transactions on Robotics, also load [references/venues/ieee-tro.md](references/venues/ieee-tro.md). Treat every venue profile as a dated starting point and re-check its official links before submission.
 
 For a multi-route request, load the smallest combination that covers it. Do not load the general prompt bank unless the routed resources are insufficient; then use [references/prompt-bank.md](references/prompt-bank.md).
+
+### Personal writing style and manuscript structure
+
+For `write`, use [references/personal-writing-style.md](references/personal-writing-style.md) as the default writing profile. Requests such as “按我的论文风格”, “个人写作风格”, or “全文结构规范” select this profile explicitly; a structural review can use it without rewriting the manuscript. Read its application rules and the sections relevant to the requested scope.
+
+Build the argument from task/scientific question → capability needed → concrete obstacle and consequences → design principle → mechanism → evidence → scoped conclusion. Explain requirements backward from the goal, then describe the method forward along its actual dependencies. Keep claims, contributions, methods, figures, and evidence aligned.
+
+Explicit author preferences and verified venue requirements take precedence over these stylistic defaults. Preserve scientific meaning and evidence limits. Adapt to method, discovery, or theory papers; do not impose fixed counts of sections, contributions, modules, experiments, or sentences. A paragraph edit stays a paragraph edit. Deliver the requested prose first, with proportional verification notes and author questions outside the manuscript.
 
 ### Section-writing selector
 
@@ -77,7 +85,7 @@ Before drafting or reviewing, state:
 
 - research question;
 - one-sentence central claim;
-- 2–5 supporting claims;
+- supporting claims warranted by the research and requested scope;
 - evidence supporting each claim;
 - scope conditions and limitations;
 - novelty relative to named prior work.
