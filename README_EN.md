@@ -1,5 +1,11 @@
 # paper-skill
 
+## Eight-step research-to-paper workflow
+
+The [eight-step workflow](workflows/eight-step-paper.md) integrates 88 Chinese academic prompts: storyline → core experiments → complete evidence → Chinese draft → citation verification → translation and initial typesetting → figure revision → final formatting and shortening. Each stage defines inputs, deliverables, completion checks, and return paths. Load only the current stage; a local edit does not require restarting the lifecycle.
+
+It preserves the author's personal writing profile and supports minimum necessary experiments, edits without new experiments, sentence-level revision coloring, figure/text synchronization, and bounded review. Historical acceptance guarantees are treated as quality goals, never promises. Local paths are parameterized; daily-work and contract prompts are excluded. The [source manifest](references/eight-step/source-manifest.json) records all 88 source IDs and normalized text hashes.
+
 > The evidence-first publication workflow for researchers who draft and think in Chinese.
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
