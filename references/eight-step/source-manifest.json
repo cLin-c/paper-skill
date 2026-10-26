@@ -2,7 +2,7 @@
   "source": "AI提示词_论文体系8步_本地预览.html",
   "source_sha256": "2ed012da6c57753fb03fdbe2bff2282f70666834c72a26efbed0835fc058a4f9",
   "scope": "category-academic only; daily work and contracts excluded",
-  "path_policy": "Historical local paths replaced by named placeholders; other prompt text preserved.",
+  "path_policy": "Historical local paths replaced by named placeholders; line endings and trailing whitespace normalized; other prompt text preserved.",
   "stages": [
     {
       "stage": 1,
@@ -183,7 +183,7 @@
         {
           "id": "prompt-13",
           "title": "4.5 方法部分逻辑与公式检查",
-          "text_sha256": "87ead0382b088078f61ac20b213ae3714a8f09d36aaec13c4d58289b6574aaf5"
+          "text_sha256": "cea8a3462e305a181cfbc056a2208b63f6aee75d175f822d8c12eab37dadd9a3"
         },
         {
           "id": "prompt-66",
