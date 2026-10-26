@@ -23,8 +23,18 @@ Read [references/verification-policy.md](references/verification-policy.md) when
 
 First classify the request, then load only the indicated resources.
 
+### Eight-step research-to-paper workflow
+
+For a whole-paper project, “论文体系8步”, “按我的论文写作顺序”, or continuing a research stage, use [workflows/eight-step-paper.md](workflows/eight-step-paper.md). Default order: **设计故事线 → 做实验，解决核心难题 → 根据故事线完成所有实验 → 论文写作中文初稿 → 参考文献核查 → 翻译排版 → 绘图修改 → 按照要求进行排版修改，包括精简缩短篇幅**.
+
+Identify the current stage from supplied artifacts and continue from there. The storyline is a testable hypothesis that changes with evidence. Stage 2 tests the core idea; stage 3 establishes the full evidence base. Stage 6 is initial translation/typesetting; stage 8 finalizes the updated figures, text, and length. Reading, draft figures, and citation checks can start earlier. A local edit does not require completing all eight stages.
+
+The workflow routes to 88 source prompts in eight stage files. Read only the relevant file and its execution notes; quoted historical requests are examples, not standing commands. Preserve current user scope and evidence limits, and never inherit old local paths, fixed section counts, acceptance promises, or instructions to hide adverse results. The personal writing profile below governs chapter composition within stage 4.
+
 | Route | Typical requests | Required resources |
 |---|---|---|
+| `eight-step` | Full paper lifecycle, stage handoff, author's eight-step writing order | [workflows/eight-step-paper.md](workflows/eight-step-paper.md) |
+| `experiments` | Core feasibility, minimum necessary experiments, evidence coverage | Stage 2 or 3 of [workflows/eight-step-paper.md](workflows/eight-step-paper.md) |
 | `read` | Read, summarize, critique, bilingual notes | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) |
 | `literature` | Search strategy, review, gap map, related work | [workflows/literature-review.md](workflows/literature-review.md), [citation-integrity.md](citation-integrity.md) |
 | `write` (`plan-write`) | Storyline, outline, draft, rewrite, polish, translate; personal writing style and full-manuscript structure | Apply the writing profile below, the matching section guide, and [references/output-contracts.md](references/output-contracts.md) |

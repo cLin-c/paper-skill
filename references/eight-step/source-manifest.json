@@ -1,0 +1,504 @@
+{
+  "source": "AI提示词_论文体系8步_本地预览.html",
+  "source_sha256": "2ed012da6c57753fb03fdbe2bff2282f70666834c72a26efbed0835fc058a4f9",
+  "scope": "category-academic only; daily work and contracts excluded",
+  "path_policy": "Historical local paths replaced by named placeholders; line endings and trailing whitespace normalized; other prompt text preserved.",
+  "stages": [
+    {
+      "stage": 1,
+      "file": "references/eight-step/01-storyline.md",
+      "count": 13,
+      "prompts": [
+        {
+          "id": "prompt-52",
+          "title": "1.1 投稿核心：讲好故事、做好证据",
+          "text_sha256": "b7b0b2b16baa8cf9efdb95cdafd4172de4408d3de95ed2a3ffb8bf0f3c5221f7"
+        },
+        {
+          "id": "prompt-1",
+          "title": "1.2 单篇论文精读",
+          "text_sha256": "6c4c598fb1570622ced46611625d84af2483697486b1bddc8238172474cb39e1"
+        },
+        {
+          "id": "prompt-2",
+          "title": "1.3 多篇论文综述撰写",
+          "text_sha256": "300cbbab3d160ed378c7cf1393f320f9d2c97053ad10f8ff27126b2ad90d39c5"
+        },
+        {
+          "id": "prompt-3",
+          "title": "1.4 研究领域现状总结",
+          "text_sha256": "2e306372dd00f22a5332af09056aa63c0a331442cada003eaaeccd76aef5a8a6"
+        },
+        {
+          "id": "prompt-12",
+          "title": "1.5 核心创新点凝练",
+          "text_sha256": "9c05c200743f07ba66ed194afc4faf94b0144fbe65c89c08d154e3cb3237a2a5"
+        },
+        {
+          "id": "prompt-41",
+          "title": "1.6 创新定位与核心故事线重构",
+          "text_sha256": "3bfa83bee587196df76cf750758ca6a8199bb3549708972e6fee0a0522db27ff"
+        },
+        {
+          "id": "prompt-9",
+          "title": "1.7 顶刊故事线升级",
+          "text_sha256": "533ea3f56c0a490b78e37c1cdd479980d3c0a95d0d2c5483564c7536b4be92e2"
+        },
+        {
+          "id": "prompt-61",
+          "title": "1.8 不补实验的核心故事线定位",
+          "text_sha256": "6079d633b77789f9b94dc5638159a7c8fe90ff252f55ab602661ec65ae71b63c"
+        },
+        {
+          "id": "prompt-62",
+          "title": "1.9 面向RA-L的故事线重构",
+          "text_sha256": "2929c2d9a7f7b808b1ac1fdf1a49fe6d1cb811e56c7a1598bce8c8f14fde7875"
+        },
+        {
+          "id": "prompt-70",
+          "title": "1.10 从领域背景收束至核心痛点",
+          "text_sha256": "a77c70b1707b1ef3cdf4fc9ced8ba16ae05f545fa7a18858280034fb9b9e75a9"
+        },
+        {
+          "id": "prompt-8",
+          "title": "1.11 目标期刊投稿评估",
+          "text_sha256": "a921cd4260bf34690bbff2198899275392da4d01b2c3f26639be6d09f87fb48d"
+        },
+        {
+          "id": "prompt-72",
+          "title": "1.12 SCI二区选刊与审稿周期需求",
+          "text_sha256": "4cafab87ba3a789018fbdd97dbc26c075da7c9138b931fb7cf418d2f0029cfb0"
+        },
+        {
+          "id": "prompt-75",
+          "title": "1.13 参考TRO同类论文解释修改依据",
+          "text_sha256": "366d435f0195d5ad0bae56cfba1d1adb55959d4be7af5b36bfca1bd041317fe5"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "file": "references/eight-step/02-core-experiments.md",
+      "count": 3,
+      "prompts": [
+        {
+          "id": "prompt-43",
+          "title": "2.1 实验方案、对比方法与评价指标设计",
+          "text_sha256": "856e7d90bc91526b073b484747dfc197b970cab98cb176a41a736fc8aebc92ae"
+        },
+        {
+          "id": "prompt-87",
+          "title": "2.2 距离 × 遮挡 × 相似度对比实验",
+          "text_sha256": "56a4282c7dc1a53cdd300e3af3750fd2336413278771b9a7038e4a8f9035b56a"
+        },
+        {
+          "id": "prompt-91",
+          "title": "2.3 机器人视频数据提取与闭环验证",
+          "text_sha256": "2c042c447c668679da5a8b6bb24f498dce087e9d1bc9b80774d4c3d48d0ad531"
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "file": "references/eight-step/03-evidence.md",
+      "count": 10,
+      "prompts": [
+        {
+          "id": "prompt-17",
+          "title": "3.1 实验计划制定",
+          "text_sha256": "8da473ff2c6ffb27de1541956aad63bdfd6da3f283eab3cb4a12a976f1b4d75f"
+        },
+        {
+          "id": "prompt-89",
+          "title": "3.2 围绕核心证据筛选必要实验",
+          "text_sha256": "71e62140651ddcbd118d7c9f6f4b7c7d517a574738ea6007d6426cdc8b212149"
+        },
+        {
+          "id": "prompt-90",
+          "title": "3.3 视角变化与非旋成体算法边界验证",
+          "text_sha256": "ece8834578182ffcc2b08b9270eef93c353ddbb693389cfff2e10d3b081aa98b"
+        },
+        {
+          "id": "prompt-92",
+          "title": "3.4 非旋成体的最小必要补实验方案",
+          "text_sha256": "8c0db918b4b183836ac7acaa2ab4c002347a5b44ee36bc6c823370e94ff4d6a6"
+        },
+        {
+          "id": "prompt-104",
+          "title": "3.5 子图g · 单路径检索原始数据",
+          "text_sha256": "8fe343a3246d804467af4423c3a6eaa887f197c4bbc6542c168faba019022544"
+        },
+        {
+          "id": "prompt-105",
+          "title": "3.6 子图g · 双路径检索与数据核对",
+          "text_sha256": "6e134c98084d1a348f71447ecb75a188ab47b5691c6f3f0a27f0f8426ba46220"
+        },
+        {
+          "id": "prompt-106",
+          "title": "3.7 子图b/c/d · 原始数据与Origin文件核对",
+          "text_sha256": "39ff69c7d4ee1253c2fffa03192cc445f423787b064a8a46c52cc12bbb771d5c"
+        },
+        {
+          "id": "prompt-44",
+          "title": "3.8 实验数据全文一致性审计",
+          "text_sha256": "b3fb276b02a2a53ef685f6bf093d3ad35b0fb058a0169f01c08922f01d7d274d"
+        },
+        {
+          "id": "prompt-18",
+          "title": "3.9 表格数据更新与全文同步",
+          "text_sha256": "900e8d1703cbead42d34af5465ac3ca994b5742cb168dd808f3530c9f1016039"
+        },
+        {
+          "id": "prompt-88",
+          "title": "3.10 依据代码与实验细节补全附录",
+          "text_sha256": "06b4895d29db08f2ca5ff2f710631690484ff896b4e2742805c61c8662f02cb4"
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "file": "references/eight-step/04-chinese-draft.md",
+      "count": 18,
+      "prompts": [
+        {
+          "id": "prompt-10",
+          "title": "4.1 引言重写",
+          "text_sha256": "e2172fb84e9850f38e7fa1421ea51ad7055cebefb90da31bbb6293c23d9cd88b"
+        },
+        {
+          "id": "prompt-11",
+          "title": "4.2 相关工作重写",
+          "text_sha256": "466c648d53cb44d9c62420b82aa8518f34896bff35eb0a4867c58e329036a23d"
+        },
+        {
+          "id": "prompt-54",
+          "title": "4.3 相关工作结构与SGOP3D总结段",
+          "text_sha256": "62875e8e912a9eba83720e1ca888bdf8291722aa5e42e1124bd935844fe3cd77"
+        },
+        {
+          "id": "prompt-14",
+          "title": "4.4 方法部分重写",
+          "text_sha256": "38638126898e37d77faa93e0be375832040027415188fcb1a980a1744deb1644"
+        },
+        {
+          "id": "prompt-13",
+          "title": "4.5 方法部分逻辑与公式检查",
+          "text_sha256": "cea8a3462e305a181cfbc056a2208b63f6aee75d175f822d8c12eab37dadd9a3"
+        },
+        {
+          "id": "prompt-66",
+          "title": "4.6 算法命名、创新表达与可视化示例",
+          "text_sha256": "2228b1f51d1ea9366ceac76ff3e4e71fece251efc298d3da848407f5b4a3f43a"
+        },
+        {
+          "id": "prompt-69",
+          "title": "4.7 TRO机理分析、学术标题与叙事布局",
+          "text_sha256": "a200abee12dddc14f8b346dc038a6179986234c52f0a45941d5ae773f1ff469c"
+        },
+        {
+          "id": "prompt-16",
+          "title": "4.8 实验部分重写",
+          "text_sha256": "b68fa5fd1a65a22f8379007dc05b03cbe789af1aeeca1f3ec2ba7779d9307dbb"
+        },
+        {
+          "id": "prompt-24",
+          "title": "4.9 Word论文整合生成",
+          "text_sha256": "6e89e589e7585811090c6c12765df4d6cce4c361d46064d2243ae58a720614f1"
+        },
+        {
+          "id": "prompt-64",
+          "title": "4.10 整合实验补充材料并交付完整Word",
+          "text_sha256": "d63562b70c5df69be5865eff2eb82e888f59950baf3b1a0dd8704e802cba55cf"
+        },
+        {
+          "id": "prompt-57",
+          "title": "4.11 ICLR全文重构与已有实验归位",
+          "text_sha256": "66a4bb5e211b083cc5b53ceb265b24c5d2599bb9c3894efe3641be130bc477a5"
+        },
+        {
+          "id": "prompt-5",
+          "title": "4.12 SCI一区/TRO风格全文润色",
+          "text_sha256": "4b7c9183a3c4c59735db1b82afe013ca86e5940a9fc09eec265fe6343be43f1a"
+        },
+        {
+          "id": "prompt-6",
+          "title": "4.13 段落级学术润色",
+          "text_sha256": "d8d5b1de6a3f6b6b306f71a9ae9b464d8437842fdbfb44fcb6428c47402121eb"
+        },
+        {
+          "id": "prompt-56",
+          "title": "4.14 逐句标红与修改前后对比报告",
+          "text_sha256": "a602c6613b3e84055ea75ae8750e5defb3f248d159e187cef611fa140d5540f1"
+        },
+        {
+          "id": "prompt-59",
+          "title": "4.15 不补实验的全文修改与标红",
+          "text_sha256": "64bdf2e4b7789581d5936f6f9940717314b458578a51ef02689fa6a8bc169a41"
+        },
+        {
+          "id": "prompt-63",
+          "title": "4.16 保留核心故事线的逐句标红修改",
+          "text_sha256": "f566dbb401b4539d52744abbae01b74ba7ded25fb9ff31cc8a688a1b99f1bb9e"
+        },
+        {
+          "id": "prompt-65",
+          "title": "4.17 章节统一、多视角表述与去冗余",
+          "text_sha256": "69fdacb5d6407f7668b4ff422c2ba1dcf5b044255196acc568b42238c4a602eb"
+        },
+        {
+          "id": "prompt-67",
+          "title": "4.18 逐句标紫的Word修改要求",
+          "text_sha256": "048d13bec07f3dd9cc10a7902e7384fb0650d9c66e2fc0980e80f7d5f377176c"
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "file": "references/eight-step/05-citations.md",
+      "count": 4,
+      "prompts": [
+        {
+          "id": "prompt-22",
+          "title": "5.1 参考文献真实性与引用准确性检查",
+          "text_sha256": "c5e2284ada71837673e17f2aab22b2d253d3941a12dd8c3351e98bd404b167df"
+        },
+        {
+          "id": "prompt-102",
+          "title": "5.2 TPAMI相关文献补充需求",
+          "text_sha256": "2086b0a1a94ccc5f888b86af11f7493a742a3e379a37e0451b9d4b586fea04a9"
+        },
+        {
+          "id": "prompt-103",
+          "title": "5.3 TRO参考文献恢复与补充需求",
+          "text_sha256": "611156ae921fbf0c07a71be7c61d58d158faebe08a0a1d23c4521593336e8f81"
+        },
+        {
+          "id": "prompt-23",
+          "title": "5.4 参考文献编号顺序整理",
+          "text_sha256": "a9fedd431e82a7bce8fd66e5e11757b776dc5b4d371187617119e22dff7aef11"
+        }
+      ]
+    },
+    {
+      "stage": 6,
+      "file": "references/eight-step/06-translation.md",
+      "count": 10,
+      "prompts": [
+        {
+          "id": "prompt-99",
+          "title": "6.1 ICLR/CVPR标准英文翻译与Word交付",
+          "text_sha256": "a064f833bdde653b9f4e7c26ab0e09775250cb2b268712510927cfee718ac2d1"
+        },
+        {
+          "id": "prompt-100",
+          "title": "6.2 学术英译与Sensors LaTeX排版",
+          "text_sha256": "efa61829279983ebec9b9494862339cd90e7b32b5ca5132ed912bdb81db3425e"
+        },
+        {
+          "id": "prompt-93",
+          "title": "6.3 可编辑LaTeX公式输出要求",
+          "text_sha256": "f609add6a98378c1d54f324e50b94da6091b709e7e8f82b691b5e3c4720f45f8"
+        },
+        {
+          "id": "prompt-15",
+          "title": "6.4 公式与变量规范化",
+          "text_sha256": "24a4cfe40cf158b3a8065b4a93f9da3f0b5dc9708e2729f9c9a71a066bd76a35"
+        },
+        {
+          "id": "prompt-42",
+          "title": "6.5 可编辑公式、变量与下标统一",
+          "text_sha256": "9d23d489a1f2d716e28cae4564677dcfd4ca019c3d46ab732ca288e9eb81e77b"
+        },
+        {
+          "id": "prompt-94",
+          "title": "6.6 ICLR 2027模板检查与Word同步",
+          "text_sha256": "2facaef82543b712cd8c02808de26d7b65dbc237e1c66ac66b533ebc12fb19be"
+        },
+        {
+          "id": "prompt-97",
+          "title": "6.7 Nature Communications模板与投稿打包",
+          "text_sha256": "11e32934ae63904eb2773d7db776c8a8c7b63df00832049e9103c5cc0f1b81cc"
+        },
+        {
+          "id": "prompt-98",
+          "title": "6.8 TRO投稿模板排版与ZIP交付",
+          "text_sha256": "e541434ff8803dbc1c41946221f72519154f3ea3dfc158ab5bc01005879a3168"
+        },
+        {
+          "id": "prompt-25",
+          "title": "6.9 Overleaf/LaTeX修改",
+          "text_sha256": "210084f443aa8bef70d5668eb8115991cbd0687647cbe6b2d8433d7a38ba76e3"
+        },
+        {
+          "id": "prompt-95",
+          "title": "6.10 Overleaf局部替换与中英对照",
+          "text_sha256": "040c2cbd06bb20a92ce6dbfc1f17712ef389097811f7e87de75bd0f7fddb468b"
+        }
+      ]
+    },
+    {
+      "stage": 7,
+      "file": "references/eight-step/07-figures.md",
+      "count": 18,
+      "prompts": [
+        {
+          "id": "prompt-45",
+          "title": "7.1 SCI级技术路线图与系统框图生成",
+          "text_sha256": "518568f440c6f8400e0cfc9d0e2470d41aebad82d325d263f0f8562521b0ccd7"
+        },
+        {
+          "id": "prompt-20",
+          "title": "7.2 实验结果图重制提示词",
+          "text_sha256": "9881c5d7129d37ea8b906af7be4872e0e2d92edcb6f1cfd271f1ffec869a12bb"
+        },
+        {
+          "id": "prompt-21",
+          "title": "7.3 表格转可视化图",
+          "text_sha256": "15680d800c3e7f7ee3f645076d6541ea78273a21944a9a77bf6e385d941b437e"
+        },
+        {
+          "id": "prompt-76",
+          "title": "7.4 明确箭头指向与图面布局",
+          "text_sha256": "f66a67ac0228e20e9dcdc231758effe70fac9d0385795e4f16b5297fe6d3d3a1"
+        },
+        {
+          "id": "prompt-77",
+          "title": "7.5 整图排版与对齐优化",
+          "text_sha256": "323f84f35c17d7ddcf68227287821fbdd55fcd6f8c38889e843c71d1044393e9"
+        },
+        {
+          "id": "prompt-78",
+          "title": "7.6 图3排版与曲线图美化",
+          "text_sha256": "7643bf1261dda7df5387b56dc3807166bb8c44567f2c14e8d44bb6747045d92e"
+        },
+        {
+          "id": "prompt-79",
+          "title": "7.7 参考论文风格重绘科研图",
+          "text_sha256": "b29a9e2a52b32ef541c28b0979483f91083f6914e34ea4e49910d03ad74cde1b"
+        },
+        {
+          "id": "prompt-80",
+          "title": "7.8 方法图闭环箭头与创新重点",
+          "text_sha256": "b84fa0615e4059432818fd845d152925db48cac675c9e793110790aef7072e6a"
+        },
+        {
+          "id": "prompt-81",
+          "title": "7.9 跨视角实例歧义实验对比图优化",
+          "text_sha256": "bebdfe1f1d4b5b9798ce25958b229761ca9b57052f3a21bb562b2b154d46db5c"
+        },
+        {
+          "id": "prompt-82",
+          "title": "7.10 图片文字识别与中文高清修复",
+          "text_sha256": "f72f744c150b22a723f621d2b8053aee8dd4b7cf6cca6345e364d107554fb0a9"
+        },
+        {
+          "id": "prompt-83",
+          "title": "7.11 图片文字识别与修复 · 创建图像版",
+          "text_sha256": "dde76570ec61e78d7f6619f9794bbfa4099294b7ac6f3e79d4d5eb20a0882aa1"
+        },
+        {
+          "id": "prompt-84",
+          "title": "7.12 局部文字修复与Arial字体统一",
+          "text_sha256": "05c9c2f6df633f9bbc6fab8014d0d92fde8aae2dda2e3e10b1a75c26eb24f551"
+        },
+        {
+          "id": "prompt-85",
+          "title": "7.13 方法图字母、变量与表述核对",
+          "text_sha256": "4dbe470b969f2e80541028ef2f411ac34bca75e064daaa3004868e1c2a4484b0"
+        },
+        {
+          "id": "prompt-86",
+          "title": "7.14 SCI一区图面美化与黑色文字",
+          "text_sha256": "c073a88e787a78c4f71da24ba08c748dd80dbd6208bdd02caf5bbfbe61098210"
+        },
+        {
+          "id": "prompt-19",
+          "title": "7.15 图题、图注与正文引用",
+          "text_sha256": "906968d092d1bb08a4486f8a9dc25249f0749ba3b7e6a1559c9887fb78529b00"
+        },
+        {
+          "id": "prompt-101",
+          "title": "7.16 图片英文翻译与600 DPI输出",
+          "text_sha256": "00f108ccff28dd6483fa4bc8ac67c6ef779b50af14337a397ea0cf7a28f3e468"
+        },
+        {
+          "id": "prompt-53",
+          "title": "7.17 替换5张图并同步修改正文",
+          "text_sha256": "0f5a644b887f9e0d7d5761533f35206e706faf8d7aae2c529c8dc0b70fafe58c"
+        },
+        {
+          "id": "prompt-68",
+          "title": "7.18 图15描述更新与一页核心贡献总结",
+          "text_sha256": "d29adb5a77f5e989d712e2df2c3f14d25b184eb53c5aa381375404d40e56f677"
+        }
+      ]
+    },
+    {
+      "stage": 8,
+      "file": "references/eight-step/08-finalization.md",
+      "count": 12,
+      "prompts": [
+        {
+          "id": "prompt-7",
+          "title": "8.1 论文精简与去冗余",
+          "text_sha256": "be3df8c06e41a36a7c9d03688d2444c960879caf871149ce56f68ae00f19c677"
+        },
+        {
+          "id": "prompt-55",
+          "title": "8.2 ICLR学术润色与方法公式精简",
+          "text_sha256": "4c97e4887b42a5e1cf8ed8e876a638bcd9c677a8f1244c30dd8ee5195dd109d3"
+        },
+        {
+          "id": "prompt-96",
+          "title": "8.3 超页精简与LaTeX替换方案",
+          "text_sha256": "8a5dcf79cb52b071d6fbc8ffea5302a9152c695cb5dd8e5b1f6432a5f254a131"
+        },
+        {
+          "id": "prompt-58",
+          "title": "8.4 正文与附录重组及逻辑衔接",
+          "text_sha256": "5dc3fc1fa48f0acc967e94dda5a3ab4149623101a51eb0d6efc4e83a13ffa101"
+        },
+        {
+          "id": "prompt-60",
+          "title": "8.5 将附录内容融合到正文",
+          "text_sha256": "cacbf86473015a3130721f1c21c01933d98b259cb49556219d9ee76e0ec387da"
+        },
+        {
+          "id": "prompt-4",
+          "title": "8.6 全文审稿与拒稿风险检查",
+          "text_sha256": "25b2e37cf1f007ec9cea9237e0b7965ed3f442a5c74d1774301b800873cdf1d4"
+        },
+        {
+          "id": "prompt-40",
+          "title": "8.7 论文致命拒稿风险专项检查",
+          "text_sha256": "95135b948006efd2df7234df45ed2844dfe9cbcba800da9c0ff7147d64c307f5"
+        },
+        {
+          "id": "prompt-39",
+          "title": "8.8 多专家联合审稿与持续修改闭环",
+          "text_sha256": "c2a818ca011f69222b5b6b983b4eb80b55772de5a4486c1113589ab7b6a283ae"
+        },
+        {
+          "id": "prompt-71",
+          "title": "8.9 NC双文件修改与多角色模拟审稿",
+          "text_sha256": "9badfe5894706fc16eff43386cb33d3f2bf98867853cb749ff49c22d63a37b79"
+        },
+        {
+          "id": "prompt-73",
+          "title": "8.10 SCI一区严格审稿、修改与最小补实验清单",
+          "text_sha256": "b3788b6fdb13c7282f9c65905b214cc4889936de0c417ca8604edd8dd81805c2"
+        },
+        {
+          "id": "prompt-74",
+          "title": "8.11 CNS子刊模拟审稿与LaTeX交付",
+          "text_sha256": "388b068d7750dd53dee5d53c0011755ec55820c4d92892b1cb9779b01fe42b64"
+        },
+        {
+          "id": "prompt-26",
+          "title": "8.12 PPT修改与答辩材料",
+          "text_sha256": "a756e3dbeb6c28ade7c50c13ff66e7362608f92b6e3909fef2ec08b9b7472fc8"
+        }
+      ]
+    }
+  ]
+}
