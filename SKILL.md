@@ -1,6 +1,6 @@
 ---
 name: paper-skill
-description: End-to-end, Chinese-first academic research and publication workflow for reading papers, literature reviews, research framing, manuscript planning and writing, Chinese-English translation, LaTeX, figures, citation verification, reporting-guideline checks, journal selection, peer review, rebuttals, revisions, and submission packages. Use for SCI, IEEE, Nature-family, IJCAI, TRO, theses, systematic reviews, clinical/observational/animal studies, and any task where claims, evidence, references, manuscript files, or journal requirements must be checked rather than invented.
+description: End-to-end, Chinese-first academic research and publication workflow for reading papers, literature reviews, research framing, manuscript planning and writing, the eight-step paper-system workflow, Chinese-English translation, LaTeX, figures, citation verification, reporting-guideline checks, journal selection, peer review, rebuttals, revisions, and submission packages. Use for SCI, IEEE, Nature-family, IJCAI, TRO, theses, systematic reviews, clinical/observational/animal studies, and any task where claims, evidence, references, manuscript files, or journal requirements must be checked rather than invented.
 ---
 
 # paper-skill
@@ -21,10 +21,11 @@ Read [references/verification-policy.md](references/verification-policy.md) when
 
 ## Route the task
 
-First classify the request, then load only the indicated resources.
+First classify the request, then load only the indicated resources. For “论文体系8步”, “八步论文流程”, or continuing a numbered stage of that workflow, select `paper-system`; ordinary paragraph edits remain scoped to `write`.
 
 | Route | Typical requests | Required resources |
 |---|---|---|
+| `paper-system` (`eight-step`) | 论文体系八步：故事线、核心实验、完整实验、中文稿、文献核查、翻译排版、绘图、精简定稿；start or resume any stage | [workflows/paper-system-eight-steps.md](workflows/paper-system-eight-steps.md), then only the selected stage's prompts |
 | `read` | Read, summarize, critique, bilingual notes | [references/paper-writing-prompts.md](references/paper-writing-prompts.md) |
 | `literature` | Search strategy, review, gap map, related work | [workflows/literature-review.md](workflows/literature-review.md), [citation-integrity.md](citation-integrity.md) |
 | `write` (`plan-write`) | Storyline, outline, draft, rewrite, polish, translate; personal writing style and full-manuscript structure | Apply the writing profile below, the matching section guide, and [references/output-contracts.md](references/output-contracts.md) |

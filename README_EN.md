@@ -71,6 +71,27 @@ principle, module dependencies, and evidence. Return the prose first, then key
 changes and unresolved author questions. Do not invent missing information.
 ```
 
+## Eight-step paper workflow: 88 prompts
+
+Use `paper-system` (alias `eight-step`) to start or resume the author's eight-stage paper workflow. The skill loads only the current stage's tasks, deliverables, completion criteria, and relevant prompts.
+
+1. [Develop the storyline — 13 prompts](references/paper-system/step-1.md).
+2. [Validate the core method — 3 prompts](references/paper-system/step-2.md).
+3. [Complete the evidence and experiments — 10 prompts](references/paper-system/step-3.md).
+4. [Draft the Chinese manuscript — 18 prompts](references/paper-system/step-4.md).
+5. [Verify references and citation support — 4 prompts](references/paper-system/step-5.md).
+6. [Translate and prepare the initial layout — 10 prompts](references/paper-system/step-6.md).
+7. [Revise figures and synchronize the text — 18 prompts](references/paper-system/step-7.md).
+8. [Finalize formatting and shorten the manuscript — 12 prompts](references/paper-system/step-8.md).
+
+The [workflow guide](workflows/paper-system-eight-steps.md) covers resuming progress and choosing evidence for performance improvements, new capabilities, or mechanism analysis. The 88 Chinese prompts come from the author's supplied HTML; personal paths are parameterized. Historical examples do not establish current facts, venue requirements, or acceptance guarantees. Daily-work and contract prompts are outside this capability.
+
+```text
+Use $paper-skill's paper-system workflow. Resume at step 4 using the attached
+confirmed methods and results. Draft the Chinese manuscript in my personal
+writing style, then report evidence links, unresolved items, and the next step.
+```
+
 ## Three flagship routes
 
 | Route | Use it for | Output |

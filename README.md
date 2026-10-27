@@ -43,7 +43,7 @@
 
 它不是“帮我写得更像论文”的提示词合集。它把论文视为一套可追踪的主张、证据、引用、图表和投稿要求，并明确拒绝编造数据、实验、DOI、政策与修改位置。
 
-[English README](README_EN.md) · [安装说明](docs/installation.md) · [论文写作顺序](#论文写作顺序) · [公开 benchmark](benchmarks/README.md) · [完整示例](examples/README.md)
+[English README](README_EN.md) · [安装说明](docs/installation.md) · [论文体系八步](#论文体系八步能力88条提示词) · [论文写作顺序](#论文写作顺序) · [公开 benchmark](benchmarks/README.md) · [完整示例](examples/README.md)
 
 ## 30 秒开始
 
@@ -84,7 +84,37 @@ Claude Code 等 slash-command 平台可使用 `/paper-skill`。安装器只写�
 
 只润色摘要或一段文字时，说明范围即可；全文规范不会要求额外生成其他章节。英文写作使用相同论证逻辑，按英文习惯组织句子并保持证据强度。
 
+## 论文体系八步能力（88条提示词）
+
+`paper-system`（别名 `eight-step`）已接入作者《AI提示词_论文体系8步_本地预览.html》中的全部 **88 条学术论文提示词**，支持从头推进、指定单步和继续已有进度。各步骤包含任务、产出与完成标准；技能按当前任务选用提示词并执行。
+
+| 步骤 | 任务与提示词入口 | 数量 |
+|---|---|---|
+| 1 | [设计故事线](references/paper-system/step-1.md) | 13 |
+| 2 | [做实验，解决核心难题](references/paper-system/step-2.md) | 3 |
+| 3 | [根据故事线完成所有实验](references/paper-system/step-3.md) | 10 |
+| 4 | [论文写作中文初稿](references/paper-system/step-4.md) | 18 |
+| 5 | [参考文献核查](references/paper-system/step-5.md) | 4 |
+| 6 | [翻译排版](references/paper-system/step-6.md) | 10 |
+| 7 | [绘图修改](references/paper-system/step-7.md) | 18 |
+| 8 | [按照要求进行排版修改，包括精简缩短篇幅](references/paper-system/step-8.md) | 12 |
+
+第2步验证核心方法，第3步补齐全文证据；第6步完成翻译和初排版，第8步根据最终图文与篇幅要求定稿。文献阅读、草图与实验记录可同步开展，故事线随真实证据调整。研究目标可从**效果领先、能力突破、机理分析**三个角度确定。
+
+```text
+使用 $paper-skill 的 paper-system 论文体系八步能力。
+先根据附件判断当前进度，从尚未完成且材料具备的步骤继续。
+选择适用提示词并直接完成任务，按真实证据调整故事线，不编造数据或引用。
+交付本步成果、主张—证据对应、未解决事项和下一步。
+```
+
+也可直接说：“使用 $paper-skill，按论文体系八步的第4步，根据附件完成中文初稿，按我的个人论文风格写作。”
+
+完整说明见[八步工作流](workflows/paper-system-eight-steps.md)。提示词保留来源编号；个人路径已改为填写项，历史案例中的项目名称、数量与刊会要求按当前任务调整，不承诺录用概率。原HTML中的日常工作和合同提示词不纳入论文能力。
+
 ## 论文写作顺序
+
+以下是八步流程中**第4步中文初稿内部的起草顺序**，也适用于独立写作任务。
 
 从研究材料开始写作时，按以下顺序推进；这是起草与修改的工作顺序，成稿的章节排列按论文类型和目标刊会要求确定。
 
