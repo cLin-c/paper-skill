@@ -1,5 +1,7 @@
 # paper-skill
 
+[Overview](#paper-skill) ? [AI Prompt Library](https://clin-c.github.io/paper-skill/) ? [Installation](docs/installation.md)
+
 > The evidence-first publication workflow for researchers who draft and think in Chinese.
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)

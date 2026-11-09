@@ -1,5 +1,7 @@
 # paper-skill
 
+[????](#paper-skill) ? [AI ??????](https://clin-c.github.io/paper-skill/) ? [????](docs/installation.md)
+
 > 面向中文科研作者的 evidence-first 英文投稿工作流。
 
 [![GitHub stars](https://img.shields.io/github/stars/cLin-c/paper-skill?style=social)](https://github.com/cLin-c/paper-skill/stargazers)
